@@ -1,4 +1,4 @@
-# MPX NYC: Reproducible Research Repository [under development]
+# MPX NYC: Reproducible Research Repository
 
 > Source code and analytic workflow for the MPX NYC / RESPND-MI study — a rapid, community-led response to the 2022 mpox outbreak among queer and trans New Yorkers. This repository contains the Quarto book, data-processing pipeline, and supporting R functions used to generate the public report at [https://mpxresponse.org](https://mpxresponse.org).
 
