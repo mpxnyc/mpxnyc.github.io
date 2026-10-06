@@ -85,7 +85,7 @@ Reusable content shared across chapters lives in triple-underscore-prefixed fold
 | `___tables/`       | Table blocks (one `.qmd` per table)                    |
 | `___videos/`       | Embedded video blocks, one per chapter/topic           |
 | `___misc/`         | Miscellaneous shared snippets (e.g. seminar banner)    |
-| `____data/`        | R scripts defining/loading the person- and place-level survey data objects |
+| `____data/`        | Person- and place-level survey data, stored as serialized R objects (`.rds`, read with `readRDS()`) |
 
 Build output and knitr caches (not hand-edited) also live alongside the source: `_book/` (rendered HTML site), `index_files/`, `C_causality_files/`, `C_causality_cache/`, and per-appendix `_files`/`_cache` folders generated on render.
 
