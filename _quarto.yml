@@ -10,7 +10,7 @@ pdf-engine: pdflatex
 
     
 execute: 
-  messages: false
+  message: false
   warning: false
   echo: true
   

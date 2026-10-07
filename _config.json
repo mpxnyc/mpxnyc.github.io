@@ -55,8 +55,8 @@
   "settings"            : {
                     "analytic_scale"        : "community",
                     "n_reps_graph"          : 1000,
-                    "person_data_file_path" : "____data/mpxnyc_person_data.R",
-                    "place_data_file_path"  : "____data/mpxnyc_place_data.R"
+                    "person_data_file_path" : "____data/mpxnyc_person_data.rds",
+                    "place_data_file_path"  : "____data/mpxnyc_place_data.rds"
                     },
   "variables"           : {
                     "censusTractHome"         : {
