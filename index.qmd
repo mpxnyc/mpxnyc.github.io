@@ -50,6 +50,7 @@ remotes::install_github("mpxnyc/mpxnyc")
 
 
 ```{r process_data}
+#| output: false
 
 targets::tar_make(reporter = "silent") # Run data pipeline
 
