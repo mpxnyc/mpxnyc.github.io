@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "To cite a statement in a particular version of the report or an appendix, cite the version DOI on Zenodo together with the appendix and its version date."
+type: software
+title: "Community and connection: A study on social connection among LGBTQ+ New Yorkers (MPX NYC report)"
+authors:
+  - family-names: Makofane
+    given-names: Keletso
+    affiliation: Ctrl+F
+    orcid: "https://orcid.org/0000-0001-8493-4238"
+license: CC-BY-NC-4.0
+url: "https://mpxresponse.org"
+repository-code: "https://github.com/mpxnyc/mpxnyc.github.io"
+date-released: 2026-11-15
+preferred-citation:
+  type: report
+  title: "Community and connection: A study on social connection among LGBTQ+ New Yorkers"
+  authors:
+    - family-names: Makofane
+      given-names: Keletso
+      orcid: "https://orcid.org/0000-0001-8493-4238"
+  institution:
+    name: Ctrl+F
+  url: "https://mpxresponse.org"
+  year: 2026

@@ -1,0 +1,24 @@
+{
+  "title": "Community and connection: A study on social connection among LGBTQ+ New Yorkers (MPX NYC report)",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "creators": [
+    {
+      "name": "Makofane, Keletso",
+      "affiliation": "Ctrl+F",
+      "orcid": "0000-0001-8493-4238"
+    }
+  ],
+  "description": "<p>Source and rendered pages of the MPX NYC report, published at <a href=\"https://mpxresponse.org\">mpxresponse.org</a>: findings of RESPND-MI, a community-led network survey during the 2022 mpox outbreak among queer and trans New Yorkers, with appendices on context, survey description, causal inference under network interference (Appendix C, SSNAC III: Causality), organizing, marketing, measurement and results.</p><p>Each archived version is a snapshot of the whole site. To cite a statement in a particular version of an appendix, cite this record's version DOI together with the appendix and its version date.</p>",
+  "license": "cc-by-nc-4.0",
+  "keywords": [
+    "mpox",
+    "network surveillance",
+    "causal inference",
+    "network interference",
+    "respondent-driven sampling",
+    "public health",
+    "New York City"
+  ],
+  "language": "eng"
+}
