@@ -1,16 +1,17 @@
 ::: {#def-npsem .theorem}
 ## Non-parametric structural equation model \[NPSEM\]
 
-A [statistical model](#def-statistical-model) characterized by a set of deterministic functions called structural equations. Each structural equation $f_V$ returns the value of a [random variable](#def-random-variable) $V$ in the model. It is a function of the other random variables as well as a random error term $U$: 
+A [statistical model](#def-statistical-model) defined relative to a [directed acyclic graph](#def-dag) $\mathcal G$ on $\mathbf V$. Each [random variable](#def-random-variable) $V$ is returned by a deterministic function $f_V$, called a structural equation, of its [parents](#def-parent) $\mathbf{Pa}(V)$ in $\mathcal G$ and an error term $U_V$, which may be vector-valued:
 
 $$
-\theta =\{f_{V}(\mathbf V_{-V}, U_V):V\in\mathbf V\}.
+V = f_V\big(\mathbf{Pa}(V), U_V\big), \qquad V \in \mathbf V.
 $$
 
-Where $\mathbf V_{-V}$ denotes the sub-vector of $\mathbf V$ that excludes $V$. By definition, no random variable is directly or indirectly a function of itself, so we can order the random variables and write each as a function of prior random variables: 
+The parameter $\theta = \big(\{f_V\}_{V\in\mathbf V},\, P_{\mathbf U}\big)$ is the set of structural equations together with the joint law of the error terms. The same equations also give the values the variables would take in hypothetical worlds in which some equations are replaced ([interventional NPSEM](#def-interventional-npsem), [causal model](#def-causal-model)). Because $\mathcal G$ is acyclic, the variables can be put in a topological order $V_1,\dots,V_m$ in which every parent precedes its children:
 
 $$
-V_{j} \;=\; f_{V_j}\!\big( V_{1},\dots,V_{j-1},\, U_{V_j} \big).
+V_{j} = f_{V_j}\big(\mathbf{Pa}(V_j),\, U_{V_j}\big), \qquad \mathbf{Pa}(V_j)\subseteq\{V_1,\dots,V_{j-1}\}.
 $$
 
+The NPSEM is *complete* if $\mathbf{Pa}(V_j) = \{V_1,\dots,V_{j-1}\}$ for every $j$. The definition places no restriction on the joint law of the error terms; such restrictions are separate assumptions.
 :::

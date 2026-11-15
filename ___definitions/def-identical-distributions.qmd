@@ -1,11 +1,9 @@
 ::: {#def-identical-distributions .theorem}
 ## Identical distributions assumption
 
-
-The assumption that [equivalent](#def-equivalence) variables have identical [structural equations](#def-npsem).
-
+[Equivalent](#def-equivalence) variables have identical structural equations and identically distributed error terms.
 
 $$
-X_i\sim X_j\Rightarrow f_{X_i}=f_{X_j}.
+X_i\sim X_j\Rightarrow f_{X_i}=f_{X_j}\ \text{ and }\ U_{X_i}\overset{d}{=}U_{X_j}.
 $$
 :::

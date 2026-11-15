@@ -3,6 +3,7 @@
 
 
 {{< include __C_causality/_vaccine_model/preface.qmd >}} 
+
 {{< include __C_causality/_vaccine_model/assumptions.qmd >}} 
 {{< include __C_causality/_vaccine_model/structural_equations.qmd >}}
 {{< include __C_causality/_vaccine_model/estimands.qmd >}}

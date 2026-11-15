@@ -1,12 +1,11 @@
 ::: {#def-separability .theorem}
 ## Separability
 
-The assumption that an [exposure mapping](#def-exposure-mapping) $g_i$ can be written:
+An [exposure mapping](#def-exposure-mapping) $g_i$ can be written as the unit's own values alongside one summary per covariate:
 
 $$
-g_i(\mathbf{X}_1,\dots,\mathbf{X}_K) 
-  = \big[ \begin{pmatrix} X_{1i} \\ \dots \\ X_{Ki} \end{pmatrix},\, g_{1i}(\mathbf{X}_1),\, \dots,\, g_{Ki}(\mathbf{X}_K)\big]^T,
+g_i(\mathbf{X}_1,\dots,\mathbf{X}_K) = \Big[ \begin{pmatrix} X_{1i} \\ \vdots \\ X_{Ki} \end{pmatrix},\, g_{1i}(\mathbf{X}_1),\, \dots,\, g_{Ki}(\mathbf{X}_K)\Big]^T,
 $$
 
-where $X_{ki} \in \mathcal O_i$ is the $i^{th}$ entry of $\mathbf V_k$ and each $g_{ti} : \{0,1\}^n \to \mathbb{R}$ is a *component function* of $g_i$. A structural equation is said to be separable if its exposure mapping is separable. 
+where $X_{ki} \in \mathscr O_i$ is the $i^{th}$ entry of $\mathbf X_k$ and each $g_{ti} : \{0,1\}^n \to \mathbb{R}$ is a component function of $g_i$. A structural equation is separable if its exposure mapping is. Separability is what lets influence from other units arrive through a few summaries rather than through all $n-1$ of their values.
 :::

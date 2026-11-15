@@ -1,11 +1,11 @@
 ::: {#def-no-interference .theorem}
-## No interference assumption 
+## No interference assumption
 
-The assumption that no variable in a given [observational unit](#def-observational-unit) is a [parent](#def-parent-child) of a [non-equivalent](#def-equivalence) variable in another unit.
-
+No variable in a given [observational unit](#def-observational-unit) is a [parent](#def-parent) of a non-[equivalent](#def-equivalence) variable in another unit.
 
 $$
-X\notin \mathbf{Pa}(Y)\quad
-\forall\, X\in \mathscr O_i,\ Y\in \mathscr O_j,\ X\not\sim Y \ i\ne j
+X\notin \mathbf{Pa}(Y)\quad \forall\, X\in \mathscr O_i,\ Y\in \mathscr O_j,\ X\not\sim Y,\ i\ne j.
 $$
+
+This assumption and [no within-covariate influence](#def-no-spillover) together are the no-interference content of the stable unit treatment value assumption (SUTVA).
 :::

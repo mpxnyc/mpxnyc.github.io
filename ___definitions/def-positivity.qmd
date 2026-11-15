@@ -1,0 +1,11 @@
+::: {#def-positivity .theorem}
+## Positivity
+
+For a static regime that sets treatment $A_i$ to $a$, every treatment level intervened on occurs in every stratum of the conditioning variables that occurs:
+
+$$
+P[A_i = a \mid L_i = l] > 0 \quad \text{for every } l \text{ with } P[L_i = l] > 0.
+$$
+
+Under network interference the event is own treatment together with network exposure, and the strata are those of the variables the identification formula conditions on. Positivity is a condition on the observed data, and can in principle be checked against it.
+:::

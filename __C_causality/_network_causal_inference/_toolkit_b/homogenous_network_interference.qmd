@@ -1,5 +1,5 @@
 ##### Homogeneous network interference
 
-The assumption of [*homogeneous network interference*](#def-homogenous-network-interference) holds that for any node in the network, the effect of a neighbor’s treatment is the same regardless of which neighbor it is, and regardless of the position of the unit in the network. In addition, network exposure mappings are restricted so that their values lie in a finite set. 
+The assumption of [*homogeneous network interference*](#def-homogeneous-network-interference) holds that for any node in the network, the effect of a neighbor’s treatment is the same regardless of which neighbor it is, and regardless of the position of the unit in the network. In addition, network exposure mappings are restricted so that their values lie in a finite set. 
 
 

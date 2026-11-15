@@ -1,9 +1,9 @@
 ::: {#def-statistical-model .theorem}
 ## Statistical model
 
-A collection of probability distributions $\mathcal M$ on a vector of [random variables](#def-random-variable) $\mathbf V$. Probability distributions in this model are characterized using a set of parameters $\mathbf \theta$.
+A collection of probability distributions $\mathcal M$ on a vector of [random variables](#def-random-variable) $\mathbf V$, indexed by a parameter $\theta$.
 
 $$
-\mathcal{M}=\{P_\theta:\theta\in\Theta\}\quad\text{on set of random variables }\mathbf V.
+\mathcal{M}=\{P_\theta:\theta\in\Theta\}\quad\text{on the random variables }\mathbf V.
 $$
 :::

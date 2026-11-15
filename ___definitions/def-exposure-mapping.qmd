@@ -1,14 +1,13 @@
 ::: {#def-exposure-mapping .theorem}
 ## Exposure mapping
 
-A function $g_i : \{0,1\}^{K \times n} \to \mathbb{R}^m$
-
-such that
+A function $g_i : \{0,1\}^{K \times n} \to \mathbb{R}^m$ that summarizes, for unit $i$, the covariates containing the parents of $Y_i$, so that the structural equation can be written
 
 $$
-Y_i = f_{Y_i}\big(g_i(\mathbf{X}_1,\dots,\mathbf{X}_K), U_{Y_i}\big).
+Y_i = f_{Y_i}\big(g_i(\mathbf{X}_1,\dots,\mathbf{X}_K), U_{Y_i}\big),
 $$
 
-where $f_{Y_i}$ is the [structural equation](#def-npsem) for $Y_i$, and vectors $\mathbf X_t$ are each an equivalence class induced by the [equivalence](#def-equivalence) relation among the parents of $Y$.
+where $f_{Y_i}$ is the structural equation for $Y_i$ in the [NPSEM](#def-npsem) and $\mathbf X_1,\dots,\mathbf X_K$ are the [covariates](#def-equivalence) that contain the parents of $Y_i$.
 
+Writing an equation this way is a change of notation, not a claim: an unrestricted $g_i$ says no more than the NPSEM does, and could be the identity. What makes exposure mappings useful are the assumptions placed on them --- [separability](#def-separability), [positional invariance](#def-positional-invariance) and [boundedness](#def-boundedness) --- which is also where graphs enter.
 :::

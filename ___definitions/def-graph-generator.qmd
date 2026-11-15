@@ -1,17 +1,11 @@
 ::: {#def-graph-generator .theorem}
 # Graph generator
 
-A graph generator gives the entries of an random graph with $n$ nodes. It is an $n \times n$ function $[f_{\psi_{ij}}]_{i,j \in \mathcal N}$ whose entries $\psi(i,j)$ are each a deterministic function of other variables in the model along with an error term.   
+A graph generator gives the entries of a random graph with $n$ nodes. It is an $n \times n$ array of structural equations $[f_{\psi_{ij}}]_{i,j \in \mathcal N}$ whose entries $\psi(i,j)$ are each a deterministic function of other variables in the model and an error term:
 
 $$
-\psi(i,j) = f_{\psi_{ij}}(\mathbf{Pa}(\psi(i,j)), U_{\psi_{ij}})
+\psi(i,j) = f_{\psi_{ij}}\big(\mathbf{Pa}(\psi(i,j)), U_{\psi_{ij}}\big).
 $$
 
-such that 
-
-$$
-U_{\psi_{ij}} = U_{\psi_{ji}} \text{ and } f_{\psi_{ij}} = f_{\psi_{ji}}
-$$
-
-
+Because a [graph](#def-graph) has $\psi(i,j)=\psi(j,i)$, the array is assumed symmetric in its indices: $U_{\psi_{ij}} = U_{\psi_{ji}}$ and $f_{\psi_{ij}} = f_{\psi_{ji}}$.
 :::

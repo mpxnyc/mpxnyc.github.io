@@ -1,8 +1,8 @@
 
 
-#### Independence 1: No spillover
+#### Independence 1: No within-covariate influence
 
-We assume no spillover: equivalent measurements on observational units are independent of each other given all prior measures. This is implied by the following DANG-like compact representation of the model.
+We assume no within-covariate influence: equivalent measurements on observational units are independent of each other given all prior measures. This is implied by the following DANG-like compact representation of the model.
 
 $$
 \begin{aligned}

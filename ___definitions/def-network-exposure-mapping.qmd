@@ -1,6 +1,5 @@
 ::: {#def-network-exposure-mapping .theorem}
 ## Network exposure mapping
 
-A [component function](#def-separability) $g_{ti}$  which is [bounded](#def-boundedness) and [positionally invariant](#def-positional-invariance) with respect to some [graph](#def-graph) $\mathscr{G}_t$. 
-
+A component function that is [bounded](#def-boundedness) and [positionally invariant](#def-positional-invariance) with respect to some [graph](#def-graph) $\mathscr{G}_t$. A name for those two assumptions together, nothing more.
 :::

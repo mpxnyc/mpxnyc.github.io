@@ -1,20 +1,10 @@
 ::: {#def-interventional-npsem .theorem}
 # Interventional NPSEM
 
-An NPSEM $\mathcal{M}$ for which a subset of structural equations $\mathbf E$ have been replaced by intervention equations in intervention regime $\Gamma$. 
-
-
-$$
-\mathcal{M}^{(\Gamma)} =  \{f_V^{(\Gamma)}: V \in \mathbf V \}
-$$
-
+The [NPSEM](#def-npsem) obtained from $\mathcal{M}$ by replacing the structural equations of the variables in $\mathbf E$ with the intervention equations of [intervention regime](#def-intervention-regime) $\Gamma$.
 
 $$
-f_V^{(\Gamma)} = \begin{cases}
-  h_V & \text{if}  & V \in \mathbf E\\
-  f_V & \text{otherwise}
-\end{cases}
+\mathcal{M}^{(\Gamma)} = \{f_V^{(\Gamma)}: V \in \mathbf V \} \qquad
+f_V^{(\Gamma)} = \begin{cases} h_V & \text{if } V \in \mathbf E\\ f_V & \text{otherwise}\end{cases}
 $$
-
-
 :::

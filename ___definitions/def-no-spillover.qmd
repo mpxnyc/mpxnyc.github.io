@@ -1,12 +1,9 @@
-
 ::: {#def-no-spillover .theorem}
-## No spillover assumption
+## No within-covariate influence assumption
 
-The assumption that no variable in a given [observational unit](#def-observational-unit) is a [parent](#def-parent-child) of an [equivalent](#def-equivalence) variable in another unit. 
-
+No variable in a given [observational unit](#def-observational-unit) is a [parent](#def-parent) of an [equivalent](#def-equivalence) variable in another unit: no element of a covariate influences another element of the same covariate.
 
 $$
-X\notin \mathbf{Pa}(X')\quad
-\forall\, X\sim X',\ X\in \mathscr O_i,\ X'\in \mathscr O_j,\ i\ne j.
+X\notin \mathbf{Pa}(X')\quad \forall\, X\sim X',\ X\in \mathscr O_i,\ X'\in \mathscr O_j,\ i\ne j.
 $$
 :::

@@ -1,8 +1,5 @@
-
-
 ::: {#def-parent .theorem}
 ## Parent
 
-A [random variable](#def-random-variable) $X$ is a parent to random variable $Y$ if $X$ appears in the [structural equation](#def-npsem) for $Y$. The set of parents for $X$ is denoted $\mathbf{Pa}(X)$.
-
+A [random variable](#def-random-variable) $X$ is a parent of random variable $Y$ if the directed acyclic graph $\mathcal G$ has an edge $X \to Y$. The set of parents of $Y$ is denoted $\mathbf{Pa}(Y)$. In an [NPSEM](#def-npsem) the parents of $Y$ are exactly the arguments of its structural equation, so the missing edges of $\mathcal G$ are what the model asserts: a variable that is not a parent of $Y$ has no direct effect on it.
 :::

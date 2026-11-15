@@ -1,12 +1,7 @@
-
 ::: {#def-boundedness .theorem}
 ## Boundedness
 
-The assumption that a component function $g_{ti}$ can only take on values from a finite set. i.e. $g_{ti}$ is bounded if there exists a finite set $\mathcal{D}$ and a constant $c$ such that for $\mathbf{X} \in \{0,1\}^n$
+A component function takes values in a finite set: there is a finite $\mathcal{D}$ such that $g_{ti}(\mathbf{X}) \in \mathcal{D}$ for all $\mathbf{X} \in \{0,1\}^n$. An exposure mapping is bounded if it is [separable](#def-separability) and all its component functions are bounded.
 
-$$
-g_{ti}(\mathbf{X}) \in \mathcal{D} \quad \text{ for }|\mathcal{D}|< c \in \mathbb{Z}.
-$$
-
-An exposure mapping is bounded if it is [separable](#def-separability) and all its component functions are bounded. 
+Boundedness is a homogeneity assumption because it is what makes exposure comparable across units: finitely many exposure levels, each occupied by many units, is what allows one function to be estimated from the whole population.
 :::

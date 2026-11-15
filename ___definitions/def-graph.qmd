@@ -1,13 +1,13 @@
 ::: {#def-graph .theorem}
 ## Graph
 
-An ordered pair $\mathscr{G} = (\mathcal{N}, \psi)$ with node set $\mathcal{N}$and adjacency function $\psi$. The adjacecy function assigns a nonnegative weight to each unordered pair of nodes $(i,j)$. 
+An ordered pair $\mathscr{G} = (\mathcal{N}, \psi)$ with node set $\mathcal{N}$ and adjacency function $\psi$. The adjacency function assigns a nonnegative weight to each unordered pair of nodes $(i,j)$.
 
 $$
-\mathscr G=(\mathcal N,\psi),\qquad
-\psi:\mathcal N\times\mathcal N\to \mathbb R_{\ge 0},\qquad
-\psi(i,j)=\psi(j,i)
+\mathscr G=(\mathcal N,\psi),\qquad \psi:\mathcal N\times\mathcal N\to \mathbb R_{\ge 0},\qquad \psi(i,j)=\psi(j,i)
 $$
 
 Nodes $i,j \in \mathcal{N}$ are connected if and only if $\psi(i,j) > 0$.
+
+The nodes of a graph are [observational units](#def-observational-unit), not random variables, and its edges carry no direction: it represents which units may influence which. The [directed acyclic graph](#def-dag) of an NPSEM is a different object, over variables.
 :::

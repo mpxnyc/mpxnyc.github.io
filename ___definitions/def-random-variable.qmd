@@ -1,7 +1,5 @@
-
 ::: {#def-random-variable .theorem}
 # Random variable
 
-A random *scalar* quantity assumed to behave according some (unknown) probability distribution.
-
+A quantity $V(\omega)$ that takes a value for each element $\omega$ of a population $\Omega$ and behaves according to some (unknown) probability distribution. Its values may be scalars, vectors or matrices.
 :::

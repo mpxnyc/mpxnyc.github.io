@@ -1,8 +1,7 @@
 ::: {#def-network-values .theorem}
-## Network values 
+## Network values
 
-The sub-vector of some $\mathbf X \in \{0,1\}^n$ that is related to nodes in the [neighborhood](#def-neighborhood) of $i$ in [graph](#def-graph) $\mathscr{G} = (\mathcal{N}, \psi)$ 
-
+The sub-vector of some $\mathbf X \in \{0,1\}^n$ whose entries belong to nodes in the [neighborhood](#def-neighborhood) of $i$ in [graph](#def-graph) $\mathscr{G} = (\mathcal{N}, \psi)$.
 
 $$
 \mathbf X_{\mathcal N_i}=\big(X_j\big)_{j\in \mathcal N_i}

@@ -1,6 +1,5 @@
-
 ::: {#def-intervention .theorem}
 ## Intervention equation
 
-An intervention equation in relation to random variable $V$ is a deterministic function $h$ with the same inputs and outputs as the [structural equation](#def-npsem) for $V$. 
+An intervention equation for random variable $V_j$ is a deterministic function $h_{V_j}$ that returns a value in the range of $V_j$ from (a sub-vector of) the variables that precede $V_j$ in the topological order of the [NPSEM](#def-npsem). It does not take the error term $U_{V_j}$ as an input. The intervention is *static* if $h_{V_j}$ is constant and *dynamic* otherwise.
 :::

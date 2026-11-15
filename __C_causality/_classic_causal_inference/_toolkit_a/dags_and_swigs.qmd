@@ -1,14 +1,14 @@
 ##### DAGs and SWIGs
 
-NPSEMs are characterized using the set of conditional indpendencies that hold among their random variables. It is possible to deduce these using the structural equations themselves —- we can check whether two variables are (conditionally) independent by checking whether both are a function of the same error term. It turns out that queries like this are much simpler to answer through a graphical representation of the NPSEM than through the NPSEM itself, however. Directed acyclic graphs allow the efficient communication of conditional independence assumptions that define NPSEMs.
+Under independence assumptions such as those of the NPSEM-IE or the FFRCISTG, an NPSEM implies a set of conditional independencies among its random variables. In principle these can be deduced from the structural equations themselves, by tracing which disturbances and which earlier variables each variable depends on. It turns out that queries like this are much simpler to answer through a graphical representation of the NPSEM than through the NPSEM itself, however. Directed acyclic graphs allow the efficient communication of conditional independence assumptions that define NPSEMs.
 
 A causal directed acyclic graph (DAG) (@fig-fully-connected-dag) is a graph whose nodes represent the variables in an NPSEM (@eq-fully-connected-dag). Directed edges point from the arguments to the result of each structural equation.
 
 {{< include ___figures/fig-fully-connected-dag.qmd >}}
 
-A single-world intervention graph (SWIG) (@fig-fully-connected-swig) is a DAG whose nodes represent the variables in the interventional data model included in a causal model (@eq-fully-connected-swig). Directed edges point from the arguments to the result of each structural equation.
+A single-world intervention graph (SWIG) (@fig-fully-connected-swig) is a DAG whose nodes represent the variables in the interventional data model included in a causal model (@eq-fully-connected-swig). Directed edges point from the arguments to the result of each structural equation. It is built from the causal DAG by splitting each intervened node in two: its natural value (for example $A_1$), which keeps the node's incoming edges, and the value set by the intervention (for example $a_1$), which keeps its outgoing edges.
 
 {{< include ___figures/fig-fully-connected-swig.qmd >}}
 
-DAGs and SWIGs are useful because they encode statistical relationships among the variables in an NPSEM through a set of graphical rules called [d-separation](#sec-d-separation). Two variables in an NPSEM are (conditionally) independent if they are (conditionally) [d-separated](#sec-d-separation) in the causal DAG representing the NPSEM.
+DAGs and SWIGs are useful because they encode statistical relationships among the variables in an NPSEM through a set of graphical rules called [d-separation](#sec-d-separation). Under an FFRCISTG, the law of the observed variables factorizes over the DAG as $p(\mathbf v) = \prod_{V \in \mathbf V} p(v \mid \mathbf{pa}_V)$, so two variables that are [d-separated](#sec-d-separation) given a set $\mathbf B$ in the DAG are conditionally independent given $\mathbf B$. The converse needs an extra assumption (faithfulness). In the SWIG, d-separation gives conditional independencies among the counterfactual variables in the same way.
 
