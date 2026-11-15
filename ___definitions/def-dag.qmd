@@ -1,0 +1,7 @@
+::: {#def-dag .theorem}
+## Directed acyclic graph
+
+A graph $\mathcal G$ whose nodes are the random variables $\mathbf V$ and whose edges are directed, written $X \to Y$, with no directed cycle: no sequence of edges leads from a variable back to itself. Acyclicity means the variables can be put in a *topological order* in which every edge points forwards. Topological orders are not unique, and they need not be chronological.
+
+A directed acyclic graph carries the causal structure among the variables of a model. It is a different object from the weighted, undirected [graph](#def-graph) used for networks; where both appear, $\mathcal G$ is the DAG and $\mathscr G$ the network.
+:::

@@ -7,3 +7,10 @@
 {{< include ___definitions/def-bipartite-npsem-ge.qmd >}}
 {{< include ___definitions/def-brnffrcistg.qmd >}}
 
+##### Supporting definitions
+
+Two definitions used throughout the appendix: the directed acyclic graph, from @def-npsem onward, and positivity, in each identification argument.
+
+{{< include ___definitions/def-dag.qmd >}}
+{{< include ___definitions/def-positivity.qmd >}}
+

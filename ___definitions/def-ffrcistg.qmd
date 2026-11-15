@@ -1,7 +1,7 @@
 ::: {#def-ffrcistg .theorem}
 ## FFRCISTG model
 
-A finest fully randomized causally interpretable structured tree graph (FFRCISTG) is a causal model defined relative to an NPSEM-IE $\mathcal M$ under intervention regime $\Gamma$. By assumption, $\mathcal M$ satisfies: (1) [no spillover](#def-no-spillover), (2) [no interference](#def-no-interference), and (3) [identical distributions](#def-identical-distributions). 
+A finest fully randomized causally interpretable structured tree graph (FFRCISTG) is a [causal model](#def-causal-model) of an [NPSEM](#def-npsem) $\mathcal M$, relative to DAG $\mathcal G$, under intervention regime $\Gamma$, in which $\mathcal M$ satisfies (1) [no within-covariate influence](#def-no-spillover), (2) [no interference](#def-no-interference), (3) [identical distributions](#def-identical-distributions), and (4) [single-world independence](#def-single-world).
 
-
+Assumption (4) is weaker than assuming the error terms mutually independent, and the difference matters only for cross-world quantities, such as natural direct effects, which the FFRCISTG does not identify.
 :::

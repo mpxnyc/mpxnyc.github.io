@@ -4,9 +4,9 @@
 
 #### Example 3: Vaccination
 
-You are a new public health officer at the Department of Health in Exampleville and are planning to conduct and assess a three-week flu vaccination campaign.   None of the townspeople have been vaccinated against flu.   There is a population of six residents in the city, and they each live in one of three neighborhoods.  In addition, residents visit their friends’ homes in other neighborhoods.
+You are a new public health officer at the Department of Health in Exampleville and are planning to conduct and assess a three-week flu vaccination campaign.   None of the townspeople have been vaccinated against flu.   There is a population of five residents in the city, and they each live in one of three neighborhoods.  In addition, residents visit their friends’ homes in other neighborhoods.
 
-At time 0, *Person 1* lives in *Neighborhood A* and visits *Neighborhood B*.  *Person 2* lives in *Neighborhood B*, but visits *Neighborhood C*.  *Person 3* lives in *Neighborhood C* and visits *Neighborhood B*.  *Persons 4* and *5* live in *Neighborhood C* and do not visit any other neighborhoods.  At the beginning of each week, before any public-health activities, each resident of Exampleville has the opportunity to change the neighborhoods they live in and visit.  
+At time 0, *Person 1* lives in *Neighborhood A* and visits *Neighborhood B*.  *Person 2* lives in *Neighborhood A*, but visits *Neighborhood C*.  *Person 3* lives in *Neighborhood C* and visits *Neighborhood B*.  *Persons 4* and *5* live in *Neighborhood C* and do not visit any other neighborhoods.  At the beginning of each week, before any public-health activities, each resident of Exampleville has the opportunity to change the neighborhoods they live in and visit.  
 
 The city of Exampleville has a structured approach to vaccination campaigns.  At the beginning of each week, each neighborhood gets a risk rating based on the prevalence of vaccination among its residents and visitors.  Based on that rating, each neighborhood decides whether to conduct a local vaccination drive.  
 

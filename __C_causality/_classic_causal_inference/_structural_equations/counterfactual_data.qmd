@@ -1,18 +1,18 @@
 #### Counterfactual data model
 
-We define counterfactual outcomes $Y_1^{(a_1)}$, $Y_2^{(a_2)}$, and $Y_3^{(a_3)}$ which represent the level of job opportunities, *Persons 1*, *2*, and *3*, would have if we set their dress to level $a_1$, $a_2$, and $a_3$, respectively. Then the model for counterfactual variables is given by @eq-independence-swig. 
+We define counterfactual outcomes $Y_1^{(a_1)}$, $Y_2^{(a_2)}$, and $Y_3^{(a_3)}$ which represent the level of job opportunities, *Persons 1*, *2*, and *3*, would have if we set their dress to level $a_1$, $a_2$, and $a_3$, respectively. Then the model for counterfactual variables is given by @eq-independence-swig.
 
-It is represented using the SWIG pictured in @fig-independence-swig. A SWIG represents a structural equation model where some of the equations are superseded by the value assigned by the experimenter. For so-called “treatment variables,” the diagram separates the value of the variable as it would have been observed with no intervention ($A_i$) from the value that as it will be used in subsequent equations ($a_i$) as a result of the experimenter's intervention. 
+It is represented using the SWIG pictured in @fig-independence-swig. A SWIG represents a structural equation model where some of the equations are superseded by the value assigned by the experimenter. For so-called “treatment variables,” the diagram separates the value of the variable as it would have been observed with no intervention ($A_i$) from the value that as it will be used in subsequent equations ($a_i$) as a result of the experimenter's intervention.
 
-Note that because of the assumption of no interference and no spillover, each counterfactual outcome is a function only of the treatment value of the same individual. 
+Note that because of the assumption of no interference and no within-covariate influence, each counterfactual outcome is a function only of the treatment value of the same individual.
 
-To ensure that counterfactual outcomes are well-defined for all experimental units, we make the assumption of positivity:
+To identify the counterfactual mean from observed data, we also assume [positivity](#def-positivity): each treatment level we intervene on occurs in every stratum of $L_i$ that occurs,
 
 $$
-0 < P[A_i = a | L_i] < 1
+P[A_i = a \mid L_i = l] > 0
 $$
 
-for $a \in \{0,1\}$
+for $a \in \{0,1\}$ and every $l$ with $P[L_i = l] > 0$. Counterfactual outcomes are defined by the model whether or not positivity holds; positivity is what lets us write their mean in terms of observed data.
 
-{{< include ___figures/fig-independence-swig.qmd >}} 
-{{< include ___equations/eq-independence-swig.qmd >}} 
+{{< include ___figures/fig-independence-swig.qmd >}}
+{{< include ___equations/eq-independence-swig.qmd >}}

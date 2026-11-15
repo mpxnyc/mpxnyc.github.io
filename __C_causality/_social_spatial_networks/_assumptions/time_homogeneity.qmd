@@ -1,6 +1,6 @@
 #### Homogeneity 5: Time homogeneity
 
-Finally, we assume that structural equations are identical across time points $s$, with the exception of the random variables defined for $s = 0$. Each of these has no parenets. 
+Finally, we assume that structural equations are identical across time points $s$, with the exception of the random variables defined for $s = 0$. Each of these has no parents. 
 
 $$
 \begin{aligned}

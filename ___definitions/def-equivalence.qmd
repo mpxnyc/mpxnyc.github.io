@@ -1,14 +1,9 @@
-
 ::: {#def-equivalence .theorem}
-## Equivalence
+## Equivalence and covariates
 
-Two [random variables](#def-random-variable) are equivalent if they belong to different [observational units](#def-observational-unit) but represent the same construct. 
+Two [random variables](#def-random-variable) are equivalent if they belong to different [observational units](#def-observational-unit) but represent the same construct. The vector of all mutually equivalent variables, such as $(Y_1,\dots,Y_n)$, is a *covariate*.
 
 $$
-X_i\sim X_j\iff \ X_i\in  \mathscr{O}_i;\ X_j\in  \mathscr{O}_j,\ X_i \text{ same construct } X_j \ (i\ne j).
+X_i\sim X_j\iff X_i\in \mathscr{O}_i,\ X_j\in \mathscr{O}_j,\ X_i \text{ and } X_j \text{ represent the same construct},\ i\ne j.
 $$
- 
- 
-
-
 :::

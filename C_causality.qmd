@@ -6,6 +6,16 @@ knitr::opts_chunk$set(cache = TRUE)
 
 # SSNAC III: Causality {#sec-causal-interpretation}
 
+::: {.callout-note collapse="true" appearance="simple"}
+## Versions of this appendix
+
+**Current version: 15 November 2026.** This revision rewords most formal definitions; puts single-world independence in place of the NPSEM-IE as Definition C.4; adds Definitions C.34 (directed acyclic graph) and C.35 (positivity); rests the identification arguments on single-world independence rather than independent errors; renames "no spillover" to "no within-covariate influence"; and adds citations, including to the earlier work in which the network methods were developed. All other definition numbers are unchanged.
+
+**Previous version: 12 September 2026.** The source and rendered page, exactly as they stood, are at commit [`7b18acd`](https://github.com/mpxnyc/mpxnyc.github.io/tree/7b18acd4cf4202934b0ec9aaffe3ee3530ca1975) ([rendered appendix](https://github.com/mpxnyc/mpxnyc.github.io/blob/7b18acd4cf4202934b0ec9aaffe3ee3530ca1975/_book/C_causality.html)).
+
+Every earlier version is kept in this site's public history on GitHub: see the history of the appendix's [sections](https://github.com/mpxnyc/mpxnyc.github.io/commits/development/__C_causality) and [definitions](https://github.com/mpxnyc/mpxnyc.github.io/commits/development/___definitions). To cite a statement from a particular version, give that version's date and link to the commit that contains it.
+:::
+
 
 {{< include __C_causality/preface.qmd >}}
 {{< include __C_causality/classic_causal_inference.qmd >}}

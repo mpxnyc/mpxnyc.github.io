@@ -8,6 +8,7 @@
 {{< include __C_causality/_network_causal_inference/assumptions.qmd >}} 
 {{< include __C_causality/_network_causal_inference/structural_equations.qmd >}} 
 {{< include __C_causality/_network_causal_inference/estimands.qmd >}} 
+
 {{< include __C_causality/_network_causal_inference/identification.qmd >}} 
 {{< include __C_causality/_network_causal_inference/notes.qmd >}} 
  

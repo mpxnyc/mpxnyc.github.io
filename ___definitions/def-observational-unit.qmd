@@ -1,10 +1,9 @@
 ::: {#def-observational-unit .theorem}
 ## Observational unit
 
-A sub-vector $\mathscr{O}_i, i \in [1,n]$ of the random variables $\mathbf V$ such that:
+A sub-vector $\mathscr{O}_i$, $i \in [1,n]$, of the random variables $\mathbf V$ such that
 
 $$
-\mathbf V = \big[ \mathscr{O}_1, ..., \mathscr{O}_n\big]^T
+\mathbf V = \big[ \mathscr{O}_1, \dots, \mathscr{O}_n\big]^T.
 $$
-
 :::

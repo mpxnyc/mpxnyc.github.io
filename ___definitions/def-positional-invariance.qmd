@@ -1,16 +1,13 @@
 ::: {#def-positional-invariance .theorem}
 ## Positional invariance
 
-The assumption that the value of [component function](#def-separability) $g_{ti}$ is invariant under a re-ordering of network values and an identical re-ordering of network weights. i.e. $g_{ti}$ is [positionally invariant](#def-positional-invariance) with respect to $\mathscr{G}_t$ if for all $\mathbf{X}, \mathbf{X}' \in \{0,1\}^n$
-
+The value of a component function is unchanged by a re-ordering of network values together with the same re-ordering of network weights. For all $\mathbf{X}, \mathbf{X}' \in \{0,1\}^n$ and every permutation matrix $\mathbf M$,
 
 $$
-\mathbf{X}_{\mathcal{N}_i} = \mathbf{M}\mathbf{X}'_{\mathcal{N}_j}, 
-\quad 
-\Psi_{i,\mathcal{N}_i} = \mathbf{M}\Psi_{j,\mathcal{N}_j}
-\Rightarrow
-g_{ti}(\mathbf{X}) = g_{tj}(\mathbf{X}').
+\mathbf{X}_{\mathcal{N}_i} = \mathbf{M}\mathbf{X}'_{\mathcal{N}_j}, \quad \Psi_{i,\mathcal{N}_i} = \mathbf{M}\Psi_{j,\mathcal{N}_j} \Rightarrow g_{ti}(\mathbf{X}) = g_{tj}(\mathbf{X}').
 $$
 
-An exposure mapping shows positional invariance with respect to graph set $\mathcal H = \{\mathscr{G}_t\}_{t \in [1:K]}$ if it is separable and all its component functions show positional invariance with respect to an element of  $\{\mathscr{G}_t\}_{t \in [1:K]}$. A structural equation is positionally invariant if its exposure mapping is positionally invariant. 
+An exposure mapping is positionally invariant with respect to a graph set $\mathcal H = \{\mathscr{G}_t\}_{t \in [1:K]}$ if it is [separable](#def-separability) and each component function is positionally invariant with respect to an element of $\mathcal H$. Two nodes in the same local configuration are summarized the same way, whoever they are and wherever they sit.
+
+This is what makes the notation of the identification formulas legitimate. Without it there are $n$ separate component functions $g_{t1},\dots,g_{tn}$, one per unit; positional invariance collapses them into a single function of the values and the node's position, so that one $g_Y(\mathbf L, \Psi_i)$ can stand for every $i$.
 :::

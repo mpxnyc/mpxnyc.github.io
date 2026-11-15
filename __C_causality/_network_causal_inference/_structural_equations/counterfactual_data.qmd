@@ -5,14 +5,14 @@ We define counterfactual outcomes $Y_1^{(a_1, \mathbf{a}_{\mathscr{N}_1})}$, $Y_
 
 Note that because of the assumption of network interference, the counterfactual outcome for *Person 1* is a function of *Person 2*'s treatment value and vice versa. The counterfactual outcome for *Person 3*, on the other hand, is a function of *Person 3*'s treatment ($a_3$) alone. This is because $\mathscr{N}_1 = \{2\}$, $\mathscr{N}_2 = \{1\}$, and $\mathscr{N}_3 = \{\}$, according to Example 2.
 
-To ensure that counterfactual outcomes are well-defined for all experimental units, we make the assumption of positivity:
+To identify counterfactual means from observed data, we also assume positivity: each combination of own treatment and network exposure we intervene on occurs in every stratum of the variables we condition on in the identification formula below,
 
 $$
-0 < P[A_i = a_i,  h_Y (\mathbf{A}, \Psi_i) =  h_Y(\mathbf{a}, \Psi_i)| L_i,g_{A}(\mathbf{L}, \Psi_i) ] < 1
+P[A_i = a_i,\ h_Y (\mathbf{A}, \Psi_i) =  h_Y(\mathbf{a}, \Psi_i) \mid L_i = l,\ g_{Y}(\mathbf{L}, \Psi_i) = g ] > 0
 $$
-for all $\mathbf{a} \in \{0,1\}^n$
+for all $\mathbf{a} \in \{0,1\}^n$ of interest and every $(l, g)$ that occurs with positive probability.
 
 
-{{< include ___figures/fig-homogenous-interference-swig.qmd >}} 
+{{< include ___figures/fig-homogenous-interference-swig.qmd >}}
 
 {{< include ___equations/eq-homogenous-interference-swig.qmd >}}

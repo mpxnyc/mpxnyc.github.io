@@ -1,4 +1,4 @@
-#### Homogeneity 1: Homogenous random network interference
+#### Homogeneity 1: Homogeneous random network interference
 
 We assume that the [exposure mapping](#def-exposure-mapping) for each variable in the structural part of the model is [separable](#def-separability) and component functions are network exposure mappings with respect to $\mathbf{\Psi}_{s}$.
 

@@ -4,7 +4,11 @@ To fully characterize the NPSEM specified above using observed data, we would ne
 
 We can simplify this system of equations by making assumptions that leave us with fewer functions to estimate and more observations per function (homogeneity assumptions), and assumptions that simplify the procedure for estimation (independence assumptions). 
 
-The finest fully randomized causally interpretrable structured tree graph (FFRCISTG) is a causal model defined by the independence assumptions of: i) no interference, and ii) no spillover, and the homogeneity assumption of iii) identical distributions.
+The finest fully randomized causally interpretable structured tree graph (FFRCISTG) is a causal model defined by the independence assumptions of: i) no interference, and ii) no within-covariate influence, and the homogeneity assumption of iii) identical distributions, together with the assumption that single-world counterfactuals are mutually independent (@def-ffrcistg). Under (i) and (ii) that independence makes the observational units independent of each other, and under (iii) they are also identically distributed. For a single unit this is Robins' FFRCISTG.
+
+**Where the names come from.** The FFRCISTG is due to Robins [-@robins1986]. Richardson and Robins [-@richardson2013] state it relative to a DAG, as the assumption that single-world counterfactuals are mutually independent: assumption (4) of @def-ffrcistg, written out in @def-single-world. Assumptions (1)–(3) are not part of Robins' definition. We add them so that observational units are independent and identically distributed, which is the setting of this chapter.
+
+The network models later in this appendix are not new kinds of model. The NFFRCISTG (@def-nffrcistg) is an FFRCISTG over the DAG whose nodes are every unit's variables, together with the interference and homogeneity assumptions listed in its definition. The RNFFRCISTG (@def-rnffrcitg) and BRNFFRCISTG (@def-brnffrcistg) relax it in one respect only: where the network is generated inside the model, single-world independence is required of the structural variables, and relational variables within a graph generator may be dependent. The prefixes N, RN and BRN are our labels for these combinations, as is the name NPSEM-GE (@def-npsem-ne). Neither is standard terminology.
 
 
 

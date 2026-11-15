@@ -1,11 +1,13 @@
 
 
 
-Because of the assumptions of *no interference* and *no spillover*, FFRCISTG models are unable to incorporate this additional information about the relationships between individuals in [Example 2](#sec-example-2).  These relationships cause what is termed *causal interference* — the treatment level of one unit affects the outcome of another unit.
+Because of the assumptions of *no interference* and *no within-covariate influence*, FFRCISTG models are unable to incorporate this additional information about the relationships between individuals in [Example 2](#sec-example-2).  These relationships cause what is termed *causal interference* — the treatment level of one unit affects the outcome of another unit.
 
 We make progress by mapping out the structure of interference using graphs and incorporate it into the model.  We introduce a statistical model called the [*Network Finest Fully Randomized Causally Interpretable Structured Tree Graph (NFFRCISTG)*](#def-nffrcistg) — an extension of the [FFRCISTG](#def-ffrcistg) model that uses graphs to encode the pattern of causal interference among a set of observational units.
 
 Below we build an [NFFRCISTG](#def-nffrcistg) model for [Example 2](#sec-example-2), illustrating the assumptions of the model.  Before that, we outline some ideas and language we will need for the illustration.
+
+The model in this section was developed in Makofane [-@makofane2021, chs. 1–3]. Chapters 2 and 3 there, and the published version of chapter 2 [@makofane2023], use auto-g-computation for identification and estimation: a network generalization of Robins' g-computation algorithm [@tchetgentchetgen2020]. The names used here (separability, positional invariance, boundedness, no within-covariate influence and the NFFRCISTG) are new to this appendix. The assumptions they name appear in that earlier work without names.
 
 
 

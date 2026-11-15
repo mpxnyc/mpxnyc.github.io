@@ -3,17 +3,17 @@
 
 
 
-D-separation is a set of rules for translating DAGs into conditional independence statements. A pair of nodes is d-separated if all the paths linking them are closed or if there is no path that links them. A pair of nodes is conditionally d-separated if all the paths linking them are closed after conditioning on some set of nodes. 
+D-separation is a set of rules for translating DAGs into conditional independence statements. A pair of nodes is d-separated if all the paths linking them are closed or if there is no path that links them. A pair of nodes is conditionally d-separated if all the paths linking them are closed after conditioning on some set of nodes.
 
-A **path** is a sequence of nodes that starts with an origin node and ends with a terminal node. Consecutive entries in the sequence are connected in the DAG. A path of length one is open by definition. A path of length two or more is open if all its triangles are open.
+A **path** is a sequence of nodes that starts with an origin node and ends with a terminal node. Consecutive entries in the sequence are connected by an edge in the DAG, pointing in either direction, and no node appears twice. A path of length one is open by definition. A path of length two or more is open if all its triangles are open.
 
 A **triangle** is a sub-sequence of a path which contains three consecutive nodes from the path. A canonical triangle is one in which we do not condition on the apex node. A conditional triangle is one in which we do condition.
 
 
 {{< include ___figures/fig-d-separation.qmd >}}
 
-A **fork** is a triangle whose apex variable has two outgoing edges. A canonical fork is open and a conditional fork is closed. The apex variable of a fork is commonly referred to as a "confounder."
+A **fork** is a triangle whose apex variable has two outgoing edges. A canonical fork is open and a conditional fork is closed. The apex of a fork is a common cause of its two neighbours; on a back-door path from treatment to outcome it is a confounder.
 
-A **spoon** is a triangle whose apex variable has two incoming edges. A canonical spoon is closed and a conditional spoon is open. The apex variable of a spoon is commonly referred to as a "collider."
+A **spoon** is a triangle whose apex variable has two incoming edges. A canonical spoon is closed and a conditional spoon is open. A spoon is also opened by conditioning on any descendant of its apex. The apex variable of a spoon is commonly referred to as a "collider."
 
-A **chopstick** is a triangle whose apex variable has one incoming edge and one outgoing edge. A canonical chopstick is open and a conditional chopstick is closed. The apex variable of a chopstick is commonly referred to as a "mediator."
+A **chopstick** is a triangle whose apex variable has one incoming edge and one outgoing edge. A canonical chopstick is open and a conditional chopstick is closed. Elsewhere a chopstick is called a chain; on a directed path from treatment to outcome its apex is a mediator.

@@ -1,7 +1,11 @@
 ::: {#def-npsem-ne .theorem}
 ## NPSEM-GE
 
-A non-parametric structural equation model with grouped errors (NPSEM-GE) is an NPSEM that includes two kinds of structural equations: those that describe the causal process as it unfolds within units (structural), and those that describe the causal process as it unfolds across units (relational). In the former type, error terms are mutually independent. In the latter, error terms are dependent within groups of equations defined as graph generators. 
+A name for an [NPSEM](#def-npsem) whose equations are of two kinds --- *structural* equations, describing the causal process within units, and *relational* equations, describing it across units, which are the equations of a [graph generator](#def-graph-generator) --- and whose error terms satisfy two conditions. First, [single-world independence](#def-single-world) holds over the structural variables, which are jointly independent of the relational error terms. Second, relational error terms may be dependent within a generator.
 
+In the bipartite model the group is one person's row of the adjacency matrix: their attachments to the $q$ places may share disturbances, while rows are independent across people.
 
+The first condition is what identification rests on. The second restricts nothing --- an NPSEM places no restriction on the joint law of its error terms to begin with --- so what it records is where dependence is allowed to remain, and therefore the unit of resampling: because dependence is confined within a row, the bootstrap resamples people, not edges.
+
+The NPSEM-GE is therefore not a kind of model of its own. It is a name for an NPSEM with graph generators and one independence condition, used so that the models below can be stated in a line.
 :::

@@ -7,17 +7,17 @@ targets::tar_source("../R_functions")
 
 In [Example 1](#sec-example-1), say *Person 1* has job status $L_1$, *Person 2* has job status $L_2$ and *Person 3* has job status $L_3$. Each of these variables can only take on two values: “employed vs. unemployed.” Similarly, define $A_i$ as *Person $i$'s* dress (formal vs. informal), and $Y_i$ as their job offers (many vs. few). The job status measurement ($L_i$) precedes dress ($A_i$) in time, and dress precedes job offers ($Y_i$).
 
-##### Independence I: No spillover
+##### Independence I: No within-covariate influence
 
 
-Under classic causal inference, we make the assumption of [no spillover](#def-no-spillover) -- that [equivalent measurements](#def-equivalence) taken across participants (e.g. $L_1$, $L_2$, and $L_3$) are independent of each other given all prior measures. i.e.:
+Under classic causal inference, we make the assumption of [no within-covariate influence](#def-no-spillover) -- that [equivalent measurements](#def-equivalence) taken across participants (e.g. $L_1$, $L_2$, and $L_3$) are independent of each other given all prior measures. i.e.:
 
 
 $$
 \begin{aligned}
 L_1 \perp L_2 \\
 L_2 \perp L_3 \\
-L_1 \perp L_3 
+L_1 \perp L_3
 \end{aligned}
 $$
 
@@ -26,7 +26,7 @@ $$
 \begin{aligned}
 A_1 \perp A_2 | L_1, L_2, L_3\\
 A_2 \perp A_3 | L_1, L_2, L_3 \\
-A_1 \perp A_3 | L_1, L_2, L_3 
+A_1 \perp A_3 | L_1, L_2, L_3
 \end{aligned}
 $$
 
@@ -35,11 +35,11 @@ $$
 \begin{aligned}
 Y_1 \perp Y_2 | L_1, L_2, L_3, A_1, A_2, A_3\\
 Y_2 \perp Y_3 | L_1, L_2, L_3, A_1, A_2, A_3 \\
-Y_1 \perp Y_3 | L_1, L_2, L_3, A_1, A_2, A_3 
+Y_1 \perp Y_3 | L_1, L_2, L_3, A_1, A_2, A_3
 \end{aligned}
 $$
 
-This is shown in @fig-no-spillover-dag as the removal of arrows that connected the $L_i$'s, $A_i$'s and $Y_i$'s. In @eq-no-spillover-dag, the $L_i$'s are not functions of each other, the $A_i$'s are not functions of each other, and the $Y_i$'s are not functions of each other. i.e. Given all the measurements taken prior to a set of contemporaneous measures, the contemporaneous measures are independent. This follows from the independence of the error terms $U_{L_i}$, the error terms $U_{A_i}$, and the error terms $U_{Y_i}$ across observations $i$.
+This is shown in @fig-no-spillover-dag as the removal of arrows that connected the $L_i$'s, $A_i$'s and $Y_i$'s. In @eq-no-spillover-dag, the $L_i$'s are not functions of each other, the $A_i$'s are not functions of each other, and the $Y_i$'s are not functions of each other. i.e. Given all the measurements taken prior to a set of contemporaneous measures, the contemporaneous measures are independent. This follows from the independence of the error terms $U_{L_i}$, the error terms $U_{A_i}$, and the error terms $U_{Y_i}$ across observations $i$ (or, more generally, from the independence assumption (4) of the FFRCISTG).
 
 {{< include ___figures/fig-no-spillover-dag.qmd >}}
 
@@ -58,7 +58,7 @@ This allows us to simplify the structural equation model so that each participan
 
 ##### Homogeneity I: Identical distributions
 
-Finally, we see above that the functions that generate observations $L_i$ are similar in structure to each other, as are the the functions that generate $A_i$'s and $Y_i$s. We make the homogeneity assumption that the functions are [identical](#def-identical-distributions) to each other. 
+Finally, we see above that the functions that generate observations $L_i$ are similar in structure to each other, as are the functions that generate $A_i$'s and $Y_i$s. We make the homogeneity assumption that the functions are [identical](#def-identical-distributions) to each other.
 
 $$
 \begin{aligned}

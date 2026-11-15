@@ -1,6 +1,5 @@
 ::: {#def-bipartite-npsem-ie .theorem}
 ## Bipartite NPSEM-GE
 
-A random bipartite graph NPSEM-GE is an NPSEM-GE which whose generators produce bipartite graphs on the same partitioning of $\mathbf V$.
-
+Every [graph generator](#def-graph-generator) in the model produces bipartite graphs on the same partition of the nodes, for example people and places. An [NPSEM-GE](#def-npsem-ne) satisfying this is a bipartite NPSEM-GE.
 :::

@@ -4,14 +4,14 @@
 
 $$
 \begin{aligned}
- E[Y_i^{(a_i, \mathbf{a}_{\mathscr{N}_i})} ] 
+ E[Y_i^{(a_i, \mathbf{a}_{\mathscr{N}_i})} ]
  &=  E[E[Y_i^{(a_i, \mathbf{a}_{\mathscr{N}_i})} | \mathbf{L}]]   \\
  &=  E[E[Y_i^{(a_i, \mathbf{a}_{\mathscr{N}_i})}                                  | L_i , g_Y(\mathbf{L}, \Psi_i)] ] \\
- &=  E[E[f_{Y}(U_{Y_i}, L_i,  a_i, g_{Y}(\textbf{L}, \Psi_i),  h_{Y}(\textbf{a}, \Psi_i))   | L_i , g_Y(\mathbf{L}, \Psi_i)] ] \\ 
+ &=  E[E[f_{Y}(U_{Y_i}, L_i,  a_i, g_{Y}(\textbf{L}, \Psi_i),  h_{Y}(\textbf{a}, \Psi_i))   | L_i , g_Y(\mathbf{L}, \Psi_i)] ] \\
  &=  E[E[f_{Y}(...)                                                               | L_i , g_Y(\mathbf{L}, \Psi_i), A_i = a_i, h_Y(\textbf{A}, \Psi_i) = h_Y(\textbf{a}, \Psi_i)]] \\
  &=  E[E[Y_i                                                                      | L_i , g_Y(\mathbf{L}, \Psi_i), A_i = a_i, h_Y(\textbf{A}, \Psi_i) = h_Y(\textbf{a}, \Psi_i)]] \\
 \end{aligned}
 $$
 
-In the first line we use the law of iterated expectations. In the second line, we use the separability of the structural equation for $Y_i^{(a_i, \mathbf{a}_{\mathscr{N}_i})}$. In the third line we replace substitute for the structural equation. In the fourth line, we use the fact that in the counterfactual model, $\mathbf{A}$ is independent of $f_{Y}(...)$ conditional on $\mathbf{L}$. In the final line we use the fact that structural equation for $Y_i^{(a_i, \mathbf{a}_{\mathscr{N}_i})}$ in the counterfactual data NPSEM-IE is identical to the structural equation for $Y_i$ in the observed data NPSEM-IE. 
+In the first line we use the law of iterated expectations. In the second line, we use the separability of the structural equation for $Y_i^{(a_i, \mathbf{a}_{\mathscr{N}_i})}$. In the third line we replace substitute for the structural equation. In the fourth line, we use the independence assumption (4) of the NFFRCISTG, which makes the single-world counterfactuals of $Y_i$ independent of $(\mathbf L, \mathbf A)$, so that $\mathbf{A}$ is independent of $f_{Y}(...)$ given $L_i$ and $g_Y(\mathbf L, \Psi_i)$; positivity ensures the conditioning event has positive probability. In the final line we use the fact that, in the causal model, the structural equation for $Y_i^{(a_i, \mathbf{a}_{\mathscr{N}_i})}$ in the interventional NPSEM is identical to the structural equation for $Y_i$ in the observed data NPSEM, with the same error term (consistency).
 
