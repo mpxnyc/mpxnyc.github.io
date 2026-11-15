@@ -1,7 +1,7 @@
 
 ###### SWINGs
 
-We introduce the Single World Intervention Network Graph (SWING) — an extension of the SWIG that allows for the representation of the counterfactual outcomes in complex causal systems.
+We introduce the Single World Intervention Network Graph (SWING) — an extension of the SWIG [@richardson2013] that allows for the representation of the counterfactual outcomes in complex causal systems.
 
 {{< include ___figures/fig-example-swig-structural.qmd >}}
 
