@@ -7,7 +7,7 @@ We make progress by mapping out the structure of interference using graphs and i
 
 Below we build an [NFFRCISTG](#def-nffrcistg) model for [Example 2](#sec-example-2), illustrating the assumptions of the model.  Before that, we outline some ideas and language we will need for the illustration.
 
-The model in this section was developed in Makofane [-@makofane2021] and applied in Makofane et al. [-@makofane2023], where identification and estimation used auto-g-computation, a network generalization of Robins' g-computation algorithm [@tchetgentchetgen2020]. The names used here (separability, positional invariance, boundedness, no within-covariate influence and the NFFRCISTG) are new to this appendix. The assumptions they name appear in that earlier work without names.
+The model in this section was developed in Makofane [-@makofane2021, chs. 1–3]. Chapters 2 and 3 there, and the published version of chapter 2 [@makofane2023], use auto-g-computation for identification and estimation: a network generalization of Robins' g-computation algorithm [@tchetgentchetgen2020]. The names used here (separability, positional invariance, boundedness, no within-covariate influence and the NFFRCISTG) are new to this appendix. The assumptions they name appear in that earlier work without names.
 
 
 
