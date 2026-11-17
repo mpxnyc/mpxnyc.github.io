@@ -9,5 +9,5 @@ $$
 
 where $\boldsymbol\Psi_{i,\mathcal N_i}$ is $\boldsymbol\Psi_i$ restricted to the neighborhood of $i$.
 
-An exposure mapping is positionally invariant with respect to a graph set $\mathcal H = \{\mathscr{G}_t\}_{t \in [1:K]}$ if it is [separable](#def-separability) and each component function is positionally invariant with respect to an element of $\mathcal H$.
+An exposure mapping is positionally invariant with respect to a graph set $\mathcal H = \{\mathscr{G}_t\}_{t \in [1:T]}$ if it is [separable](#def-separability) and each component function is positionally invariant with respect to an element of $\mathcal H$.
 :::
