@@ -4,7 +4,7 @@
 An ordered pair $\mathscr{G} = (\mathcal{N}, \psi)$ with node set $\mathcal{N}$, whose elements represent [observational units](#def-observational-unit), and adjacency function $\psi$, which represents causal relations between observational units. The adjacency function assigns a nonnegative weight to each unordered pair of observational units $i, j$.
 
 $$
-\mathscr G=(\mathcal N,\psi),\qquad \psi:\mathcal N\times\mathcal N\to \mathbb R_{\ge 0},\qquad \psi(i,j)=\psi(j,i)
+\mathscr G=(\mathcal N,\psi),\qquad \psi:\mathcal N\times\mathcal N\to \mathbb R_{\ge 0},\qquad \psi(i,j)=\psi(j,i),\qquad \psi(i,i)=0
 $$
 
 $i,j \in \mathcal{N}$ are connected if and only if $\psi(i,j) > 0$.
