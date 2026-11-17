@@ -1,11 +1,11 @@
 ::: {#def-separability .theorem}
 ## Separability
 
-An [exposure mapping](#def-exposure-mapping) $g_i$ is separable if it can be written as unit $i$'s own value of each covariate, alongside one summary per covariate:
+An [exposure mapping](#def-exposure-mapping) $g_{ik}$ is separable if it can be written as unit $i$'s own value for each covariate, alongside one summary per covariate:
 
 $$
-g_i(\mathbf{X}_1,\dots,\mathbf{X}_K) = \Big[ \underbrace{\begin{pmatrix} X_{1i} \\ \vdots \\ X_{Ki} \end{pmatrix}}_{\in\, \mathbb R^{K}},\, \underbrace{g_{1i}(\mathbf{X}_1),\, \dots,\, g_{Ki}(\mathbf{X}_K)}_{\text{each} \,\in\, \mathbb R}\Big]^T,
+g_{ik}(\mathbf{X}_1,\dots,\mathbf{X}_{k-1}) = \Big[ \underbrace{\begin{pmatrix} X_{1i} \\ \vdots \\ X_{k-1,i} \end{pmatrix}}_{\in\, \mathbb R^{k-1}},\, \underbrace{g_{1i}(\mathbf{X}_1),\, \dots,\, g_{k-1,i}(\mathbf{X}_{k-1})}_{\text{each} \,\in\, \mathbb R}\Big]^T,
 $$
 
-where $X_{ki} \in \mathscr O_i$ is unit $i$'s own entry of covariate $\mathbf X_k$, and each $g_{ti} : \{0,1\}^n \to \mathbb{R}$, called a **component function** of $g_i$, summarizes covariate $\mathbf X_t$ over the other units. A structural equation is separable if its exposure mapping is.
+where $X_{ti} \in \mathscr O_i$ is unit $i$'s own entry of covariate $\mathbf X_t$, and each $g_{ti} : \{0,1\}^n \to \mathbb{R}$, called a **component function** of $g_{ik}$, summarizes covariate $\mathbf X_t$. A structural equation is separable if its exposure mapping is.
 :::

@@ -1,7 +1,7 @@
 ::: {#def-homogenous-random-network-interference .theorem}
 # Homogeneous random network interference
 
-An exposure mapping exhibits homogeneous random network interference if it exhibits [homogeneous network interference](#def-homogeneous-network-interference) with respect to a set of [graph generators](#def-npsem-ne):
+An exposure mapping in an [RNNPSEM](#def-npsem-ne) exhibits homogeneous random network interference if it exhibits [homogeneous network interference](#def-homogeneous-network-interference) with respect to the set of [graph generators](#def-npsem-ne) included in the model:
 
 $$
 \mathcal H = \{\boldsymbol \psi : \boldsymbol \psi \subset \mathbf V \text{ is a graph generator} \}.

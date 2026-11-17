@@ -16,5 +16,5 @@ $$
 \mathbf V = \Big[\,\bigcup_{i \in \mathcal N} \mathscr{O}_i\Big] \cup \Big[\,\bigcup_{i,j \in \mathcal N,\ i \ne j} \psi(i,j)\Big].
 $$
 
-A **graph generator** is an array $\boldsymbol\psi = [\,\psi(i,j)\,]$ of relational equations, one for each unordered pair of distinct nodes, giving the entries of a random [network graph](#def-graph).
+A **graph generator** is an array $\boldsymbol\psi = [\,\psi(i,j)\,]_{i,j \in \mathcal N}$ of relational equations, one for each unordered pair of distinct nodes, giving the entries of a random [network graph](#def-graph).
 :::

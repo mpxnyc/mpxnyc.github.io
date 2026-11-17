@@ -1,10 +1,10 @@
 ::: {#def-exposure-mapping .theorem}
 ## Exposure mapping
 
-A function $g_i : \{0,1\}^{K \times n} \to \mathbb{R}^m$ that selects and transforms the parents of a variable from the matrix of [covariates](#def-covariate):
+A function $g_{ik} : \{0,1\}^{(k-1) \times n} \to \mathbb{R}^m$ that selects and transforms the parents of a variable from the matrix of [covariates](#def-covariate):
 
 $$
-X_{ki} = f_{X_{ki}}\big(g_i(\mathbf{X}_1,\dots,\mathbf{X}_{k-1}),\, U_{X_{ki}}\big) = f_{X_{ki}}\big(\mathbf{Pa}(X_{ki}),\, U_{X_{ki}}\big),
+X_{ki} = f_{X_{ki}}\big(g_{ik}(\mathbf{X}_1,\dots,\mathbf{X}_{k-1}),\, U_{X_{ki}}\big) = f_{X_{ki}}\big(\mathbf{Pa}(X_{ki}),\, U_{X_{ki}}\big),
 $$
 
 where $\mathbf X_1,\dots,\mathbf X_{k-1}$ are the covariates that precede $X_{ki}$ in [topological order](#def-dag).

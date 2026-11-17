@@ -1,7 +1,7 @@
 ::: {#def-graph .theorem}
 ## Network graph
 
-An ordered pair $\mathscr{G} = (\mathcal{N}, \psi)$ with node set $\mathcal{N}$, whose elements represent [observational units](#def-observational-unit), and adjacency function $\psi$, which represents causal relations between them. The adjacency function assigns a nonnegative weight to each unordered pair of observational units $i, j$.
+An ordered pair $\mathscr{G} = (\mathcal{N}, \psi)$ with node set $\mathcal{N}$, whose elements represent [observational units](#def-observational-unit), and adjacency function $\psi$, which represents causal relations between observational units. The adjacency function assigns a nonnegative weight to each unordered pair of observational units $i, j$.
 
 $$
 \mathscr G=(\mathcal N,\psi),\qquad \psi:\mathcal N\times\mathcal N\to \mathbb R_{\ge 0},\qquad \psi(i,j)=\psi(j,i)
@@ -9,19 +9,19 @@ $$
 
 $i,j \in \mathcal{N}$ are connected if and only if $\psi(i,j) > 0$.
 
-The **neighborhood** of a node $i \in \mathcal N$ is the set of nodes connected to it:
+The **neighborhood** of an observational unit $i \in \mathcal N$ is the set of units connected to it:
 
 $$
 \mathcal{N}_i = \{ j \in \mathcal{N} : \psi(i,j) > 0 \}.
 $$
 
-The **network weights** $\Psi_i$ are the weights node $i$ shares with every node, with $n = |\mathcal N|$:
+The **network weights** $\Psi_i$ are the weights unit $i$ shares with every unit, with $n = |\mathcal N|$:
 
 $$
 \Psi_i = [\psi(i,1), \dots, \psi(i,n)]^T.
 $$
 
-For $\mathbf X \in \{0,1\}^n$, the **network values** $\mathbf X_{\mathcal N_i}$ are the entries belonging to the neighborhood of $i$:
+For $\mathbf X \in \{0,1\}^n$, the **network values** $\mathbf X_{\mathcal N_i}$ are the entries of $\mathbf X$ belonging to the neighborhood of $i$:
 
 $$
 \mathbf X_{\mathcal N_i}=\big(X_j\big)_{j\in \mathcal N_i}.
