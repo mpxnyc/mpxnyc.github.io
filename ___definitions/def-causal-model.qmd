@@ -9,7 +9,7 @@ $$
 
 Here $U_V$ is the error term of $V$ in $\mathcal M$ and $U^{(\Gamma)}_V$ the error term of the corresponding variable in $\mathcal M^{(\Gamma)}$.
 
-$\mathcal C$ is an NPSEM describing the behaviour of $[\mathbf V, \mathbf V^{(\Gamma)}]$. The variables $\mathbf V$ associated with $\mathcal M$ are called **observational variables**; the variables $\mathbf V^{(\Gamma)}$ associated with $\mathcal M^{(\Gamma)}$ are called **counterfactual variables**, obtained by sequential substitution. For a variable $V$ whose equation $\Gamma$ replaces, its counterfactual is its **natural value**:
+The variables $\mathbf V$ associated with $\mathcal M$ are called **observational variables**; the variables $\mathbf V^{(\Gamma)}$ associated with $\mathcal M^{(\Gamma)}$ are called **counterfactual variables**, obtained by sequential substitution. For a variable $V$ whose equation $\Gamma$ replaces, its counterfactual is its **natural value**:
 
 $$
 V^{(\Gamma)} = f_V\big(\mathbf{Pa}(V)^{(\Gamma)}, U_V\big).

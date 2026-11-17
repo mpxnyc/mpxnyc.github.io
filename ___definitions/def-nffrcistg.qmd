@@ -1,5 +1,5 @@
 ::: {#def-nffrcistg .theorem}
 ## NFFRCISTG model
 
-A network finest fully randomized causally interpretable structured tree graph (NFFRCISTG) is a [causal model](#def-causal-model) $\mathcal C = (\mathcal M, \mathcal M^{(\Gamma)})$ of an [NPSEM](#def-npsem) $\mathcal M$ that satisfies (1) [no contagion](#def-no-spillover), (2) [homogeneous network interference](#def-homogeneous-network-interference) with respect to some graph set $\mathcal H$, (3) [identical structural distributions](#def-identical-distributions), and (4) [single-world independence](#def-single-world).
+A network finest fully randomized causally interpretable structured tree graph (NFFRCISTG) is a [causal model](#def-causal-model) $\mathcal C = (\mathcal M, \mathcal M^{(\Gamma)})$ of an [NPSEM](#def-npsem) $\mathcal M$, where $\mathcal M$ satisfies (1) [no contagion](#def-no-spillover), (2) [homogeneous network interference](#def-homogeneous-network-interference) with respect to some graph set $\mathcal H$, (3) [identical structural distributions](#def-identical-distributions), and (4) [single-world independence](#def-single-world).
 :::

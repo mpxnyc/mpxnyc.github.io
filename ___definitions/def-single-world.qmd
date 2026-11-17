@@ -1,7 +1,7 @@
 ::: {#def-single-world .theorem}
 ## Single-world independence
 
-For every value $\mathbf v$ of $\mathbf V$, let $\Gamma_{\mathbf v}$ be the static regime that sets every variable to its value in $\mathbf v$. The counterfactual variables of $(\mathcal M, \mathcal M^{(\Gamma_{\mathbf v})})$, obtained by sequential substitution,
+For every $\mathbf v$ in the range of $\mathbf V$, let $\Gamma_{\mathbf v}$ be the static regime that sets every variable to its value in $\mathbf v$. The counterfactual variables of $(\mathcal M, \mathcal M^{(\Gamma_{\mathbf v})})$, obtained by sequential substitution,
 
 $$
 \big\{\, V^{(\Gamma_{\mathbf v})} : V \in \mathbf V \,\big\},
