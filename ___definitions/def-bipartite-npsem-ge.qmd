@@ -7,9 +7,9 @@ $$
 \psi(i,j) > 0 \;\Rightarrow\; i \text{ and } j \text{ are in distinct classes}.
 $$
 
-For each graph generator, the [network weights](#def-graph) of a unit $i \in \mathcal P$, $\Psi_i = [\,\psi(i,j)\,]_{j \in \mathcal Q}$, are taken as a single variable belonging to its [observational unit](#def-observational-unit), so that their equation is a structural equation:
+For each graph generator, the [network weights](#def-graph) of a unit $i \in \mathcal P$ form a vector, $\boldsymbol\Psi_i = [\,\psi(i,j)\,]_{j \in \mathcal Q} \in \mathbb R^{|\mathcal Q|}$, taken as a single variable belonging to its [observational unit](#def-observational-unit), so that its equation is a structural equation:
 
 $$
-\Psi_i \in \mathscr{O}_i, \qquad \mathbf V = \bigcup_{i \in \mathcal N} \mathscr{O}_i.
+\boldsymbol\Psi_i \in \mathscr{O}_i, \qquad \mathbf V = \bigcup_{i \in \mathcal N} \mathscr{O}_i.
 $$
 :::

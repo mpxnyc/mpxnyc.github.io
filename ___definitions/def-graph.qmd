@@ -15,10 +15,10 @@ $$
 \mathcal{N}_i = \{ j \in \mathcal{N} : \psi(i,j) > 0 \}.
 $$
 
-The **network weights** $\Psi_i$ are the weights unit $i$ shares with every unit, with $n = |\mathcal N|$:
+The **network weights** $\boldsymbol\Psi_i$ are the weights unit $i$ shares with every unit, with $n = |\mathcal N|$:
 
 $$
-\Psi_i = [\psi(i,1), \dots, \psi(i,n)]^T.
+\boldsymbol\Psi_i = [\psi(i,1), \dots, \psi(i,n)]^T.
 $$
 
 For $\mathbf X \in \{0,1\}^n$, the **network values** $\mathbf X_{\mathcal N_i}$ are the entries of $\mathbf X$ belonging to the neighborhood of $i$:
