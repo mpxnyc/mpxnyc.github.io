@@ -1,11 +1,11 @@
 ::: {#def-intervention .theorem}
 ## Intervention equation
 
-A deterministic function $h_{V_j}$ that returns a value in the range of $V_j$ from the variables preceding $V_j$ in a [topological order](#def-dag) of the [NPSEM](#def-npsem):
+A deterministic function $h_{\mathbf V_j}$ that returns a value in the range of [covariate](#def-covariate) $\mathbf V_j$ from the covariates preceding $\mathbf V_j$ in a [topological order](#def-dag) of the [NPSEM](#def-npsem):
 
 $$
-h_{V_j} : \mathcal{R}(V_1) \times \dots \times \mathcal{R}(V_{j-1}) \to \mathcal{R}(V_j),
+h_{\mathbf V_j} : \mathcal{R}(\mathbf V_1) \times \dots \times \mathcal{R}(\mathbf V_{j-1}) \to \mathcal{R}(\mathbf V_j),
 $$
 
-where $\mathcal{R}(V)$ is the range of $V$. The arguments are measured variables; the error term $U_{V_j}$ is not among them.
+where $\mathcal{R}(\mathbf V)$ is the range of $\mathbf V$. The arguments are measured variables; the error terms $\mathbf U_{\mathbf V_j}$ are not among them.
 :::
