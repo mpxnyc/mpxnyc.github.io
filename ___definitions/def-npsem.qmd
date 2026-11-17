@@ -18,6 +18,4 @@ Written in a [topological order](#def-dag) of $\mathcal G$, each variable is a f
 $$
 V_{j} = f_{V_j}\big(\mathbf{Pa}(V_j),\, U_{V_j}\big), \qquad \mathbf{Pa}(V_j)\subseteq\{V_1,\dots,V_{j-1}\}.
 $$
-
-The NPSEM is *complete* if $\mathbf{Pa}(V_j) = \{V_1,\dots,V_{j-1}\}$ for every $j$.
 :::

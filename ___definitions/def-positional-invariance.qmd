@@ -1,7 +1,7 @@
 ::: {#def-positional-invariance .theorem}
 ## Positional invariance
 
-A component function $g_{ti}$ is positionally invariant with respect to [network graph](#def-graph) $\mathscr G_t$ if it (a) depends only on the network values $\mathbf X_{\mathcal N_i}$, and (b) is unchanged by a permutation of those values together with the same permutation of the network weights: for all $\mathbf{X}, \mathbf{X}' \in \{0,1\}^n$ and every permutation matrix $\mathbf M$,
+A component function $g_{ti}$ is positionally invariant with respect to [network graph](#def-graph) $\mathscr G_t$ if it (a) depends only on the network values $\mathbf X_{\mathcal N_i}$, and (b) is unchanged by a permutation of those values together with the same permutation of the network weights: for all $\mathbf{X}, \mathbf{X}' \in \mathcal R(\mathbf X_t)$ and every permutation matrix $\mathbf M$,
 
 $$
 \mathbf{X}_{\mathcal{N}_i} = \mathbf{M}\mathbf{X}'_{\mathcal{N}_j}, \quad \boldsymbol\Psi_{i,\mathcal{N}_i} = \mathbf{M}\boldsymbol\Psi_{j,\mathcal{N}_j} \Rightarrow g_{ti}(\mathbf{X}) = g_{tj}(\mathbf{X}'),

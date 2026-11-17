@@ -1,5 +1,5 @@
 ::: {#def-boundedness .theorem}
 ## Boundedness
 
-A component function is bounded if it takes values in a finite set, i.e. there is a finite $\mathcal{D}$ such that $g_{ti}(\mathbf{X}) \in \mathcal{D}$ for all $\mathbf{X} \in \{0,1\}^n$. An exposure mapping is bounded if it is [separable](#def-separability) and all its component functions are bounded.
+A component function is bounded if it takes values in a finite set, i.e. there is a finite $\mathcal{D}$ such that $g_{ti}(\mathbf{X}) \in \mathcal{D}$ for all $\mathbf{X} \in \mathcal R(\mathbf X_t)$. An exposure mapping is bounded if it is [separable](#def-separability) and all its component functions are bounded.
 :::

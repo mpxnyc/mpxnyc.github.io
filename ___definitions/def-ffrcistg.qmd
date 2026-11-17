@@ -1,5 +1,5 @@
 ::: {#def-ffrcistg .theorem}
 ## FFRCISTG model
 
-A finest fully randomized causally interpretable structured tree graph (FFRCISTG) is a [causal model](#def-causal-model) $\mathcal C = (\mathcal M, \mathcal M^{(\Gamma)})$ of an [NPSEM](#def-npsem) $\mathcal M$ that satisfies (1) [no contagion](#def-no-spillover), (2) [no interference](#def-no-interference), (3) [identical structural distributions](#def-identical-distributions), and (4) [single-world independence](#def-single-world).
+A finest fully randomized causally interpretable structured tree graph (FFRCISTG) is a [causal model](#def-causal-model) $\mathcal C$ of an [NPSEM](#def-npsem) $\mathcal M$ under all static regimes that satisfies (1) [no contagion](#def-no-spillover), (2) [no interference](#def-no-interference), (3) [identical structural distributions](#def-identical-distributions), and (4) [single-world independence](#def-single-world).
 :::

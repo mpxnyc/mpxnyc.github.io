@@ -4,8 +4,8 @@
 For every value $\mathbf v$ of $\mathbf V$, the counterfactual variables
 
 $$
-\big\{\, V^{(\mathbf{pa}_V)} \in \mathbf V^{(\Gamma)} : V \in \mathbf V \,\big\}
+\big\{\, V^{(\mathbf{pa}_V)} : V \in \mathbf V \,\big\}
 $$
 
-are mutually independent. Here $\mathbf{pa}_V$ is the sub-vector of $\mathbf v$ that gives values to the parents of $V$, and $V^{(\mathbf{pa}_V)}$ is obtained under the static regime $\Gamma$ that sets them to $\mathbf{pa}_V$.
+are mutually independent. Here $\mathbf{pa}_V$ is the sub-vector of $\mathbf v$ that gives values to the parents of $V$, and $V^{(\mathbf{pa}_V)}$ is the counterfactual of $V$ under the static regime that sets them to $\mathbf{pa}_V$.
 :::

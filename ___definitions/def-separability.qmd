@@ -7,5 +7,5 @@ $$
 g_{ik}(\mathbf{X}_1,\dots,\mathbf{X}_{k-1}) = \Big[ \underbrace{\begin{pmatrix} X_{1i} \\ \vdots \\ X_{k-1,i} \end{pmatrix}}_{\in\, \mathbb R^{k-1}},\, \underbrace{g_{1i}(\mathbf{X}_1),\, \dots,\, g_{k-1,i}(\mathbf{X}_{k-1})}_{\text{each} \,\in\, \mathbb R}\Big]^T,
 $$
 
-where $X_{ti} \in \mathscr O_i$ is unit $i$'s own entry of covariate $\mathbf X_t$, and each $g_{ti} : \{0,1\}^n \to \mathbb{R}$, called a **component function** of $g_{ik}$, summarizes covariate $\mathbf X_t$. A structural equation is separable if its exposure mapping is.
+where $X_{ti} \in \mathscr O_i$ is unit $i$'s own entry of covariate $\mathbf X_t$, and each $g_{ti} : \mathcal R(\mathbf X_t) \to \mathbb{R}$, called a **component function** of $g_{ik}$, summarizes covariate $\mathbf X_t$. A structural equation is separable if its exposure mapping is.
 :::
