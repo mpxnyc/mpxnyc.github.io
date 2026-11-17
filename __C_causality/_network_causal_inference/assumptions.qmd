@@ -1,10 +1,10 @@
 ### Assumptions
 
-##### Independence I: No within-covariate influence
+##### Independence I: No contagion
 
-In [Example 2](#sec-example-2), we make the assumption of [no within-covariate influence](#def-no-spillover) - that [equivalent measurements](#def-equivalence) (e.g. $L_1$, $L_2$, and $L_3$) are independent of each other given all prior measures.
+In [Example 2](#sec-example-2), we make the assumption of [no contagion](#def-no-spillover) - that [equivalent measurements](#def-equivalence) (e.g. $L_1$, $L_2$, and $L_3$) are independent of each other given all prior measures.
 
-This conditional independence can be checked in data. It was tested, before the assumption had a name, for physical function among family members in Agincourt [@makofane2021, ch. 2; @makofane2023] and for household mortality [@makofane2021, ch. 3]. For two of the three physical function measures the test did not reject conditional independence; for the third, effects were estimated with a coding estimator on a subset of the network in which no two individuals are connected. For household mortality there was no evidence of dependence. A test of this kind checks the conditional independence the assumption implies. It does not tell within-covariate influence apart from an unmeasured common cause of the two measures, which is how that paper reads a rejection.
+This conditional independence can be checked in data. It was tested, before the assumption had a name, for physical function among family members in Agincourt [@makofane2021, ch. 2; @makofane2023] and for household mortality [@makofane2021, ch. 3]. For two of the three physical function measures the test did not reject conditional independence; for the third, effects were estimated with a coding estimator on a subset of the network in which no two individuals are connected. For household mortality there was no evidence of dependence. A test of this kind checks the conditional independence the assumption implies. It does not tell contagion apart from an unmeasured common cause of the two measures, which is how that paper reads a rejection.
 
 This is shown in @fig-interference-dag, as the removal of arrows that connected the $L_i$'s, $A_i$'s and $Y_i$'s in @fig-fully-connected-dag. In @eq-interference-dag, the $L_i$'s are not functions of each other, the $A_i$'s are not functions of each other, and the $Y_i$'s are not functions of each other, unlike in @eq-fully-connected-dag. This implies that conditioning all the measurements taken prior to a set of contemporaneous measures, the contemporaneous measures are independent.
 
@@ -49,7 +49,7 @@ where $\Psi_i$ is the $i^{th}$ row of matrix $\Psi$.
 
 
 
-We assume that the value of a component function is [invariant to its position](#def-positional-invariance) in the network. This allows us to drop the person subscript on the network exposure mappings. 
+We assume that the value of a component function is [invariant to its position](#def-positional-invariance) in the network. This allows us to drop the person subscript on the exposure mappings. 
 
 $$
 \begin{aligned}
@@ -78,7 +78,7 @@ $$
 
 
 
-##### Homogeneity II: Identical distributions
+##### Homogeneity II: Identical structural distributions
 
 We assume that the structural equations that produce individual measures are [identical](#def-identical-distributions) across individuals. Hence, we can drop the person subscript from the structural equations. 
 

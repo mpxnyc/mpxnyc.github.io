@@ -1,14 +1,8 @@
 ##### Formal definitions
 
 {{< include ___definitions/def-graph.qmd >}}
-{{< include ___definitions/def-neighborhood.qmd >}}
-{{< include ___definitions/def-network-weights-vector.qmd >}}
-{{< include ___definitions/def-network-values.qmd >}}
-{{< include ___definitions/def-exposure-mapping.qmd >}}
 {{< include ___definitions/def-separability.qmd >}}
-{{< include ___definitions/def-loyalty.qmd >}}
 {{< include ___definitions/def-positional-invariance.qmd >}}
 {{< include ___definitions/def-boundedness.qmd >}}
-{{< include ___definitions/def-network-exposure-mapping.qmd >}}
 {{< include ___definitions/def-homogeneous-network-interference.qmd >}}
 {{< include ___definitions/def-nffrcistg.qmd >}}

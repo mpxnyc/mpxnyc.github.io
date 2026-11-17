@@ -1,11 +1,13 @@
 ::: {#def-causal-model .theorem}
 ## Causal model
 
-A causal model $\mathcal C$ of an "observational" [NPSEM](#def-npsem) $\mathcal M$ under intervention regime $\Gamma$ combines $\mathcal M$ with its [interventional NPSEM](#def-interventional-npsem) $\mathcal M^{(\Gamma)}$, constraining the error term of each variable in $\mathcal M^{(\Gamma)}$ to equal the error term of the same variable in $\mathcal M$.
+A causal model $\mathcal C$ of an [NPSEM](#def-npsem) $\mathcal M$ under intervention regime $\Gamma$ is the pair of $\mathcal M$ and its [interventional NPSEM](#def-interventional-npsem) $\mathcal M^{(\Gamma)}$, with the error terms of the two held equal:
 
 $$
-\mathcal{C} = \mathcal{M} \cup \mathcal M^{(\Gamma)} \qquad \text{for all } V \in \mathbf V, \quad U_V = U^{(\Gamma)}_V
+\mathcal{C} = \big(\mathcal{M},\ \mathcal M^{(\Gamma)}\big), \qquad U^{(\Gamma)}_V = U_V \quad \text{for all } V \in \mathbf V.
 $$
 
-The counterfactuals are the variables of $\mathcal M^{(\Gamma)}$: they are computed by recursive substitution through the same structural equations and the same error terms as the observed variables. A causal model is a structure, not yet a causal claim; what turns it into an [FFRCISTG](#def-ffrcistg) is the further assumptions that model makes.
+Here $U_V$ is the error term of $V$ in $\mathcal M$ and $U^{(\Gamma)}_V$ the error term of the corresponding variable in $\mathcal M^{(\Gamma)}$.
+
+The variables of $\mathcal M$ are called the **observational variables**. The variables of $\mathcal M^{(\Gamma)}$ are called the **counterfactual variables**, obtained by recursive substitution. A counterfactual under the static regime that sets $V$'s parents to the values $\mathbf{pa}_V$ is written $V^{(\mathbf{pa}_V)}$.
 :::

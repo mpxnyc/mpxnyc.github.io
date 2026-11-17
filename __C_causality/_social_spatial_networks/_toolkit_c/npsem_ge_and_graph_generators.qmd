@@ -1,8 +1,3 @@
-##### NPSEM-GE and graph generators
+##### Random network NPSEM and graph generators
 
-A graph generator is an array of structural equations, each modelling an edge in a random graph. The error terms included in a graph generator are not independent of each other, but are independent of error terms not included. We define a non-parametric structural equation model that includes graph generators as a non-parametric structural equation model with grouped errors (NPSEM-GE).
-
-
-     
-
-
+A random network NPSEM (RNNPSEM, @def-npsem-ne) has two kinds of equation. *Structural* equations represent constructs measured on each observational unit; *relational* equations represent the causal processes linking constructs across observational units. A graph generator is an array of relational equations, one for each pair of distinct nodes, giving the entries of a random network graph. In a general random network, nothing is assumed about how the relational error terms depend on each other: the network is a nuisance, required only to be independent of the structural variables. In a bipartite random network (@def-bipartite-npsem-ie), each person's row of the adjacency matrix, their network weights, belongs to their observational unit, so the network becomes person-level data.

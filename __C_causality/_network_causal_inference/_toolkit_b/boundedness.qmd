@@ -5,6 +5,6 @@ The assumption of **boundedness** can obtain in three different ways. It could b
 
 It might obtain via restrictions on the value of $\mathbf{X}$ itself. It might be the case, for instance, that the count of $i$'s for which $X_{ti}=1$ is very low so that on average, the count of alters for which $X_{tj} = 1, j \in N_i$ will also be low.
 
-Finally, boundedness could obtain as a result of the functional form of $g$ itself. This might happen if $g$ models a network exposure which has a ceiling effect in its dose-response curve with the outcome of interest. For example, if $X$ indicates ownership of a car, and $\mathscr{G}$ encodes close friendships, $g$ would be a network exposure mapping which tells us how each additional friend who has a car shifts the outcome of interest. For most health applications, its likely that beyond some number of friends who have a car, an additional friend who gets a car will not change the outcome.
+Finally, boundedness could obtain as a result of the functional form of $g$ itself. This might happen if $g$ models a network exposure which has a ceiling effect in its dose-response curve with the outcome of interest. For example, if $X$ indicates ownership of a car, and $\mathscr{G}$ encodes close friendships, $g$ would be a component function which tells us how each additional friend who has a car shifts the outcome of interest. For most health applications, its likely that beyond some number of friends who have a car, an additional friend who gets a car will not change the outcome.
 
 

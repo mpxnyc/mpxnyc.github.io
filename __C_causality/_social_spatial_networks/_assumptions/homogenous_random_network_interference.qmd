@@ -1,6 +1,6 @@
 #### Homogeneity 1: Homogeneous random network interference
 
-We assume that the [exposure mapping](#def-exposure-mapping) for each variable in the structural part of the model is [separable](#def-separability) and component functions are network exposure mappings with respect to $\mathbf{\Psi}_{s}$.
+We assume that the [exposure mapping](#def-exposure-mapping) for each variable in the structural part of the model is [separable](#def-separability) and its component functions are [positionally invariant](#def-positional-invariance) and [bounded](#def-boundedness) with respect to $\mathbf{\Psi}_{s}$.
 
 $$
 \begin{aligned}
@@ -25,4 +25,4 @@ g_{*}(\mathbf{V}^*, \Psi^*_2) \\
 g_{*}(\mathbf{V}^*, \Psi^*_n) \\
 \end{bmatrix}
 $$
-and $\Psi^*_k$ is the $k^{th}$ row of the adjacency matrix $\mathbf \Psi^*$. The functions $g_{*}$ are network exposure mappings.
+and $\Psi^*_k$ is the $k^{th}$ row of the adjacency matrix $\mathbf \Psi^*$. The functions $g_{*}$ are positionally invariant and bounded component functions.

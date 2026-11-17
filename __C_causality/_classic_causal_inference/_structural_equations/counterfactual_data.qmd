@@ -4,9 +4,9 @@ We define counterfactual outcomes $Y_1^{(a_1)}$, $Y_2^{(a_2)}$, and $Y_3^{(a_3)}
 
 It is represented using the SWIG pictured in @fig-independence-swig. A SWIG represents a structural equation model where some of the equations are superseded by the value assigned by the experimenter. For so-called “treatment variables,” the diagram separates the value of the variable as it would have been observed with no intervention ($A_i$) from the value that as it will be used in subsequent equations ($a_i$) as a result of the experimenter's intervention.
 
-Note that because of the assumption of no interference and no within-covariate influence, each counterfactual outcome is a function only of the treatment value of the same individual.
+Note that because of the assumption of no interference and no contagion, each counterfactual outcome is a function only of the treatment value of the same individual.
 
-To identify the counterfactual mean from observed data, we also assume [positivity](#def-positivity): each treatment level we intervene on occurs in every stratum of $L_i$ that occurs,
+To identify the counterfactual mean from observed data, we also assume positivity: each treatment level we intervene on occurs in every stratum of $L_i$ that occurs,
 
 $$
 P[A_i = a \mid L_i = l] > 0

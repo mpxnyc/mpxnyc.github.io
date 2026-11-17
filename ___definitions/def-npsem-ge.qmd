@@ -1,11 +1,20 @@
 ::: {#def-npsem-ne .theorem}
-## NPSEM-GE
+## Random network NPSEM \[RNNPSEM\]
 
-A name for an [NPSEM](#def-npsem) whose equations are of two kinds --- *structural* equations, describing the causal process within units, and *relational* equations, describing it across units, which are the equations of a [graph generator](#def-graph-generator) --- and whose error terms satisfy two conditions. First, [single-world independence](#def-single-world) holds over the structural variables, which are jointly independent of the relational error terms. Second, relational error terms may be dependent within a generator.
+An RNNPSEM is an [NPSEM](#def-npsem) whose equations are of two kinds. *Structural* equations represent constructs measured on each [observational unit](#def-observational-unit); *relational* equations represent the causal processes linking constructs across observational units. A typical equation of each kind is
 
-In the bipartite model the group is one person's row of the adjacency matrix: their attachments to the $q$ places may share disturbances, while rows are independent across people.
+$$
+\begin{aligned}
+X_{ki} &= f_{X_{ki}}\big(\mathbf{Pa}(X_{ki}),\, U_{X_{ki}}\big), & X_{ki} &\in \mathscr{O}_i,\\
+\psi(i,j) &= f_{\psi_{ij}}\big(\mathbf{Pa}(\psi(i,j)),\, U_{\psi_{ij}}\big), & i &\ne j.
+\end{aligned}
+$$
 
-The first condition is what identification rests on. The second restricts nothing --- an NPSEM places no restriction on the joint law of its error terms to begin with --- so what it records is where dependence is allowed to remain, and therefore the unit of resampling: because dependence is confined within a row, the bootstrap resamples people, not edges.
+Its random variables are the observational units together with the relational variables:
 
-The NPSEM-GE is therefore not a kind of model of its own. It is a name for an NPSEM with graph generators and one independence condition, used so that the models below can be stated in a line.
+$$
+\mathbf V = \Big[\,\bigcup_{i \in \mathcal N} \mathscr{O}_i\Big] \cup \Big[\,\bigcup_{i,j \in \mathcal N,\ i \ne j} \psi(i,j)\Big].
+$$
+
+A **graph generator** is an array $\boldsymbol\psi = [\,\psi(i,j)\,]$ of relational equations, one for each unordered pair of distinct nodes, giving the entries of a random [network graph](#def-graph).
 :::

@@ -1,5 +1,15 @@
 ::: {#def-bipartite-npsem-ie .theorem}
-## Bipartite NPSEM-GE
+## Bipartite random network NPSEM \[BRNNPSEM\]
 
-Every [graph generator](#def-graph-generator) in the model produces bipartite graphs on the same partition of the nodes, for example people and places. An [NPSEM-GE](#def-npsem-ne) satisfying this is a bipartite NPSEM-GE.
+An [RNNPSEM](#def-npsem-ne) that represents a causal system with two classes of [observational unit](#def-observational-unit), $\mathcal P$ and $\mathcal Q$, for example people and places, and edges only between classes: its structural equations fall into two groups, one for each class, and its graph generators produce bipartite graphs:
+
+$$
+\psi(i,j) > 0 \;\Rightarrow\; i \text{ and } j \text{ are in distinct classes}.
+$$
+
+For each graph generator, the [network weights](#def-graph) of a unit $i \in \mathcal P$, $\Psi_i = [\,\psi(i,j)\,]_{j \in \mathcal Q}$, are taken as a single variable belonging to its [observational unit](#def-observational-unit), so that their equation is a structural equation:
+
+$$
+\Psi_i \in \mathscr{O}_i, \qquad \mathbf V = \bigcup_{i \in \mathcal N} \mathscr{O}_i.
+$$
 :::

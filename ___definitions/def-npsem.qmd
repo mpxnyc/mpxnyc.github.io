@@ -1,17 +1,23 @@
 ::: {#def-npsem .theorem}
 ## Non-parametric structural equation model \[NPSEM\]
 
-A [statistical model](#def-statistical-model) defined relative to a [directed acyclic graph](#def-dag) $\mathcal G$ on $\mathbf V$. Each [random variable](#def-random-variable) $V$ is returned by a deterministic function $f_V$, called a structural equation, of its [parents](#def-parent) $\mathbf{Pa}(V)$ in $\mathcal G$ and an error term $U_V$, which may be vector-valued:
+A [statistical model](#def-statistical-model) defined relative to a [directed acyclic graph](#def-dag) $\mathcal G$ on $\mathbf V$. Each [random variable](#def-random-variable) $V$ is returned by a deterministic function $f_V$, called a structural equation, of its parents $\mathbf{Pa}(V)$ in $\mathcal G$ and an error term $U_V$:
 
 $$
 V = f_V\big(\mathbf{Pa}(V), U_V\big), \qquad V \in \mathbf V.
 $$
 
-The parameter $\theta = \big(\{f_V\}_{V\in\mathbf V},\, P_{\mathbf U}\big)$ is the set of structural equations together with the joint law of the error terms. The same equations also give the values the variables would take in hypothetical worlds in which some equations are replaced ([interventional NPSEM](#def-interventional-npsem), [causal model](#def-causal-model)). Because $\mathcal G$ is acyclic, the variables can be put in a topological order $V_1,\dots,V_m$ in which every parent precedes its children:
+The parameter is the set of structural equations together with $P_{\mathbf U}$, the joint law of the error terms $\mathbf U = (U_V)_{V \in \mathbf V}$:
+
+$$
+\theta = \big(\{f_V\}_{V\in\mathbf V},\, P_{\mathbf U}\big).
+$$
+
+Written in a [topological order](#def-dag) of $\mathcal G$, each variable is a function of variables that precede it:
 
 $$
 V_{j} = f_{V_j}\big(\mathbf{Pa}(V_j),\, U_{V_j}\big), \qquad \mathbf{Pa}(V_j)\subseteq\{V_1,\dots,V_{j-1}\}.
 $$
 
-The NPSEM is *complete* if $\mathbf{Pa}(V_j) = \{V_1,\dots,V_{j-1}\}$ for every $j$. The definition places no restriction on the joint law of the error terms; such restrictions are separate assumptions.
+The NPSEM is *complete* if $\mathbf{Pa}(V_j) = \{V_1,\dots,V_{j-1}\}$ for every $j$.
 :::

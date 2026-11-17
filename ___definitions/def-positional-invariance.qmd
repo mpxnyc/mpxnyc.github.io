@@ -1,13 +1,13 @@
 ::: {#def-positional-invariance .theorem}
 ## Positional invariance
 
-The value of a component function is unchanged by a re-ordering of network values together with the same re-ordering of network weights. For all $\mathbf{X}, \mathbf{X}' \in \{0,1\}^n$ and every permutation matrix $\mathbf M$,
+A component function $g_{ti}$ is positionally invariant with respect to [network graph](#def-graph) $\mathscr G_t$ if it (a) depends only on the network values $\mathbf X_{\mathcal N_i}$, and (b) is unchanged by a permutation of those values together with the same permutation of the network weights: for all $\mathbf{X}, \mathbf{X}' \in \{0,1\}^n$ and every permutation matrix $\mathbf M$,
 
 $$
-\mathbf{X}_{\mathcal{N}_i} = \mathbf{M}\mathbf{X}'_{\mathcal{N}_j}, \quad \Psi_{i,\mathcal{N}_i} = \mathbf{M}\Psi_{j,\mathcal{N}_j} \Rightarrow g_{ti}(\mathbf{X}) = g_{tj}(\mathbf{X}').
+\mathbf{X}_{\mathcal{N}_i} = \mathbf{M}\mathbf{X}'_{\mathcal{N}_j}, \quad \Psi_{i,\mathcal{N}_i} = \mathbf{M}\Psi_{j,\mathcal{N}_j} \Rightarrow g_{ti}(\mathbf{X}) = g_{tj}(\mathbf{X}'),
 $$
 
-An exposure mapping is positionally invariant with respect to a graph set $\mathcal H = \{\mathscr{G}_t\}_{t \in [1:K]}$ if it is [separable](#def-separability) and each component function is positionally invariant with respect to an element of $\mathcal H$. Two nodes in the same local configuration are summarized the same way, whoever they are and wherever they sit.
+where $\Psi_{i,\mathcal N_i}$ is $\Psi_i$ restricted to the neighborhood of $i$.
 
-This is what makes the notation of the identification formulas legitimate. Without it there are $n$ separate component functions $g_{t1},\dots,g_{tn}$, one per unit; positional invariance collapses them into a single function of the values and the node's position, so that one $g_Y(\mathbf L, \Psi_i)$ can stand for every $i$.
+An exposure mapping is positionally invariant with respect to a graph set $\mathcal H = \{\mathscr{G}_t\}_{t \in [1:K]}$ if it is [separable](#def-separability) and each component function is positionally invariant with respect to an element of $\mathcal H$.
 :::
