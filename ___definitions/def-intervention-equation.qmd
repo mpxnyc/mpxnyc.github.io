@@ -1,5 +1,11 @@
 ::: {#def-intervention .theorem}
 ## Intervention equation
 
-An intervention equation for random variable $V_j$ is a deterministic function $h_{V_j}$ that returns a value in the range of $V_j$ from (a sub-vector of) the variables that precede $V_j$ in the topological order of the [NPSEM](#def-npsem). It does not take the error term $U_{V_j}$ as an input. The intervention is *static* if $h_{V_j}$ is constant and *dynamic* otherwise.
+A deterministic function $h_{X_{ki}}$ that returns a value in the range of the random variable $X_{ki}$ from the [covariates](#def-covariate) preceding it in a [topological order](#def-dag) of the [NPSEM](#def-npsem), and from the elements of its own covariate that precede it:
+
+$$
+h_{X_{ki}} : \mathcal{R}(\mathbf X_1) \times \dots \times \mathcal{R}(\mathbf X_{k-1}) \times \mathcal{R}(\mathbf X_{k,<i}) \to \mathcal{R}(X_{ki}),
+$$
+
+where $\mathcal{R}(\cdot)$ is the range. The arguments are measured variables; the error term $U_{X_{ki}}$ is not among them.
 :::

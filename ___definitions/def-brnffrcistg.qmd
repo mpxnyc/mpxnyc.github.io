@@ -1,7 +1,5 @@
 ::: {#def-brnffrcistg .theorem}
 ## BRNFFRCISTG model
 
-A bipartite random network finest fully randomized causally interpretable structured tree graph (BRNFFRCISTG) is a causal model of a [bipartite NPSEM-GE](#def-bipartite-npsem-ie) that satisfies (1) [no within-covariate influence](#def-no-spillover), (2) [homogeneous random network interference](#def-homogenous-random-network-interference), (3) [identical distributions](#def-identical-distributions), and (4) [single-world independence](#def-single-world) over the structural variables, as in the [RNFFRCISTG](#def-rnffrcitg).
-
-Units attach to a shared set of places, so repeated attachments do the work that repeated units do under no interference, and the effects of place-level regimes --- where to vaccinate, say --- are identified given positivity. Regimes acting directly on person-to-person ties are not reached by this model.
+A bipartite random network finest fully randomized causally interpretable structured tree graph (BRNFFRCISTG) is a causal model $\mathscr C = (\mathscr M, \mathscr M^{(\Gamma)})$ of a [BRNNPSEM](#def-bipartite-npsem-ie) $\mathscr M$ that satisfies the conditions of an [RNFFRCISTG](#def-rnffrcitg), except that single-world independence takes each $\boldsymbol\Psi_i$, rather than each graph generator, as a single variable.
 :::

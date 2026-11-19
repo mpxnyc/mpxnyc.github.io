@@ -1,13 +1,29 @@
 ::: {#def-graph .theorem}
-## Graph
+## Network graph
 
-An ordered pair $\mathscr{G} = (\mathcal{N}, \psi)$ with node set $\mathcal{N}$ and adjacency function $\psi$. The adjacency function assigns a nonnegative weight to each unordered pair of nodes $(i,j)$.
+An ordered pair $\mathscr{G} = (\mathcal{N}, \psi)$ with node set $\mathcal{N}$, whose elements represent [observational units](#def-observational-unit), and adjacency function $\psi$, which represents potential mutual causal influence between observational units. The adjacency function assigns a nonnegative weight to each unordered pair of observational units $i, j$.
 
 $$
-\mathscr G=(\mathcal N,\psi),\qquad \psi:\mathcal N\times\mathcal N\to \mathbb R_{\ge 0},\qquad \psi(i,j)=\psi(j,i)
+\mathscr G=(\mathcal N,\psi),\qquad \psi:\mathcal N\times\mathcal N\to \mathbb R_{\ge 0},\qquad \psi(i,j)=\psi(j,i),\qquad \psi(i,i)=0
 $$
 
-Nodes $i,j \in \mathcal{N}$ are connected if and only if $\psi(i,j) > 0$.
+$i,j \in \mathcal{N}$ are connected if and only if $\psi(i,j) > 0$.
 
-The nodes of a graph are [observational units](#def-observational-unit), not random variables, and its edges carry no direction: it represents which units may influence which. The [directed acyclic graph](#def-dag) of an NPSEM is a different object, over variables.
+The **neighborhood** of an observational unit $i \in \mathcal N$ is the set of units connected to it:
+
+$$
+\mathcal{N}_i = \{ j \in \mathcal{N} : \psi(i,j) > 0 \}.
+$$
+
+The **network weights** $\boldsymbol\Psi_i$ are the weights unit $i$ shares with every unit, with $n = |\mathcal N|$:
+
+$$
+\boldsymbol\Psi_i = [\psi(i,1), \dots, \psi(i,n)]^T.
+$$
+
+For a covariate $\mathbf X$, the **network values** $\mathbf X_{\mathcal N_i}$ are the entries of $\mathbf X$ belonging to the neighborhood of $i$:
+
+$$
+\mathbf X_{\mathcal N_i}=\big(X_j\big)_{j\in \mathcal N_i}.
+$$
 :::

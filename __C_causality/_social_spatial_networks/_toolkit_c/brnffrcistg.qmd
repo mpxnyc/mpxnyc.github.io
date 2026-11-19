@@ -1,4 +1,3 @@
 ##### Bipartite Random Network FFRCISTG
 
-A bipartite graph is one where nodes are partitioned into two classes and edges connect only across classes. A bipartite RNFFRCISTG is an RNFFRCISTG in which all graph generators produce bipartite graphs with the same partitioning.
-
+A bipartite graph is one where nodes are partitioned into two classes and edges connect only across classes. A BRNFFRCISTG is a causal model of a bipartite random network NPSEM that satisfies the conditions of an RNFFRCISTG, except that single-world independence takes each person's network weights, their row of the adjacency matrix, rather than each graph generator, as a single variable (@def-brnffrcistg). That row belongs to the person's observational unit (@def-bipartite-npsem-ie), so no contagion, identical structural distributions and single-world independence apply to it like any other covariate.

@@ -1,7 +1,7 @@
 ::: {#def-interventional-npsem .theorem}
 # Interventional NPSEM
 
-The [NPSEM](#def-npsem) obtained from $\mathcal{M}$ by replacing the structural equations of the variables in $\mathbf E$ with the intervention equations of [intervention regime](#def-intervention-regime) $\Gamma$.
+The [NPSEM](#def-npsem) obtained from an NPSEM $\mathcal{M} = \{f_V : V \in \mathbf V\}$ by replacing the structural equations of the variables in $\mathbf E$ with the intervention equations of [intervention regime](#def-intervention-regime) $\Gamma$.
 
 $$
 \mathcal{M}^{(\Gamma)} = \{f_V^{(\Gamma)}: V \in \mathbf V \} \qquad

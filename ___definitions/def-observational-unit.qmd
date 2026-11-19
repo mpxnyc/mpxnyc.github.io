@@ -4,6 +4,6 @@
 A sub-vector $\mathscr{O}_i$, $i \in [1,n]$, of the random variables $\mathbf V$ such that
 
 $$
-\mathbf V = \big[ \mathscr{O}_1, \dots, \mathscr{O}_n\big]^T.
+\mathscr{O}_i \subset \mathbf V, \qquad \mathscr{O}_i \cap \mathscr{O}_j = \emptyset, \quad i \ne j.
 $$
 :::

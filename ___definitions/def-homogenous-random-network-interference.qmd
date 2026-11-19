@@ -1,11 +1,11 @@
 ::: {#def-homogenous-random-network-interference .theorem}
 # Homogeneous random network interference
 
-An exposure mapping exhibits homogeneous random network interference with respect to a set of [graph generators](#def-graph-generator)
+An exposure mapping in an [RNNPSEM](#def-npsem-ne) exhibits homogeneous random network interference if it exhibits [homogeneous network interference](#def-homogeneous-network-interference) with respect to the set of [graph generators](#def-npsem-ne) included in the model, for every realization of them:
 
 $$
-\mathcal H = \{\boldsymbol \psi : \boldsymbol \psi \subset \mathbf V \text{ is a graph generator} \}
+\mathcal H = \{\boldsymbol \psi : \boldsymbol \psi \subset \mathbf V \text{ is a graph generator} \}.
 $$
 
-if it is [separable](#def-separability) and all its component functions are [network exposure mappings](#def-network-exposure-mapping) with respect to $\mathcal H$. An NPSEM exhibits homogeneous random network interference if all its exposure mappings do. This is [homogeneous network interference](#def-homogeneous-network-interference) with $\mathcal H$ holding graph generators in place of fixed graphs.
+An [RNNPSEM](#def-npsem-ne) exhibits homogeneous random network interference if all the exposure mappings in its structural equations do.
 :::

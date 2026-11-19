@@ -1,16 +1,8 @@
 ##### Formal definitions
 
-{{< include ___definitions/def-graph-generator.qmd >}}
 {{< include ___definitions/def-npsem-ge.qmd >}}
 {{< include ___definitions/def-homogenous-random-network-interference.qmd >}}
 {{< include ___definitions/def-rnffrcitg.qmd >}}
 {{< include ___definitions/def-bipartite-npsem-ge.qmd >}}
 {{< include ___definitions/def-brnffrcistg.qmd >}}
-
-##### Supporting definitions
-
-Two definitions used throughout the appendix: the directed acyclic graph, from @def-npsem onward, and positivity, in each identification argument.
-
-{{< include ___definitions/def-dag.qmd >}}
-{{< include ___definitions/def-positivity.qmd >}}
-
+{{< include ___definitions/def-brnffrcistg-family.qmd >}}

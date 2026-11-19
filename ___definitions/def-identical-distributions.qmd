@@ -1,9 +1,11 @@
 ::: {#def-identical-distributions .theorem}
-## Identical distributions assumption
+## Identical structural distributions
 
 [Equivalent](#def-equivalence) variables have identical structural equations and identically distributed error terms.
 
 $$
 X_i\sim X_j\Rightarrow f_{X_i}=f_{X_j}\ \text{ and }\ U_{X_i}\overset{d}{=}U_{X_j}.
 $$
+
+Identical marginal error distributions suffice: under [single-world independence](#def-single-world), the law of each unit is the product of the laws of its one-step-ahead counterfactuals.
 :::

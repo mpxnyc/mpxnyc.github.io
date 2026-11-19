@@ -1,4 +1,4 @@
-#### Homogeneity 2: Identical distributions
+#### Homogeneity 2: Identical structural distributions
 
 We assume that all structural equations contained in the vector $\mathbf f_{*}$ are identical.
 

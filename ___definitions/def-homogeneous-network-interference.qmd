@@ -1,7 +1,5 @@
 ::: {#def-homogeneous-network-interference .theorem}
 ## Homogeneous network interference
 
-An exposure mapping is [separable](#def-separability) and all its component functions are [network exposure mappings](#def-network-exposure-mapping) with respect to a graph set $\mathcal H$. An NPSEM satisfies homogeneous network interference if all its exposure mappings do.
-
-The name is the decomposition. *Interference* arrives through separable summaries; it is *homogeneous* because those summaries treat every node alike ([positional invariance](#def-positional-invariance)) and take finitely many levels ([boundedness](#def-boundedness)). When $\mathcal H$ holds [graph generators](#def-graph-generator) rather than fixed graphs, the same assumption is called [homogeneous random network interference](#def-homogenous-random-network-interference).
+An exposure mapping exhibits homogeneous network interference with respect to a graph set $\mathcal H$ if it is [separable](#def-separability) with [positionally invariant](#def-positional-invariance) and [bounded](#def-boundedness) component functions with respect to $\mathcal H$. An NPSEM satisfies homogeneous network interference if all its exposure mappings do.
 :::

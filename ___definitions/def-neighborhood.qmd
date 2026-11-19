@@ -1,9 +1,0 @@
-::: {#def-neighborhood .theorem}
-## Neighborhood
-
-The set of nodes connected to a given node $i \in \mathcal{N}$ in [graph](#def-graph) $\mathscr{G} = (\mathcal{N}, \psi)$.
-
-$$
-\mathcal{N}_i = \{ j \in \mathcal{N} : \psi(i,j) > 0 \}.
-$$
-:::

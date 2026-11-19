@@ -1,13 +1,11 @@
 ::: {#def-exposure-mapping .theorem}
 ## Exposure mapping
 
-A function $g_i : \{0,1\}^{K \times n} \to \mathbb{R}^m$ that summarizes, for unit $i$, the covariates containing the parents of $Y_i$, so that the structural equation can be written
+A function $g_{ik} : \mathcal R(\mathbf X_1) \times \dots \times \mathcal R(\mathbf X_{k-1}) \times \mathcal R(\mathbf X_{k,<i}) \times \mathcal R(\boldsymbol\psi_1) \times \dots \times \mathcal R(\boldsymbol\psi_T) \to \mathbb{R}^m$ that selects and transforms the parents of a variable from the variables that precede it:
 
 $$
-Y_i = f_{Y_i}\big(g_i(\mathbf{X}_1,\dots,\mathbf{X}_K), U_{Y_i}\big),
+X_{ki} = f_{X_{ki}}\big(g_{ik}(\mathbf{X}_1,\dots,\mathbf{X}_{k-1}, \mathbf X_{k,<i}, \boldsymbol\psi_1, \dots, \boldsymbol\psi_T),\, U_{X_{ki}}\big) = f_{X_{ki}}\big(\mathbf{Pa}(X_{ki}),\, U_{X_{ki}}\big),
 $$
 
-where $f_{Y_i}$ is the structural equation for $Y_i$ in the [NPSEM](#def-npsem) and $\mathbf X_1,\dots,\mathbf X_K$ are the [covariates](#def-equivalence) that contain the parents of $Y_i$.
-
-Writing an equation this way is a change of notation, not a claim: an unrestricted $g_i$ says no more than the NPSEM does, and could be the identity. What makes exposure mappings useful are the assumptions placed on them --- [separability](#def-separability), [positional invariance](#def-positional-invariance) and [boundedness](#def-boundedness) --- which is also where graphs enter.
+where $\mathcal R(\cdot)$ is the range, $\mathbf X_1,\dots,\mathbf X_{k-1}$ are the [covariates](#def-covariate) that precede $X_{ki}$ in [topological order](#def-dag), $\mathbf X_{k,<i}$ the elements of its own covariate that precede it, and $\boldsymbol\psi_1, \dots, \boldsymbol\psi_T$ the [graph generators](#def-npsem-ne) that precede it. With a fixed network there are no graph generators.
 :::

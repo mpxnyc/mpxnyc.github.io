@@ -1,17 +1,11 @@
 ::: {#def-single-world .theorem}
 ## Single-world independence
 
-For every value $\mathbf v$ of $\mathbf V$, the counterfactuals
+For every $\mathbf v$ in the range of $\mathbf V$, let $\Gamma_{\mathbf v}$ be the static regime that sets every variable to its value in $\mathbf v$. The counterfactual variables of $(\mathcal M, \mathcal M^{(\Gamma_{\mathbf v})})$, obtained by sequential substitution,
 
 $$
-\big\{\, V^{(\mathbf{pa}_V)} : V \in \mathbf V \,\big\}
+\big\{\, V^{(\Gamma_{\mathbf v})} : V \in \mathbf V \,\big\},
 $$
 
-are mutually independent. Here $\mathbf{pa}_V$ is the sub-vector of $\mathbf v$ that gives values to the [parents](#def-parent) of $V$, and $V^{(\mathbf{pa}_V)}$ is the value $V$ would take if its parents were set to $\mathbf{pa}_V$.
-
-Each variable contributes exactly one counterfactual here --- the one in which its parents are held at the values $\mathbf v$ assigns them --- so the condition is about variables within a single hypothetical world, not across several.
-
-A stronger condition in common use requires the error terms themselves to be mutually independent, which says that no two variables share a cause the model leaves out. That implies single-world independence, and the converse does not hold. The two differ only for cross-world quantities, such as natural direct effects, which single-world independence alone does not identify.
-
-This is the independence condition the [FFRCISTG](#def-ffrcistg) assumes.
+are mutually independent. Each $V^{(\Gamma_{\mathbf v})}$ depends on $\mathbf v$ only through the values $\mathbf{pa}_V$ of $V$'s parents, and is written $V^{(\mathbf{pa}_V)}$.
 :::
