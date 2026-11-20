@@ -1,5 +1,0 @@
-::: {#def-brnffrcistg-family .theorem}
-## Family of BRNFFRCISTGs
-
-A sequence of [BRNFFRCISTGs](#def-brnffrcistg) $\mathscr C_p = (\mathscr M_p, \mathscr M_p^{(\Gamma)})$, $p = 1, 2, \ldots$, under the same intervention regime $\Gamma$ and on the same set of units $\mathcal Q$, in which $\mathscr M_{p+1}$ adds one unit to $\mathcal P$, and the structural equations of the units in $\mathcal P$, with the distributions of their error terms, are the same in every $\mathscr M_p$. The equations of the units in $\mathcal Q$ may change with $p$.
-:::

@@ -5,4 +5,3 @@
 {{< include ___definitions/def-rnffrcitg.qmd >}}
 {{< include ___definitions/def-bipartite-npsem-ge.qmd >}}
 {{< include ___definitions/def-brnffrcistg.qmd >}}
-{{< include ___definitions/def-brnffrcistg-family.qmd >}}
