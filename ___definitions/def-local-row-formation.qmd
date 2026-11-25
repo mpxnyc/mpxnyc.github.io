@@ -1,0 +1,11 @@
+::: {#def-local-row-formation .theorem}
+## Local row formation
+
+A [BRNNPSEM](#def-bipartite-npsem-ge) satisfies local row formation if the structural equation of each person's row $\boldsymbol\Psi_i$ depends on the rest of the system only through a bounded summary $c_i$ of the person's history and a bounded summary $r_i$ of their past rows, for example the places they attended in the previous period:
+
+$$
+\boldsymbol\Psi_i = f_{\boldsymbol\Psi}\big(c_i,\, r_i,\, U_i\big),
+$$
+
+where $(c_i, r_i)$ takes finitely many values. The histories of the places are not inputs. With [identical structural distributions](#def-identical-distributions), every person's row follows the same equation.
+:::

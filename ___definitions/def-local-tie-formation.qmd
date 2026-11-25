@@ -1,0 +1,11 @@
+::: {#def-local-tie-formation .theorem}
+## Local tie formation
+
+A bipartite [graph generator](#def-npsem-ge) satisfies local tie formation if the relational equation of each [dyad](#def-dyad) depends on the rest of the system only through a bounded summary $c_i$ of the person's history, a bounded summary $c_j$ of the place's history, and a bounded summary $s_{ij}$ of the dyad's past, for example whether the person attended the place in the previous period:
+
+$$
+D_{ij} = f_{\boldsymbol\psi}\big(c_i,\, c_j,\, s_{ij},\, U_{ij}\big),
+$$
+
+where $(c_i, c_j, s_{ij})$ takes finitely many values.
+:::

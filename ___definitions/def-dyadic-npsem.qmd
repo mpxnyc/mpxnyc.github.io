@@ -1,0 +1,5 @@
+::: {#def-dyadic-npsem .theorem}
+## Dyadic bipartite random network NPSEM \[DBRNNPSEM\]
+
+A [BRNNPSEM](#def-bipartite-npsem-ge) whose graph generators satisfy [local tie formation](#def-local-tie-formation) and have [identical relational distributions](#def-identical-relational-distributions). Each relational equation is then the equation of a person–place [dyad](#def-dyad), with finitely many inputs and the same form for every dyad.
+:::

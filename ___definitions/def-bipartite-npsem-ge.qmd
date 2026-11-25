@@ -1,13 +1,13 @@
 ::: {#def-bipartite-npsem-ie .theorem}
 ## Bipartite random network NPSEM \[BRNNPSEM\]
 
-An [RNNPSEM](#def-npsem-ne) that represents a causal system with two classes of [observational unit](#def-observational-unit), $\mathcal P$ and $\mathcal Q$, for example people and places, and edges only between classes: its structural equations fall into two groups, one for each class, and its graph generators produce bipartite graphs:
+An [RNNPSEM](#def-npsem-ne) that represents a causal system with two classes of [observational unit](#def-observational-unit), $\mathcal P$ and $\mathcal Q$, for example people and places, and edges only between classes: its structural equations fall into two groups, one for each class, and its graph generators produce bipartite graphs, in which a tie between a unit of $\mathcal P$ and a unit of $\mathcal Q$ runs both ways with the same weight:
 
 $$
-\psi(i,j) > 0 \;\Rightarrow\; i \text{ and } j \text{ are in distinct classes}.
+\psi(i,j) > 0 \;\Rightarrow\; i \text{ and } j \text{ are in distinct classes}, \qquad \psi(i,j) = \psi(j,i) \ \text{ for } i \in \mathcal P,\ j \in \mathcal Q.
 $$
 
-For each graph generator, the [network weights](#def-graph) of a unit $i \in \mathcal P$ form a vector, $\boldsymbol\Psi_i = [\,\psi(i,j)\,]_{j \in \mathcal Q} \in \mathbb R^{|\mathcal Q|}$, taken as a single variable belonging to its [observational unit](#def-observational-unit), so that its equation is a structural equation of unit $i$: the relational equations of the BRNNPSEM become structural equations of the units in $\mathcal P$.
+The adjacency matrix is therefore determined by the rows of the units in $\mathcal P$. For each graph generator, the [network weights](#def-graph) of a unit $i \in \mathcal P$ form a vector, $\boldsymbol\Psi_i = [\,\psi(i,j)\,]_{j \in \mathcal Q} \in \mathbb R^{|\mathcal Q|}$, taken as a single variable belonging to its [observational unit](#def-observational-unit), so that its equation is a structural equation of unit $i$: the relational equations of the BRNNPSEM become structural equations of the units in $\mathcal P$.
 
 $$
 \boldsymbol\Psi_i \in \mathscr{O}_i, \qquad \mathbf V = \bigcup_{i \in \mathcal N} \mathscr{O}_i.

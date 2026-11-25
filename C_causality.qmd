@@ -10,7 +10,9 @@ knitr::opts_chunk$set(cache = TRUE)
 ## Versions of this appendix
 
 
-**Current version: 20 November 2026.** This revision removes the family of BRNFFRCISTGs (formerly C.29). The remarks on the bipartite model now reach sampling through the conditional laws shared by all units rather than through a family of models. Definitions C.1–C.28 are unchanged.
+**Current version: 24 November 2026.** This revision makes network graphs directed: $\psi(i,j)$ is the weight of $j$'s influence on $i$, the neighborhood is the units that influence $i$, and graph generators have one relational variable for each ordered pair (C.18, C.24); in the bipartite NPSEM, ties between people and places are symmetric, so the rows of the people determine the network (C.27). It adds Definitions C.29–C.34, local row formation and the dyadic bipartite random network model (DBRNFFRCISTG), and a new section, [Nonparametric identification and estimation](#sec-identification-estimation), which identifies the mean of an outcome over a set of units by a g-formula under the RNFFRCISTG, the BRNFFRCISTG and the DBRNFFRCISTG and discusses estimation under each. Definitions C.1–C.28 are otherwise unchanged.
+
+**Previous version: 20 November 2026.** This revision removes the family of BRNFFRCISTGs (formerly C.29). The remarks on the bipartite model now reach sampling through the conditional laws shared by all units rather than through a family of models. Definitions C.1–C.28 are unchanged.
 
 **Previous version: 18 November 2026.** This revision numbers the formal definitions C.1–C.29 in a single sequence that follows the order of the argument, the numbering used in the accompanying seminar materials; the table below maps the previous numbers to the new ones. It folds neighborhood, network weights and network values into the network graph (C.18); deletes loyalty, which positional invariance implies, the network exposure mapping, folded into homogeneous network interference, and positivity, which is a condition for identification rather than part of the framework; adds the covariate (C.7); renames "no within-covariate influence" to "no contagion", "identical distributions" to "identical structural distributions", the NPSEM-GE to the random network NPSEM (C.24) and the bipartite NPSEM-GE to the bipartite random network NPSEM (C.27). The graph generator is now defined inside C.24. In the bipartite case each person's network weights, their row of the adjacency matrix, belong to their observational unit, and the BRNFFRCISTG (C.28) takes each such row, rather than each graph generator, as a single variable under single-world independence. A new definition, the family of BRNFFRCISTGs (C.29), supports the discussion of sampling, and the remarks on the bipartite model now say that bipartiteness mitigates, but does not eliminate, the measurement error that sampling induces in network values. The RNFFRCISTG (C.26) assumes single-world independence with each graph generator taken as a single variable. Single-world independence (C.13) is checked in the causal model under the regime that sets every variable, by sequential substitution, which gives Robins's one-step-ahead counterfactuals. DOI for this version: [10.5281/zenodo.24360184](https://doi.org/10.5281/zenodo.24360184).
 
@@ -48,6 +50,7 @@ Every earlier version is kept in this site's public history on GitHub: see the h
 
 {{< include __C_causality/network_causal_inference.qmd >}}
 {{< include __C_causality/social_spatial_networks.qmd >}}
+{{< include __C_causality/identification_estimation.qmd >}}
 {{< include __C_causality/vaccine_model.qmd >}}
 {{< include __C_causality/acknowledgements.qmd >}}
 
