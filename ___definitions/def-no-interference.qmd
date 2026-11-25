@@ -6,6 +6,4 @@ No variable in a given [observational unit](#def-observational-unit) is a parent
 $$
 X\notin \mathbf{Pa}(Y)\quad \forall\, X\in \mathscr O_i,\ Y\in \mathscr O_j,\ X\not\sim Y,\ i\ne j.
 $$
-
-Equivalently, a variable's counterfactual does not depend on the values an intervention sets on non-equivalent variables in other units.
 :::

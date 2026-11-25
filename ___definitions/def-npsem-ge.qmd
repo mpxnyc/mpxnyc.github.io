@@ -16,5 +16,16 @@ $$
 \mathbf V = \Big[\,\bigcup_{i \in \mathcal N} \mathscr{O}_i\Big] \cup \Big[\,\bigcup_{i,j \in \mathcal N,\ i \ne j} \psi(i,j)\Big].
 $$
 
-A **graph generator** is an array $\boldsymbol\psi = [\,\psi(i,j)\,]_{i,j \in \mathcal N}$ of relational variables, one for each ordered pair of distinct nodes, giving the entries of a random [network graph](#def-graph). When there are several, for example over time, they are written $\boldsymbol\psi_1, \dots, \boldsymbol\psi_T$.
+A **graph generator** is the matrix of relational variables, one for each ordered pair of distinct nodes, that gives the entries of a random [network graph](#def-graph):
+
+$$
+\boldsymbol\psi = \begin{bmatrix}
+0 & \psi(1,2) & \cdots & \psi(1,n)\\
+\psi(2,1) & 0 & \cdots & \psi(2,n)\\
+\vdots & \vdots & \ddots & \vdots\\
+\psi(n,1) & \psi(n,2) & \cdots & 0
+\end{bmatrix}.
+$$
+
+Its $i$th row is the vector of [network weights](#def-graph) $\boldsymbol\Psi_i$ of unit $i$. When there are several, for example over time, they are written $\boldsymbol\psi_1, \dots, \boldsymbol\psi_T$.
 :::

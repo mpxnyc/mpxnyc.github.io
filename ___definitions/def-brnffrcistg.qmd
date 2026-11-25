@@ -1,5 +1,5 @@
 ::: {#def-brnffrcistg .theorem}
 ## BRNFFRCISTG model
 
-A bipartite random network finest fully randomized causally interpretable structured tree graph (BRNFFRCISTG) is a causal model $\mathscr C = (\mathscr M, \mathscr M^{(\Gamma)})$ of a [BRNNPSEM](#def-bipartite-npsem-ie) $\mathscr M$ that satisfies the conditions of an [RNFFRCISTG](#def-rnffrcitg), except that single-world independence takes each $\boldsymbol\Psi_i$, rather than each graph generator, as a single variable.
+A bipartite random network finest fully randomized causally interpretable structured tree graph (BRNFFRCISTG) is a causal model $\mathcal C = (\mathcal M, \mathcal M^{(\Gamma)})$ of a [BRNNPSEM](#def-bipartite-npsem-ie) $\mathcal M$ that satisfies the conditions of an [RNFFRCISTG](#def-rnffrcitg), except that single-world independence takes each $\boldsymbol\Psi_i$, rather than each graph generator, as a single variable.
 :::
