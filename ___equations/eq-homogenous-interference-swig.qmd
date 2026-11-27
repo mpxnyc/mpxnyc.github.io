@@ -3,6 +3,6 @@ $$
 \begin{aligned}
 L_i &= f_{L}(  U_{L_i}  ) \\
 A_i &= f_{A}( U_{A_i}, L_i, g_{A}(\textbf{L}, \Psi_i) ) \\
-Y_i^{(a_i,\textbf{a}_{\mathscr{N}_i} )} &= f_{Y}(U_{Y_i}, L_i,  a_i,  g_{Y}(\textbf{L}, \Psi_i),      h_{Y}(\textbf{a}, \Psi_i)         ) \\
+Y_i^{(a_i,\textbf{a}_{\mathcal{N}_i} )} &= f_{Y}(U_{Y_i}, L_i,  a_i,  g_{Y}(\textbf{L}, \Psi_i),      h_{Y}(\textbf{a}, \Psi_i)         ) \\
 \end{aligned} 
 $$ {#eq-homogenous-interference-swig}

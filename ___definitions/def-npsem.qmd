@@ -13,7 +13,7 @@ $$
 \theta=\big(\{f_V\}_{V\in\mathbf{V}},\,P_\mathbf{U}\big).
 $$
 
-The NPSEM itself places no restriction on $P_\mathbf{U}$; in particular, the error terms need not be independent. The models of sections 2–6 restrict them only through single-world independence (C.13).
+The NPSEM itself places no restriction on $P_\mathbf{U}$; in particular, the error terms need not be independent. The models of this appendix (C.17, C.23, C.26, C.28 and C.34) restrict them only through single-world independence (C.13).
 
 Written in a topological order of $\mathcal{G}$, each variable is a function of variables that precede it:
 

@@ -7,14 +7,14 @@ According to the model specified by structural equations [-@eq-edge-intervention
 {{< include ___figures/fig-edge-intervention-swing.qmd >}}
 
 
-Define $\psi(i, j)$ as an adjacency function - an indicator function that equals to $1$ if Person $i$ lives in or visits neighborhood $j$ and $0$ otherwise. Let $\mathscr{N}_P$ be the indices of all person nodes and $\mathscr{N}_N$ be a set of indices for neighborhood nodes. Under the contact-neutralizing approach:
+Define $\psi(i, j)$ as an adjacency function - an indicator function that equals to $1$ if Person $i$ lives in or visits neighborhood $j$ and $0$ otherwise. Let $\mathcal{N}_P$ be the indices of all person nodes and $\mathcal{N}_N$ be a set of indices for neighborhood nodes. Under the contact-neutralizing approach:
 
 $$
-h_{sj}(\mathbf{V}_{s-1}) = \sum_{ i \in \mathscr{N}_P} (1 -V_{(s-1), i}) \times \psi(i, j)   
+h_{sj}(\mathbf{V}_{s-1}) = \sum_{ i \in \mathcal{N}_P} (1 -V_{(s-1), i}) \times \psi(i, j)   
 $$
 
 and under the movement-neutralizing approach:
 
 $$
-h_{sj}(\mathbf{V}_{s-1}) =   \sum_{ i \in \mathscr{N}_P} (1 -V_{(s-1), i}) \times \psi(i, j) \sum_{ k \in \mathscr{N}_N} \psi(i, k) 
+h_{sj}(\mathbf{V}_{s-1}) =   \sum_{ i \in \mathcal{N}_P} (1 -V_{(s-1), i}) \times \psi(i, j) \sum_{ k \in \mathcal{N}_N} \psi(i, k) 
 $$

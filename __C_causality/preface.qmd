@@ -64,6 +64,6 @@ We re-frame the task of statistical inference from that of learning from a growi
 
 We avail ourselves of asymptotic theory by making the assumption of **no contagion** between observational units—a weaker version of the independence assumption. These assumptions allow our estimates to benefit from having more observational units, even if they collectively contribute to one realization of the statistical model.
 
-In the sections that follow, we describe classic causal inference, social network analysis with causal interpretation, and the SSNAC framework, each time discussing their assumptions, causal model, and causal estimands and illustrating a causal identification strategy. Finally, we describe the main analysis of the report, which applies the SSNAC framework to RESPND-MI data.
+In the sections that follow, we describe classic causal inference, social network analysis with causal interpretation, and the SSNAC framework, each time discussing their assumptions, causal model, and causal estimands and illustrating a causal identification strategy. We then state, for the random network models, the g-formulas that identify the mean of an outcome under an intervention, and discuss their nonparametric estimation (@sec-identification-estimation). Finally, we describe the main analysis of the report, which applies the SSNAC framework to RESPND-MI data.
 
 

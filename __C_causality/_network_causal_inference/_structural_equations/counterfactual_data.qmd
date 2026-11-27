@@ -1,9 +1,9 @@
 #### Counterfactual data model
 
 
-We define counterfactual outcomes $Y_1^{(a_1, \mathbf{a}_{\mathscr{N}_1})}$, $Y_2^{(a_2, \mathbf{a}_{\mathscr{N}_2})}$, and $Y_3^{(a_3, \mathbf{a}_{\mathscr{N}_3})}$, which represent the level of job opportunities, *Persons 1*, *2*, and *3*, would have if we set their dress to level $a_1$, $a_2$, and $a_3$, respectively. Then the model for counterfactual variable is given by @eq-homogenous-interference-swig. It is represented using a SWIG in @fig-homogenous-interference-swig.
+We define counterfactual outcomes $Y_1^{(a_1, \mathbf{a}_{\mathcal{N}_1})}$, $Y_2^{(a_2, \mathbf{a}_{\mathcal{N}_2})}$, and $Y_3^{(a_3, \mathbf{a}_{\mathcal{N}_3})}$, which represent the level of job opportunities, *Persons 1*, *2*, and *3*, would have if we set their dress to level $a_1$, $a_2$, and $a_3$, respectively. Then the model for counterfactual variable is given by @eq-homogenous-interference-swig. It is represented using a SWIG in @fig-homogenous-interference-swig.
 
-Note that because of the assumption of network interference, the counterfactual outcome for *Person 1* is a function of *Person 2*'s treatment value and vice versa. The counterfactual outcome for *Person 3*, on the other hand, is a function of *Person 3*'s treatment ($a_3$) alone. This is because $\mathscr{N}_1 = \{2\}$, $\mathscr{N}_2 = \{1\}$, and $\mathscr{N}_3 = \{\}$, according to Example 2.
+Note that because of the assumption of network interference, the counterfactual outcome for *Person 1* is a function of *Person 2*'s treatment value and vice versa. The counterfactual outcome for *Person 3*, on the other hand, is a function of *Person 3*'s treatment ($a_3$) alone. This is because $\mathcal{N}_1 = \{2\}$, $\mathcal{N}_2 = \{1\}$, and $\mathcal{N}_3 = \{\}$, according to Example 2.
 
 To identify counterfactual means from observed data, we also assume positivity: each combination of own treatment and network exposure we intervene on occurs in every stratum of the variables we condition on in the identification formula below,
 

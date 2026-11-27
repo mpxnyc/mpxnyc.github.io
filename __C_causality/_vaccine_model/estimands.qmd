@@ -5,7 +5,7 @@
 Intervention coverage for the $s^{th}$ community district to be immunized, is defined:
 
 $$
-C_s^{(h)} = \frac{1}{|\mathscr{N}_p|}\sum_i V_{si}^{(h)} 
+C_s^{(h)} = \frac{1}{|\mathcal{N}_p|}\sum_i V_{si}^{(h)} 
 $$
 
 The cumulative intervention coverage after immunizing $s$ community districts is therefore:

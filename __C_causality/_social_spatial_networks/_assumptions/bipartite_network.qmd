@@ -1,6 +1,6 @@
 #### Homogeneity 3: Bipartite network
 
-We assume that $\mathbf{\Psi}_{s}$ is bipartite. This means that we can represent it as a $p \times q$ matrix. We can also represent place attributes using vectors of length $q$, and person attributes using vectors of length $p$.
+We assume that $\mathbf{\Psi}_{s}$ is bipartite (@def-bipartite-npsem-ie): ties join people to places only, and a tie between a person and a place runs both ways with the same weight. The people's rows therefore determine the network, and we can represent it as a $p \times q$ matrix. We can also represent place attributes using vectors of length $q$, and person attributes using vectors of length $p$.
 
 $$
 \begin{aligned}

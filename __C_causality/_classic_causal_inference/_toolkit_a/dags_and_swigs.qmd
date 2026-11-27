@@ -1,6 +1,6 @@
 ##### DAGs and SWIGs
 
-Under independence assumptions such as those of the NPSEM-IE or the FFRCISTG, an NPSEM implies a set of conditional independencies among its random variables. In principle these can be deduced from the structural equations themselves, by tracing which disturbances and which earlier variables each variable depends on. It turns out that queries like this are much simpler to answer through a graphical representation of the NPSEM than through the NPSEM itself, however. Directed acyclic graphs allow the efficient communication of conditional independence assumptions that define NPSEMs.
+Under an independence assumption such as single-world independence (@def-single-world), which the FFRCISTG makes, an NPSEM implies a set of conditional independencies among its random variables. In principle these can be deduced from the structural equations themselves, by tracing which disturbances and which earlier variables each variable depends on. It turns out that queries like this are much simpler to answer through a graphical representation of the NPSEM than through the NPSEM itself, however. Directed acyclic graphs allow the efficient communication of conditional independence assumptions that define NPSEMs.
 
 A causal directed acyclic graph (DAG) (@fig-fully-connected-dag) is a graph whose nodes represent the variables in an NPSEM (@eq-fully-connected-dag). Directed edges point from the arguments to the result of each structural equation.
 

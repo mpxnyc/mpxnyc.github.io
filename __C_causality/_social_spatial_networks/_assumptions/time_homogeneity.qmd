@@ -14,7 +14,7 @@ $$
 &   V_{0i}                  & &=     f_{ V_0}( U_{ V_{0i}})  \\
 &   M_{si}                  & &=     f_{ M} ( U_{ M_{si}} ,  V_{s-1,i},    M_{s-1, i},  g_{TM}(\mathbf{T}_{s}, {\Psi}_{si}))       \\
 &   V_{si}                  & &=     f_{ V}( U_{ V_{si}},  M_{si},  V_{s-1, i})                                                \\
-\text{Relational: People in places } (\mathbb{R^{1 \times q}}) \\
+\text{Structural: People in places } (\mathbb{R}^{1 \times q}) \\
 &  {\Psi}_{0i}   & &= F_{{\mathbf \Psi_0}}(\mathbf U_{{\Psi}_{0i}})  \\
 &  {\Psi}_{si}   & &= F_{{\mathbf \Psi}}(\mathbf U_{{\Psi}_{si}}, \mathbf{V}_{s-1}, \mathbf{\Psi}_{s-1})  \\
 \end{aligned}

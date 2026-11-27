@@ -1,6 +1,6 @@
 #### Homogeneity 1: Homogeneous random network interference
 
-We assume that the [exposure mapping](#def-exposure-mapping) for each variable in the structural part of the model is [separable](#def-separability) and its component functions are [positionally invariant](#def-positional-invariance) and [bounded](#def-boundedness) with respect to $\mathbf{\Psi}_{s}$.
+We assume that the [exposure mapping](#def-exposure-mapping) for each variable in the structural part of the model is [separable](#def-separability) and its component functions are [positionally invariant](#def-positional-invariance) and [bounded](#def-boundedness) with respect to the graph generators $\mathbf{\Psi}_{s-1}$ and $\mathbf{\Psi}_{s}$ (@def-homogenous-random-network-interference).
 
 $$
 \begin{aligned}

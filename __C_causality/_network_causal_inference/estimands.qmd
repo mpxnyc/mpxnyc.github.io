@@ -5,18 +5,18 @@ We are interested in whether on average, changing someone's dress would change t
 
 
 $$ 
-ATE = \frac{1}{n}\sum_i E[Y_i^{(a = 1, \mathbf{a}_{\mathscr{N}_i} = \textbf{ 1})} - Y_i^{(a = 0, \mathbf{a}_{\mathscr{N}_i} = \textbf{ 0})}]
+ATE = \frac{1}{n}\sum_i E[Y_i^{(a = 1, \mathbf{a}_{\mathcal{N}_i} = \textbf{ 1})} - Y_i^{(a = 0, \mathbf{a}_{\mathcal{N}_i} = \textbf{ 0})}]
 $$
 It is possible to decompose this average causal effect into a portion attributable to direct (within individual) causal pathways. The decomposition mirrors the direct, indirect and total effects that Hudgens and Halloran [-@hudgens2008] defined under interference. Theirs compare treatment allocation strategies across groups; these compare fixed treatments of a unit and its neighbors. We call the indirect component a spillover effect. Makofane et al. [-@makofane2023] estimate the same three quantities for the effect of own and family wealth on physical function. This tells us, on average, to what extent one's own dress affects one own's job opportunities. 
 
 
 $$ 
-ADE = \frac{1}{n}\sum_i E[Y_i^{(a = 1, \mathbf{a}_{\mathscr{N}_i} = \textbf{ 0})} - Y_i^{(a = 0, \mathbf{a}_{\mathscr{N}_i} = \textbf{ 0})}]
+ADE = \frac{1}{n}\sum_i E[Y_i^{(a = 1, \mathbf{a}_{\mathcal{N}_i} = \textbf{ 0})} - Y_i^{(a = 0, \mathbf{a}_{\mathcal{N}_i} = \textbf{ 0})}]
 $$
 
 We can calculate the portion of the average total effect attributable to spillover (cross-individual) causal pathways. This tells us, on average, to what extent one's spouse's dress affects one's job opportunities. 
 
 
 $$ 
-ASE = \frac{1}{n}\sum_i E[Y_i^{(a = 1, \mathbf{a}_{\mathscr{N}_i} = \textbf{ 1})} - Y_i^{(a = 1, \mathbf{a}_{\mathscr{N}_i} = \textbf{ 0})}]
+ASE = \frac{1}{n}\sum_i E[Y_i^{(a = 1, \mathbf{a}_{\mathcal{N}_i} = \textbf{ 1})} - Y_i^{(a = 1, \mathbf{a}_{\mathcal{N}_i} = \textbf{ 0})}]
 $$

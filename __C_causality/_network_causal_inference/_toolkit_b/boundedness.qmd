@@ -1,7 +1,7 @@
 
 ##### Note on boundedness {.unnumbered}
 
-The assumption of **boundedness** can obtain in three different ways. It could be as a result of restrictions on the structure of the graph. For example, if the only relationships of interest between individual participants were marriages, each node would have a degree of either 0 or 1, meaning the count of alters with $X_{tj} = 1, j \in \mathscr{N}_i$ is either zero or one.
+The assumption of **boundedness** can obtain in three different ways. It could be as a result of restrictions on the structure of the graph. For example, if the only relationships of interest between individual participants were marriages, each node would have a degree of either 0 or 1, meaning the count of alters with $X_{tj} = 1, j \in \mathcal{N}_i$ is either zero or one.
 
 It might obtain via restrictions on the value of $\mathbf{X}$ itself. It might be the case, for instance, that the count of $i$'s for which $X_{ti}=1$ is very low so that on average, the count of alters for which $X_{tj} = 1, j \in N_i$ will also be low.
 

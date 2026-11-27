@@ -2,7 +2,7 @@
 
 #### Independence 1: No contagion
 
-We assume no contagion: equivalent measurements on observational units are independent of each other given all prior measures. This is implied by the following DANG-like compact representation of the model.
+We assume no contagion (@def-no-spillover): no element of a covariate influences another element of the same covariate. With single-world independence, equivalent measurements on observational units are then independent of each other given all prior measures. No contagion is expressed by the following DANG-like compact representation of the model.
 
 $$
 \begin{aligned}
