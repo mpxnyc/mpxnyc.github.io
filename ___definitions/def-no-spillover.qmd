@@ -1,9 +1,11 @@
 ::: {#def-no-spillover .theorem}
 ## No contagion
 
-No variable in a given [observational unit](#def-observational-unit) is a parent of an [equivalent](#def-equivalence) variable in another unit, i.e. no element of a covariate influences another element of the same covariate.
+No variable in a given observational unit is a parent of an equivalent variable in another unit, i.e. no element of a covariate influences another element of the same covariate:
 
 $$
-X\notin \mathbf{Pa}(X')\quad \forall\, X\sim X',\ X\in \mathscr O_i,\ X'\in \mathscr O_j,\ i\ne j.
+X\notin\mathbf{Pa}(X')\qquad\forall\ X\sim X',\ X\in\mathscr{O}_i,\ X'\in\mathscr{O}_j,\ i\neq j.
 $$
+
+The argument $\mathbf{X}_{k,<i}$ of the exposure mapping (C.8) then drops out.
 :::

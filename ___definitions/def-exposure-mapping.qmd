@@ -1,11 +1,17 @@
 ::: {#def-exposure-mapping .theorem}
 ## Exposure mapping
 
-A function $g_{ik} : \mathcal R(\mathbf X_1) \times \dots \times \mathcal R(\mathbf X_{k-1}) \times \mathcal R(\mathbf X_{k,<i}) \times \mathcal R(\boldsymbol\psi_1) \times \dots \times \mathcal R(\boldsymbol\psi_T) \to \mathbb{R}^m$ that selects and transforms the parents of a variable from the variables that precede it:
+We fix a topological order in which the covariates come in blocks, every entry of $\mathbf{X}_{k-1}$ before every entry of $\mathbf{X}_k$, and in which each graph generator (C.24) sits between two blocks. An exposure mapping is a function
 
 $$
-X_{ki} = f_{X_{ki}}\big(g_{ik}(\mathbf{X}_1,\dots,\mathbf{X}_{k-1}, \mathbf X_{k,<i}, \boldsymbol\psi_1, \dots, \boldsymbol\psi_T),\, U_{X_{ki}}\big) = f_{X_{ki}}\big(\mathbf{Pa}(X_{ki}),\, U_{X_{ki}}\big),
+g_{ik}:\mathcal{R}(\mathbf{X}_1)\times\dots\times\mathcal{R}(\mathbf{X}_{k-1})\times\mathcal{R}(\mathbf{X}_{k,<i})\times\mathcal{R}(\boldsymbol{\psi}_1)\times\dots\times\mathcal{R}(\boldsymbol{\psi}_T)\to\mathbb{R}^{m_k}
 $$
 
-where $\mathcal R(\cdot)$ is the range, $\mathbf X_1,\dots,\mathbf X_{k-1}$ are the [covariates](#def-covariate) that precede $X_{ki}$ in [topological order](#def-dag), $\mathbf X_{k,<i}$ the elements of its own covariate that precede it, and $\boldsymbol\psi_1, \dots, \boldsymbol\psi_T$ the [graph generators](#def-npsem-ne) that precede it. With a fixed network there are no graph generators.
+that selects and transforms the parents of $X_{ki}$ from the variables that precede it, so that its structural equation reads them only through $g_{ik}$:
+
+$$
+X_{ki}=f_{X_{ki}}\big(g_{ik}(\mathbf{X}_1,\dots,\mathbf{X}_{k-1},\mathbf{X}_{k,<i},\boldsymbol{\psi}_1,\dots,\boldsymbol{\psi}_T),\,U_{X_{ki}}\big),
+$$
+
+where $\mathbf{X}_1,\dots,\mathbf{X}_{k-1}$ are the covariates that precede $X_{ki}$, $\mathbf{X}_{k,<i}$ the elements of its own covariate that precede it, and $\boldsymbol{\psi}_1,\dots,\boldsymbol{\psi}_T$ the graph generators that precede it. $\mathbf{Pa}(X_{ki})$ is the set of arguments on which $g_{ik}$ depends. With a fixed network there are no graph generators, and $g_{ik}$ depends on the network through its definition.
 :::

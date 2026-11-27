@@ -1,0 +1,235 @@
+## Nonparametric identification and estimation {#sec-identification-estimation}
+
+This section identifies the mean of an outcome over a set of units, under a regime that sets some covariates on some units, by a g-formula under the RNFFRCISTG, the BRNFFRCISTG and the DBRNFFRCISTG, discusses its nonparametric estimation under each, and closes with remarks on the definitions and results. Definitions C.29–C.34, which it uses, are given with Toolkit C.
+
+### Nonparametric identification {#sec-id .unnumbered}
+#### Setting {#sec-id-setting .unnumbered}
+There are $n=|\mathcal{N}|$ units. The covariates are $\mathbf{X}_1,\dots,\mathbf{X}_K\in\mathbb{R}^n$, categorical, with one entry per unit, each preceded by a graph generator $\boldsymbol{\psi}_k\in\mathbb{R}^{n\times n}$, whose entry $\psi_k(i,j)$ is the weight of $j$’s influence on $i$ (C.18): $\boldsymbol{\psi}_1,\mathbf{X}_1,\dots,\boldsymbol{\psi}_K,\mathbf{X}_K$. Tie weights, like covariates, take finitely many values (in our examples, ties are binary), so the sums over networks below are finite. Histories are written with bars, as in the Notation, and $\bar{\boldsymbol{\psi}}_k=(\boldsymbol{\psi}_1,\dots,\boldsymbol{\psi}_k)$. The network value $g_{ki}$ is the summary of $\mathbf{X}_k$ over unit $i$’s neighbors in $\boldsymbol{\psi}_k$ (C.19, C.20), with history $\bar g_{k,i}=(g_{1i},\dots,g_{ki})$; by boundedness (C.21) it takes finitely many values. The pair $(\bar X_{k-1,i},\bar g_{k-1,i})$ is unit $i$’s cell for $\mathbf{X}_k$. Every unit in $\mathcal{N}$ is observed, with its covariates and its ties: the identification and estimation results below assume a census. @fig-identification-structure shows the structure.
+
+![Two units, $i$ and $j$, over two periods. A graph generator precedes each covariate; network values (grey) are fixed functions of the covariates and the graph generator (dashed arrows); a covariate depends on its unit's own history and network values. The next graph generator may depend on the whole past; only the arrow from $\boldsymbol\psi_1$ is drawn. There is no arrow between $X_{1i}$ and $X_{1j}$: no contagion (C.14).](__C_causality/_identification_estimation/figure-identification.svg){#fig-identification-structure width=70%}
+
+Under the models of this section, the conditional law of $X_{ki}$ given its own cell is the same for every unit (Proposition 1, which rests on C.16 and C.25). We call that common law a **kernel**:
+
+$$
+h_k(x\mid\bar x,\bar g)=P\big(X_{ki}=x\mid \bar X_{k-1,i}=\bar x,\ \bar g_{k-1,i}=\bar g\big),
+$$
+
+for every unit $i$ that reaches the cell $(\bar x,\bar g)$ with positive probability, and the common laws $\ell_k$ of rows ([bipartite random networks](#sec-id-bipartite-random-networks)) and of dyads ([dyadic bipartite random networks](#sec-id-dyadic-bipartite-random-networks)) are kernels likewise. A kernel is defined at every cell that some unit reaches with positive probability.
+
+A static regime $\Gamma$ sets $X_{ki}=x^*_{ki}$ for every pair $(k,i)$ in a set $\mathbf{E}$: some covariates, on some units. We identify $\mathbf{E}$ with the set of intervened variables $X_{ki}$, $(k,i)\in\mathbf{E}$ (C.10). The regime replaces only the equations of the intervened variables (C.9–C.11); every other structural and relational equation is the same under $\Gamma$ as in the observed world. This invariance, or modularity, is what allows kernels estimated in the observed world to be used under $\Gamma$. The outcome is one of the covariates, $\mathbf{Y}=\mathbf{X}_r$ for some $r\le K$, and the target is the mean of its counterfactual values over a set of units $\mathcal{T}\subseteq\mathcal{N}$ whose outcomes are not intervened variables, $(r,j)\notin\mathbf{E}$ for $j\in\mathcal{T}$:
+
+$$
+\theta(\Gamma)=\frac{1}{|\mathcal{T}|}\sum_{j\in\mathcal{T}}E\big[Y_j^{(\Gamma)}\big].
+$$
+
+**Positivity** is a condition on the inputs of the structural and relational equations: every value of an equation’s inputs that the regime can produce must also occur in the observed law. For a covariate, the inputs are the cell $(\bar x,\bar g)$. Let $n_k(\bar x,\bar g)$ be the number of units whose cell for $\mathbf{X}_k$ is $(\bar x,\bar g)$, and $n_k^{(\Gamma)}(\bar x,\bar g)$ the number of units whose $X_{ki}$ is not an intervened variable and whose cell under $\Gamma$ is $(\bar x,\bar g)$. Because the equation is shared, it is enough that some unit has each value of the inputs, not the same unit: for every $k$ and every $(\bar x,\bar g)$,
+
+$$
+P\big(n_k^{(\Gamma)}(\bar x,\bar g)>0\big)>0\ \Longrightarrow\ P\big(n_k(\bar x,\bar g)>0\big)>0.
+$$
+
+For a graph generator, the inputs are the past it depends on: in [random networks](#sec-id-random-networks) the whole past $(\bar{\mathbf{x}}_{k-1},\bar{\boldsymbol{\psi}}_{k-1})$, in [bipartite random networks](#sec-id-bipartite-random-networks) a person’s summaries $(c_{ki},r_{ki})$, and in [dyadic bipartite random networks](#sec-id-dyadic-bipartite-random-networks) a dyad’s summaries $(c_{ki},c_{kl},s_{k,il})$, with the same condition. For the graph generators of a general random network the condition is a condition on the law, and it can hold. What fails is estimation: the inputs are the whole past, of which a single realization shows one value, so the generator’s law is seen at one past only. The bipartite and dyadic models below, and the estimation results, respond to this.
+
+#### Random networks {#sec-id-random-networks .unnumbered}
+**PROPOSITION 1: Markov factorization.** Under the RNFFRCISTG, the law factorizes into one kernel per covariate, common to all units, and the laws of the graph generators:
+
+$$
+P(\mathbf{V})=\prod_{k=1}^{K}\Big[\prod_{i\in\mathcal{N}}h_k\big(X_{ki}\mid\bar X_{k-1,i},\bar g_{k-1,i}\big)\Big]\,P\big(\boldsymbol{\psi}_k\mid\bar{\mathbf{X}}_{k-1},\bar{\boldsymbol{\psi}}_{k-1}\big).
+$$
+
+*Proof.* (i) Single-world independence (C.13), with each graph generator a single variable (C.26), implies that the law of $\mathbf{V}$ is Markov with respect to the DAG in which each $\boldsymbol{\psi}_k$ is one node [@robins1986; @richardson2013]: it is the product, over its variables, of each variable’s law given its parents, with one factor for each $\boldsymbol{\psi}_k$. Indeed, at every $\mathbf{v}$, consistency (C.12) gives $\{\mathbf{V}=\mathbf{v}\}=\bigcap_{V}\{V^{(\mathbf{pa}_V(\mathbf{v}))}=v_V\}$, and C.13 makes the probability of this intersection a product.
+
+(ii) No contagion (C.14) says that no entry $X_{kj}$, $j\neq i$, of a covariate is a parent of $X_{ki}$. The parents of $X_{ki}$ therefore all precede $\mathbf{X}_k$, and the law of $\mathbf{X}_k$ given the past is a product over units.
+
+(iii) Homogeneous random network interference (C.19–C.21, C.25) says that $X_{ki}$ reads its parents only through its cell $(\bar X_{k-1,i},\bar g_{k-1,i})$, with the same summary functions for every realization of the graph generators. Its law given its parents is therefore the law of $f_k(\bar x,\bar g,U_{X_{ki}})$ at its cell, and, by the tower property, so is its law given its cell alone.
+
+(iv) Identical structural distributions (C.16) make that law the same function of the cell for every unit: the kernel $h_k$. $\square$
+
+**THEOREM 1: g-formula for the RNFFRCISTG.** Under the RNFFRCISTG and positivity, $\theta(\Gamma)$ is identified:
+
+$$
+\begin{aligned}
+\theta(\Gamma)&=\frac{1}{|\mathcal{T}|}\sum_{j\in\mathcal{T}}\ \sum_{\mathbf{x},\boldsymbol{\psi}:\ \mathbf{x}_\mathbf{E}=\mathbf{x}^*} y_j\prod_{(k,i)\notin\mathbf{E}}h_k\big(x_{ki}\mid\bar x_{k-1,i},\bar g_{k-1,i}\big)\\&\qquad\times\prod_{k=1}^{K}P\big(\boldsymbol{\psi}_k\mid\bar{\mathbf{x}}_{k-1},\bar{\boldsymbol{\psi}}_{k-1}\big),
+\end{aligned}
+$$
+
+with each $g_{ki}$ computed from $\mathbf{x}$ on $\boldsymbol{\psi}$, and $y_j=x_{rj}$.
+
+*Proof.* Fix $j\in\mathcal{T}$. Write $\mathbf{H}_k^{(\Gamma)}=(\boldsymbol{\psi}_1^{(\Gamma)},\mathbf{X}_1^{(\Gamma)},\dots,\boldsymbol{\psi}_{k-1}^{(\Gamma)},\mathbf{X}_{k-1}^{(\Gamma)})$ for the counterfactual history before period $k$, in which each intervened variable takes its assigned value $x^*_{ki}$ (C.12), and $\mathbf{h}_k$ for a value of it.
+
+(i) Iterated expectations. Conditioning in causal order on the counterfactual history, over the values $(\mathbf{x},\boldsymbol{\psi})$ with $\mathbf{x}_\mathbf{E}=\mathbf{x}^*$ to which $\Gamma$ gives positive probability,
+
+$$
+\begin{aligned}
+E\big[Y_j^{(\Gamma)}\big]=\sum_{\mathbf{x},\boldsymbol{\psi}}y_j\prod_{k=1}^{K}&P\big(\boldsymbol{\psi}_k^{(\Gamma)}=\boldsymbol{\psi}_k\mid\mathbf{H}_k^{(\Gamma)}=\mathbf{h}_k\big)\\ \times\ &P\big(\mathbf{X}_k^{(\Gamma)}=\mathbf{x}_k\mid\mathbf{H}_k^{(\Gamma)}=\mathbf{h}_k,\ \boldsymbol{\psi}_k^{(\Gamma)}=\boldsymbol{\psi}_k\big).
+\end{aligned}
+$$
+
+(ii) Single-world independence. Let $\mathbf{v}$ be the value of $\mathbf{V}$ given by $(\mathbf{x},\boldsymbol{\psi})$. By sequential substitution (C.12), each variable that is not intervened equals its one-step-ahead counterfactual at the counterfactual values of its parents; on the conditioning event those values are $\mathbf{pa}_V(\mathbf{v})$, and each intervened variable equals $x^*_{ki}$. The conditioning event is therefore $\bigcap_V\{V^{(\mathbf{pa}_V(\mathbf{v}))}=v_V\}$, over the variables of the history that are not intervened. These one-step-ahead counterfactuals and those of period $k$ all belong to the single world $\mathbf{v}$, so by single-world independence (C.13) the event is independent of the period-$k$ counterfactuals, which are mutually independent. With no contagion (C.14), the parents of each $X_{ki}$ lie in the history and $\boldsymbol{\psi}_k$, so
+
+$$
+\begin{aligned}
+P\big(\mathbf{X}_k^{(\Gamma)}=\mathbf{x}_k\mid\cdot\big)&=\prod_{(k,i)\in\mathbf{E}}\mathbf{1}\{x_{ki}=x^*_{ki}\}\prod_{(k,i)\notin\mathbf{E}}P\big(X_{ki}^{(\mathbf{pa})}=x_{ki}\big),\\ P\big(\boldsymbol{\psi}_k^{(\Gamma)}=\boldsymbol{\psi}_k\mid\cdot\big)&=P\big(\boldsymbol{\psi}_k^{(\mathbf{pa})}=\boldsymbol{\psi}_k\big),
+\end{aligned}
+$$
+
+with $\mathbf{pa}=\mathbf{pa}_V(\mathbf{v})$ for each variable.
+
+(iii) Equal distributions. $X_{ki}^{(\mathbf{pa})}=f_k(\bar x_{k-1,i},\bar g_{k-1,i},U_{X_{ki}})$ reads $\mathbf{pa}$ only through the cell (C.25), and every unit has the same structural equation and error distribution (C.16). So $P(X_{ki}^{(\mathbf{pa})}=x)$ is one function of the cell, the same for every unit.
+
+(iv) Positivity and consistency. The cell of $X_{ki}$ at $\mathbf{v}$ arises under $\Gamma$ with positive probability, so by positivity some unit $i'$ has, with positive probability, parents $\mathbf{pa}'$ in the same cell. On $\{\mathbf{Pa}(X_{ki'})=\mathbf{pa}'\}$, consistency (C.12) gives $X_{ki'}=X_{ki'}^{(\mathbf{pa}')}$. That event is a disjoint union, over values of the ancestors of $X_{ki'}$, of intersections of one-step-ahead counterfactual events, each independent of $X_{ki'}^{(\mathbf{pa}')}$ by C.13; so it is independent of $X_{ki'}^{(\mathbf{pa}')}$, and
+
+$$
+P\big(X_{ki}^{(\mathbf{pa})}=x\big)=P\big(X_{ki'}^{(\mathbf{pa}')}=x\big)=P\big(X_{ki'}=x\mid\mathbf{Pa}(X_{ki'})=\mathbf{pa}'\big)=h_k\big(x\mid\bar x_{k-1,i},\bar g_{k-1,i}\big),
+$$
+
+the first equality by (iii) and the last by Proposition 1. In the same way, $P(\boldsymbol{\psi}_k^{(\mathbf{pa})}=\boldsymbol{\psi}_k)=P(\boldsymbol{\psi}_k\mid\bar{\mathbf{x}}_{k-1},\bar{\boldsymbol{\psi}}_{k-1})$, since positivity for the generator gives the past positive probability in the observed law.
+
+(v) Substituting (ii)–(iv) in (i) gives the inner sum of the statement; averaging over $\mathcal{T}$ gives $\theta(\Gamma)$. $\square$
+
+See Remarks 3 and 4.
+
+#### Bipartite random networks {#sec-id-bipartite-random-networks .unnumbered}
+**Independent rows.** Under the BRNFFRCISTG (C.28), each person’s row $\boldsymbol{\Psi}_{ki}\in\mathbb{R}^{|\mathcal{Q}|}$ of $\boldsymbol{\psi}_k$, their ties to the places, is a single variable of their own observational unit, and single-world independence makes the rows independent given the past. Local row formation (C.29) restricts how a row depends on the past, through the summaries
+
+$$
+c_{ki}=\kappa_k\big(\bar X_{k-1,i},\bar g_{k-1,i}\big),\qquad r_{ki}=\rho_k\big(\bar{\boldsymbol{\Psi}}_{k-1,i}\big)
+$$
+
+of the person’s own history and of their own past rows, each with finitely many values. Identical structural distributions (C.16) give every person the same row kernel $\ell_k(\cdot\mid c_{ki},r_{ki})$. The rows of the places are determined by those of the people (C.27). People and places have separate structural equations, so the kernels $h_k$ are taken separately for each class.
+
+**THEOREM 2: g-formula for the BRNFFRCISTG.** Under the BRNFFRCISTG with local row formation (C.29) and positivity, $\theta(\Gamma)$ is identified, with one row kernel per graph generator:
+
+$$
+\begin{aligned}
+\theta(\Gamma)&=\frac{1}{|\mathcal{T}|}\sum_{j\in\mathcal{T}}\ \sum_{\mathbf{x},\boldsymbol{\psi}:\ \mathbf{x}_\mathbf{E}=\mathbf{x}^*} y_j\prod_{(k,i)\notin\mathbf{E}}h_k\big(x_{ki}\mid\bar x_{k-1,i},\bar g_{k-1,i}\big)\\&\qquad\times\prod_{k=1}^{K}\prod_{i\in\mathcal{P}}\ell_k\big(\psi_k(i,\cdot)\mid c_{ki},r_{ki}\big),
+\end{aligned}
+$$
+
+where $\psi_k(i,\cdot)$ is person $i$’s row of $\boldsymbol{\psi}_k$, and each $g_{ki}$, $c_{ki}$ and $r_{ki}$ is computed from $\mathbf{x}$ and $\boldsymbol{\psi}$.
+
+*Proof.* As for Theorem 1, applied to the DAG in which each person’s row, rather than each graph generator, is one node. In (ii), single-world independence makes the rows’ one-step-ahead counterfactuals mutually independent and independent of the covariates’, so the generator’s factor splits into one factor per person. In (iii), local row formation (C.29) makes each factor a function of $(c_{ki},r_{ki})$, and identical structural distributions (C.16) make it the same function for every person. In (iv), positivity on the cells $(c,r)$ identifies it as $\ell_k$. The places’ rows add no factor, being determined by the people’s (C.27). $\square$
+
+#### Dyadic bipartite random networks {#sec-id-dyadic-bipartite-random-networks .unnumbered}
+Under the DBRNFFRCISTG (C.34), each dyad $D_{k,il}$ is a single variable, and local tie formation (C.31) gives it the summaries $c_{ki}$ of the person, $c_{kl}$ of the place and $s_{k,il}$ of the dyad’s past. Identical relational distributions (C.32) give every dyad the same dyad kernel $\ell_k(\cdot\mid c_{ki},c_{kl},s_{k,il})$.
+
+**THEOREM 3: g-formula for the DBRNFFRCISTG.** Under the DBRNFFRCISTG (C.34) and positivity, $\theta(\Gamma)$ is identified, with one dyad kernel per graph generator:
+
+$$
+\begin{aligned}
+\theta(\Gamma)&=\frac{1}{|\mathcal{T}|}\sum_{j\in\mathcal{T}}\ \sum_{\mathbf{x},\boldsymbol{\psi}:\ \mathbf{x}_\mathbf{E}=\mathbf{x}^*} y_j\prod_{(k,i)\notin\mathbf{E}}h_k\big(x_{ki}\mid\bar x_{k-1,i},\bar g_{k-1,i}\big)\\&\qquad\times\prod_{k=1}^{K}\prod_{i\in\mathcal{P}}\prod_{l\in\mathcal{Q}}\ell_k\big(d_{k,il}\mid c_{ki},c_{kl},s_{k,il}\big),
+\end{aligned}
+$$
+
+where $d_{k,il}=\psi_k(i,l)$, and each $g_{ki}$, $c_{ki}$, $c_{kl}$ and $s_{k,il}$ is computed from $\mathbf{x}$ and $\boldsymbol{\psi}$.
+
+*Proof.* As for Theorem 2, with each dyad, rather than each row, a single variable (C.34): single-world independence makes the dyads’ one-step-ahead counterfactuals mutually independent, so each row’s factor splits into one factor per place. Local tie formation (C.31) makes each a function of $(c_{ki},c_{kl},s_{k,il})$, identical relational distributions (C.32) make it the same function for every dyad, and positivity on the cells $(c,c',s)$ identifies it as $\ell_k$. $\square$
+
+See Remark 4.
+
+### Nonparametric estimation {#sec-est .unnumbered}
+#### Random networks {#sec-est-random-networks .unnumbered}
+The kernels are estimable from one realization; the laws of the graph generators are not. Conditionally on all variables that precede $\mathbf{X}_k$ in the causal order, its entries are independent, and each is a draw from $h_k$ at the unit’s own cell (Proposition 1), so $h_k$ is estimated by pooled cell proportions,
+
+$$
+\hat h_k(x\mid\bar x,\bar g)=\frac{\sum_{i\in\mathcal{N}}\mathbf{1}\{X_{ki}=x,\ \bar X_{k-1,i}=\bar x,\ \bar g_{k-1,i}=\bar g\}}{\sum_{i\in\mathcal{N}}\mathbf{1}\{\bar X_{k-1,i}=\bar x,\ \bar g_{k-1,i}=\bar g\}},
+$$
+
+each consistent and asymptotically normal as its count $n_k(\bar x,\bar g)$ grows: given the past, it is a proportion of independent draws from one law. Each graph generator, however, is a single variable observed once. Its law $P(\boldsymbol{\psi}_k=\boldsymbol{\psi}\mid\bar{\mathbf{X}}_{k-1},\bar{\boldsymbol{\psi}}_{k-1})$ is a distribution over every possible network on $n$ units, $2^{n(n-1)}$ of them for binary directed ties, a number that grows with $n$; to estimate it we would need to observe many of these values at each past, and one realization gives one draw at one past. The law is identified but cannot be estimated.
+
+If no graph generator has an intervened variable among its ancestors, sequential substitution gives $\boldsymbol{\psi}_k^{(\Gamma)}=\boldsymbol{\psi}_k$ for every $k$: the regime leaves the network at its realized value. We then target the mean with the network held there, $\theta(\Gamma\mid\boldsymbol{\psi})$, the mean of the outcome under the regime that applies $\Gamma$ and also sets every graph generator to its realized value. Its g-formula is that of Theorem 1 with the generator factors deleted, and positivity is needed only for the covariates:
+
+$$
+\theta(\Gamma\mid\boldsymbol{\psi})=\frac{1}{|\mathcal{T}|}\sum_{j\in\mathcal{T}}\ \sum_{\mathbf{x}:\ \mathbf{x}_\mathbf{E}=\mathbf{x}^*}y_j\prod_{(k,i)\notin\mathbf{E}}h_k\big(x_{ki}\mid\bar x_{k-1,i},\bar g_{k-1,i}\big),
+$$
+
+estimated by substituting $\hat h_k$:
+
+$$
+\hat\theta(\Gamma\mid\boldsymbol{\psi})=\frac{1}{|\mathcal{T}|}\sum_{j\in\mathcal{T}}\ \sum_{\mathbf{x}:\ \mathbf{x}_\mathbf{E}=\mathbf{x}^*}y_j\prod_{(k,i)\notin\mathbf{E}}\hat h_k\big(x_{ki}\mid\bar x_{k-1,i},\bar g_{k-1,i}\big),
+$$
+
+with each $g_{ki}$ computed from $\mathbf{x}$ on the realized $\boldsymbol{\psi}$. When the graph generators do not depend on the covariates, $\boldsymbol{\psi}$ depends only on their error terms, which are independent of the covariates’ one-step-ahead counterfactuals (C.13); $\theta(\Gamma\mid\boldsymbol{\psi})$ is then the mean conditional on the realized network, $|\mathcal{T}|^{-1}\sum_{j\in\mathcal{T}}E[Y_j^{(\Gamma)}\mid\bar{\boldsymbol{\psi}}_K=\boldsymbol{\psi}]$. Otherwise the two differ, because the realized network carries information about the covariates that formed it.
+
+The asymptotics are those of a single network with $n\to\infty$, $K$ and the cells fixed: given the past, draws within a cell are independent. The sum over $\mathbf{x}$ is computed forward in $k$, by drawing each period’s covariates from the fitted kernels and recomputing network values; under the [bipartite](#sec-est-bipartite-random-networks) and [dyadic](#sec-est-dyadic-bipartite-random-networks) models the networks are drawn the same way, from the fitted row or dyad kernels. Confidence intervals follow from a parametric bootstrap, which redraws the data from the fitted kernels and recomputes the estimate. See Remarks 5 and 6, and Remark 10 for what changes when only some units are observed.
+
+#### Bipartite random networks {#sec-est-bipartite-random-networks .unnumbered}
+The row kernels are estimable from one realization. Each realization holds $|\mathcal{P}|$ rows from $\ell_k$, and a row lists ties to the fixed, finite set of places $\mathcal{Q}$, of size $q=|\mathcal{Q}|$, so it takes finitely many values, $2^q$ for binary ties. Its inputs $(c_{ki},r_{ki})$ vary across people and take finitely many values, so
+
+$$
+\ell_k(\boldsymbol{\psi}\mid c,r)=P\big(\boldsymbol{\Psi}_{ki}=\boldsymbol{\psi}\mid c_{ki}=c,\ r_{ki}=r\big),
+$$
+
+$$
+\hat\ell_k(\boldsymbol{\psi}\mid c,r)=\frac{\sum_{i\in\mathcal{P}}\mathbf{1}\{\boldsymbol{\Psi}_{ki}=\boldsymbol{\psi},\ c_{ki}=c,\ r_{ki}=r\}}{\sum_{i\in\mathcal{P}}\mathbf{1}\{c_{ki}=c,\ r_{ki}=r\}},
+$$
+
+and the estimate substitutes both kernels in Theorem 2:
+
+$$
+\begin{aligned}
+\hat\theta(\Gamma)&=\frac{1}{|\mathcal{T}|}\sum_{j\in\mathcal{T}}\ \sum_{\mathbf{x},\boldsymbol{\psi}:\ \mathbf{x}_\mathbf{E}=\mathbf{x}^*}y_j\prod_{(k,i)\notin\mathbf{E}}\hat h_k\big(x_{ki}\mid\bar x_{k-1,i},\bar g_{k-1,i}\big)\\&\qquad\times\prod_{k=1}^{K}\prod_{i\in\mathcal{P}}\hat\ell_k\big(\psi_k(i,\cdot)\mid c_{ki},r_{ki}\big).
+\end{aligned}
+$$
+
+Regimes that change the network are then estimable under positivity on the row cells they visit. With $n_k(c,r)$ the number of people whose row inputs are $(c,r)$, and $n_k^{(\Gamma)}(c,r)$ the same number under $\Gamma$,
+
+$$
+P\big(n_k^{(\Gamma)}(c,r)>0\big)>0\ \Longrightarrow\ P\big(n_k(c,r)>0\big)>0.
+$$
+
+The number of possible rows enters neither positivity, which concerns the cells $(c,r)$, nor the estimate, which uses the empirical distribution of rows within each cell. It matters only through $r$: a row summary that keeps past rows in detail has up to $2^q$ values, each a separate cell. See Remark 7.
+
+#### Dyadic bipartite random networks {#sec-est-dyadic-bipartite-random-networks .unnumbered}
+The dyad kernels are estimable from one realization, with ties that depend on the person, the place and their history. Each realization holds one dyad for every person–place pair, $|\mathcal{P}|\times q$ in all, and $(c,c',s)$ takes finitely many values whatever the number of places, so
+
+$$
+\ell_k(d\mid c,c',s)=P\big(D_{k,il}=d\mid c_{ki}=c,\ c_{kl}=c',\ s_{k,il}=s\big),
+$$
+
+$$
+\hat\ell_k(d\mid c,c',s)=\frac{\sum_{i\in\mathcal{P}}\sum_{l\in\mathcal{Q}}\mathbf{1}\{D_{k,il}=d,\ c_{ki}=c,\ c_{kl}=c',\ s_{k,il}=s\}}{\sum_{i\in\mathcal{P}}\sum_{l\in\mathcal{Q}}\mathbf{1}\{c_{ki}=c,\ c_{kl}=c',\ s_{k,il}=s\}},
+$$
+
+and the estimate substitutes both kernels in Theorem 3:
+
+$$
+\begin{aligned}
+\hat\theta(\Gamma)&=\frac{1}{|\mathcal{T}|}\sum_{j\in\mathcal{T}}\ \sum_{\mathbf{x},\boldsymbol{\psi}:\ \mathbf{x}_\mathbf{E}=\mathbf{x}^*}y_j\prod_{(k,i)\notin\mathbf{E}}\hat h_k\big(x_{ki}\mid\bar x_{k-1,i},\bar g_{k-1,i}\big)\\&\qquad\times\prod_{k=1}^{K}\prod_{i\in\mathcal{P}}\prod_{l\in\mathcal{Q}}\hat\ell_k\big(d_{k,il}\mid c_{ki},c_{kl},s_{k,il}\big).
+\end{aligned}
+$$
+
+By modularity (C.11), the regime changes the inputs $(c,c',s)$ of the dyad’s equation, not the equation itself. The place summary $c_{kl}$ varies across the $q$ places within a realization, so dependence on the particular places is estimated from one network; under local row formation ([estimation, bipartite random networks](#sec-est-bipartite-random-networks)), ties depend on the places only through the person’s own network values. Regimes that change the network are estimable under positivity on the dyad cells they visit. With $n_k(c,c',s)$ the number of dyads whose inputs are $(c,c',s)$, and $n_k^{(\Gamma)}(c,c',s)$ the same number under $\Gamma$,
+
+$$
+P\big(n_k^{(\Gamma)}(c,c',s)>0\big)>0\ \Longrightarrow\ P\big(n_k(c,c',s)>0\big)>0.
+$$
+
+The number of cells does not grow with $q$. See Remark 8.
+
+### Remarks {#sec-remarks .unnumbered}
+[]{#rem-marginal}**REMARK 1: On identical structural distributions (C.16).** C.16 restricts only the marginal law of each error term, not their joint law. That is enough. Under single-world independence (C.13), and by consistency (C.12), the law of $\mathbf{V}$ at any value $\mathbf{v}$ is the product of the laws of the one-step-ahead counterfactuals,
+
+$$
+P(\mathbf{V}=\mathbf{v})=\prod_{V\in\mathbf{V}}P\big(V^{(\mathbf{pa}_V(\mathbf{v}))}=v_V\big),
+$$
+
+and each factor depends on $U_V$ only through its marginal law.
+
+[]{#rem-robins}**REMARK 2: On the FFRCISTG (C.17).** In @robins1986, the FFRCISTG is a model for the variables of one unit, with units drawn i.i.d. Under C.14–C.16 with C.13, the units of C.17 are independent and identically distributed: by Remark 1, the law of $\mathbf{V}$ is a product of factors each belonging to one unit, and C.16 makes the units’ factors the same. Each unit then follows Robins’s FFRCISTG on its own variables. This is why this appendix keeps his name for its first model, and builds the others from it.
+
+[]{#rem-gformula}**REMARK 3: On Theorem 1 and the truncated factorization.** The proof of Theorem 1 is the g-formula argument of @robins1986, as in @hernan2021 [ch. 21], run in the counterfactual world: iterated expectations over the counterfactual history, single-world independence to replace each counterfactual conditional law by the law of a one-step-ahead counterfactual [@richardson2013], and consistency to identify it from the observed law. Positivity enters only at that last step, and because the kernels are shared, at the level of cells. Theorem 1 is the truncated factorization [@robins1986; @pearl2009]: the factors of the intervened variables are deleted, and $\theta(\Gamma)$ is the mean over $\mathcal{T}$ of $E[Y_j\mid do(\mathbf{X}_\mathbf{E}=\mathbf{x}^*)]$. It is derived under the FFRCISTG, which suffices for static regimes.
+
+[]{#rem-central}**REMARK 4: On the central assumption (Theorems 1–3).** Single-world independence, by generator, row or dyad, excludes unmeasured common causes of ties and covariates, including latent homophily: unmeasured traits that shape both whom a person is tied to and their outcomes [@shalizi2011]. It cannot be tested from the observed law, and it is the assumption on which Theorems 1–3 depend.
+
+[]{#rem-held}**REMARK 5: On holding the network at its realized value ([estimation, random networks](#sec-est-random-networks)).** The g-formula of Theorem 1 holds under the RNFFRCISTG. When no graph generator has an intervened variable among its ancestors, the regime leaves the network at its realized value, and $\theta(\Gamma\mid\boldsymbol{\psi})$, the mean with the network held there, applies. This covers the NFFRCISTG, whose network is degenerate, and the FFRCISTG, whose network is degenerate and empty; under positivity for the covariates, $\theta(\Gamma\mid\boldsymbol{\psi})$ is estimable from one realization.
+
+[]{#rem-respond}**REMARK 6: On networks that respond ([estimation, random networks](#sec-est-random-networks)).** When an intervened variable is an ancestor of a later graph generator, as when a treatment changes ties in the next period, the regime changes the network, and the formula of Theorem 1 needs that generator’s law at the counterfactual pasts the regime visits, over all $2^{n(n-1)}$ networks. Positivity can hold, since it is a condition on the law; but one realization shows the generator’s law at one past, so the law cannot be estimated at the others. Estimating it requires further homogeneity assumptions about the process that produces the generators. The bipartite models (C.27–C.34) give two.
+
+[]{#rem-rows}**REMARK 7: On independent rows ([estimation, bipartite random networks](#sec-est-bipartite-random-networks)).** The first is the BRNFFRCISTG (C.28), a bipartite network with independent rows. Each person’s row is a copy of one row kernel, so a realization holds $|\mathcal{P}|$ copies; under local row formation (C.29), the row kernel is estimable when $|\mathcal{P}|$ is large relative to the number of cells $(c,r)$.
+
+[]{#rem-dyads}**REMARK 8: On independent dyads ([estimation, dyadic bipartite random networks](#sec-est-dyadic-bipartite-random-networks)).** When a person’s ties depend on summaries of the particular places, the dyadic assumptions serve instead: each person–place dyad forms from bounded summaries of the person, the place and the dyad’s history (C.31), every dyad follows the same relational equation (C.32), and dyads are independent given the past (C.34). A realization then holds $|\mathcal{P}|$ copies of each person kernel $h_k$, $q$ copies of each place kernel, and $|\mathcal{P}|\times q$ copies of each dyad kernel $\ell_k$. The dyadic model is testable against the bipartite one. It implies that, given the past, a person’s ties to two places are independent, $D_{k,il}\perp D_{k,il'}$, and depend on it only through $(c_{ki},c_{kl},s_{k,il})$ and $(c_{ki},c_{kl'},s_{k,il'})$, a restriction that independent rows do not impose.
+
+[]{#rem-scope}**REMARK 9: On scope.** The regimes here are static, and their intervened variables are covariates. The models are time-ordered: no contagion (C.14) excludes dependence among the entries of a covariate within a period. Auto-g-computation [@tchetgentchetgen2020] allows such dependence, through a chain graph whose outcomes form a Markov random field; the approach here gives it up, and requires measurements fine enough in time that influence within a period is negligible. The g-formulas extend to dynamic and stochastic regimes, which assign covariates from the observed past or at random, by replacing the restriction $\mathbf{x}_\mathbf{E}=\mathbf{x}^*$ with the regime’s conditional law.
+
+[]{#rem-sampling}**REMARK 10: On sampling.** A random network NPSEM is defined on a fixed set of units $\mathcal{N}$, and adding a person yields a different model, so the i.i.d. picture of sampling, in which units are drawn one at a time from a common law, does not apply. The identification and estimation results assume that every unit is observed; extending them to samples is work that remains. When only some units are observed, each sampled person’s network values are mismeasured, because they draw on units outside the sample. If a reference network has been measured on the whole population, as in a health and demographic surveillance system, the problem is one of missing covariates, and we can impute them from the kernels. Without a reference network, the network must be imputed as well. Bipartiteness mitigates the problem. A person’s row belongs to their own observational unit (C.27), so a respondent’s report of their ties to places measures the row exactly. If the place values are generated by the places themselves, the respondent’s network values are then measured without error.

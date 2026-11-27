@@ -1,11 +1,11 @@
 ::: {#def-intervention-regime .theorem}
 ## Intervention regime
 
-A set of [intervention equations](#def-intervention) defined on a subset of random variables $\mathbf E \subset \mathbf V$.
+A set of intervention equations defined on a subset of random variables $\mathbf{E}\subset\mathbf{V}$:
 
 $$
-\Gamma = \{ h_V \}_{V \in \mathbf{E}}
+\Gamma=\{h_V\}_{V\in\mathbf{E}}.
 $$
 
-The regime is *static* if every $h_V$ is constant, and *dynamic* otherwise.
+The variables in $\mathbf{E}$ are the intervened variables. The regime is static if every $h_V$ is constant, and dynamic otherwise.
 :::

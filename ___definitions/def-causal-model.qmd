@@ -1,17 +1,21 @@
 ::: {#def-causal-model .theorem}
 ## Causal model
 
-A causal model $\mathcal C$ of an [NPSEM](#def-npsem) $\mathcal M$ under [intervention regime](#def-intervention-regime) $\Gamma$ is the pair of $\mathcal M$ and its [interventional NPSEM](#def-interventional-npsem) $\mathcal M^{(\Gamma)}$, with the error terms of the two held equal:
+A causal model $\mathcal{C}$ of an NPSEM $\mathcal{M}$ under intervention regime $\Gamma$ is the pair of $\mathcal{M}$ and its interventional NPSEM $\mathcal{M}^{(\Gamma)}$, with the error terms of the two held equal:
 
 $$
-\mathcal{C} = \big(\mathcal{M},\ \mathcal M^{(\Gamma)}\big), \qquad U^{(\Gamma)}_V = U_V \quad \text{for all } V \in \mathbf V.
+\mathcal{C}=\big(\mathcal{M},\mathcal{M}^{(\Gamma)}\big),\qquad U_V^{(\Gamma)}=U_V\quad\text{for all }V\in\mathbf{V}.
 $$
 
-Here $U_V$ is the error term of $V$ in $\mathcal M$ and $U^{(\Gamma)}_V$ the error term of the corresponding variable in $\mathcal M^{(\Gamma)}$.
+Here $U_V$ is the error term of $V$ in $\mathcal{M}$ and $U_V^{(\Gamma)}$ the error term of the corresponding variable in $\mathcal{M}^{(\Gamma)}$.
 
-The variables $\mathbf V$ associated with $\mathcal M$ are called **observational variables**; the variables $\mathbf V^{(\Gamma)}$ associated with $\mathcal M^{(\Gamma)}$ are called **counterfactual variables**, obtained by sequential substitution. For a variable $V$ whose equation $\Gamma$ replaces, its counterfactual is its **natural value**:
+The variables $\mathbf{V}$ associated with $\mathcal{M}$ are called observational variables; the variables $\mathbf{V}^{(\Gamma)}$ associated with $\mathcal{M}^{(\Gamma)}$ are called counterfactual variables. They are obtained by sequential substitution: in a topological order, each $V^{(\Gamma)}$ is the value of $f_V^{(\Gamma)}$ at the counterfactual values of its parents,
 
 $$
-V^{(\Gamma)} = f_V\big(\mathbf{Pa}(V)^{(\Gamma)}, U_V\big).
+V^{(\Gamma)}=f^{(\Gamma)}_V\big(\mathbf{Pa}(V)^{(\Gamma)},U_V\big).
 $$
+
+For an intervened variable $V\in\mathbf{E}$, $V^{(\Gamma)}$ is therefore the value its intervention equation assigns, and it is this value that its children read. Its natural value under $\Gamma$ is $f_V\big(\mathbf{Pa}(V)^{(\Gamma)},U_V\big)$, the value it would have taken had its own equation not been replaced.
+
+Because $\mathcal{M}$ is itself $\mathcal{M}^{(\Gamma)}$ for the empty regime, each observational variable satisfies $V=f_V(\mathbf{Pa}(V),U_V)$. Consistency follows: on the event $\{\mathbf{Pa}(V)=\mathbf{pa}\}$, $V$ equals the one-step-ahead counterfactual $V^{(\mathbf{pa})}=f_V(\mathbf{pa},U_V)$ of C.13.
 :::

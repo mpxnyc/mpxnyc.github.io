@@ -4,7 +4,7 @@ M_{0i} &=  0 \\
 V_{0i} &=  0 \\
 R_{sj}^{(h)} &=  h(\mathbf{V}_{s-1}) \\
 T_{sj}^{(h)} &=  \begin{cases} 1 & R_{sj}^{(h)} = max_k R_{sk}^{(h)} \\ 0 & \text{otherwise} \end{cases} \\
-M_{si}^{(h)} &=  \begin{cases} 1 & \mathbf{T}_{s\mathscr{N}_i}^{(h)} \neq \mathbf{0}  \\ 0 & \text{otherwise} \end{cases} \\
+M_{si}^{(h)} &=  \begin{cases} 1 & \mathbf{T}_{s\mathcal{N}_i}^{(h)} \neq \mathbf{0}  \\ 0 & \text{otherwise} \end{cases} \\
 V_{si}^{(h)} &=  \begin{cases} 1 & M_{si}^{(h)} = 1 \text{ or } V_{s-1,i}^{(h)} = 1\\ 0 & \text{otherwise} \end{cases} \\
 \end{aligned}
 $$ {#eq-edge-intervention-swing}

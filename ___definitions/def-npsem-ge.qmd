@@ -1,20 +1,21 @@
 ::: {#def-npsem-ne .theorem}
-## Random network NPSEM \[RNNPSEM\]
+## Random network NPSEM [RNNPSEM]
 
-An RNNPSEM is an [NPSEM](#def-npsem) whose equations are of two kinds. *Structural* equations represent constructs measured on each [observational unit](#def-observational-unit); *relational* equations represent the causal processes linking constructs across observational units. A typical equation of each kind is
-
-$$
-\begin{aligned}
-X_{ki} &= f_{X_{ki}}\big(\mathbf{Pa}(X_{ki}),\, U_{X_{ki}}\big), & X_{ki} &\in \mathscr{O}_i,\\
-\psi(i,j) &= f_{\psi_{ij}}\big(\mathbf{Pa}(\psi(i,j)),\, U_{\psi_{ij}}\big), & i &\ne j.
-\end{aligned}
-$$
-
-Its random variables are the observational units together with the relational variables:
+An RNNPSEM is an NPSEM whose equations are of two kinds. Structural equations represent constructs measured on each observational unit; relational equations represent the causal processes linking constructs across observational units. A typical equation of each kind is
 
 $$
-\mathbf V = \Big[\,\bigcup_{i \in \mathcal N} \mathscr{O}_i\Big] \cup \Big[\,\bigcup_{i,j \in \mathcal N,\ i \ne j} \psi(i,j)\Big].
+X_{ki}=f_{X_{ki}}\big(\mathbf{Pa}(X_{ki}),U_{X_{ki}}\big),\quad X_{ki}\in\mathscr{O}_i;\qquad \psi_t(i,j)=f_{\psi_t ij}\big(\mathbf{Pa}(\psi_t(i,j)),U_{\psi_t ij}\big),\quad i\neq j.
 $$
 
-A **graph generator** is an array $\boldsymbol\psi = [\,\psi(i,j)\,]_{i,j \in \mathcal N}$ of relational variables, one for each unordered pair of distinct nodes, giving the entries of a random [network graph](#def-graph). When there are several, for example over time, they are written $\boldsymbol\psi_1, \dots, \boldsymbol\psi_T$.
+A graph generator is the matrix of relational variables, one for each ordered pair of distinct nodes, that gives the entries of a random network graph:
+
+$$
+\boldsymbol{\psi}_t=\begin{bmatrix}0&\psi_t(1,2)&\cdots&\psi_t(1,n)\\ \psi_t(2,1)&0&\cdots&\psi_t(2,n)\\ \vdots&\vdots&\ddots&\vdots\\ \psi_t(n,1)&\psi_t(n,2)&\cdots&0\end{bmatrix}.
+$$
+
+The diagonal is fixed at zero and is not a variable. Its $i$th row is the vector of network weights $\boldsymbol{\Psi}_{ti}$ of unit $i$. When there are several, for example over time, they are written $\boldsymbol{\psi}_1,\dots,\boldsymbol{\psi}_T$, and each is treated as one block: its entries are consecutive in the topological order of C.8, so no other variable lies between two of them. The random variables of an RNNPSEM are the observational units together with the relational variables:
+
+$$
+\mathbf{V}=\Big[\bigcup_{i\in\mathcal{N}}\mathscr{O}_i\Big]\cup\Big[\bigcup_{t=1}^{T}\ \bigcup_{i,j\in\mathcal{N},\,i\neq j}\psi_t(i,j)\Big].
+$$
 :::

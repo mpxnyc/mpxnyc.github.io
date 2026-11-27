@@ -1,12 +1,11 @@
 ::: {#def-covariate .theorem}
 ## Covariate
 
-The vector $\mathbf X_k$ of all mutually [equivalent](#def-equivalence) variables. Writing $X_{ki}$ for the $k^{th}$ construct on the $i^{th}$ observational unit, the covariate $\mathbf X_k$ is the vector of the $X_{ki}$, and $\mathbf V$ can be stated as the matrix of its covariates $\mathbf X_k$:
+The vector $\mathbf{X}_k$ of all mutually equivalent variables, an equivalence class of $\sim$. Writing $X_{ki}$ for the $k$th construct on the $i$th observational unit, the covariate $\mathbf{X}_k$ is the vector of the $X_{ki}$, ordered by unit, and $\mathbf{V}$ can be stated as the matrix of its covariates:
 
 $$
-\mathbf X_k = \big[\, X_{k1}, \dots, X_{kn} \,\big]^T, \qquad
-\mathbf V = \big[\, \mathbf X_1, \dots, \mathbf X_K \,\big].
+\mathbf{X}_k=\big(X_{k1},\dots,X_{kn}\big)^{T},\qquad \mathbf{V}=\big(\mathbf{X}_1,\dots,\mathbf{X}_K\big).
 $$
 
-For scalar constructs, $\mathbf X_k \in \mathbb R^{n}$ and $\mathbf V \in \mathbb R^{n \times K}$. When units fall into classes carrying different constructs, $\mathbf V$ is one such matrix per class, and its entries may be vectors.
+For scalar constructs, $\mathbf{X}_k\in\mathbb{R}^n$ and $\mathbf{V}\in\mathbb{R}^{n\times K}$. When units fall into classes carrying different constructs, $\mathbf{V}$ is one such matrix per class, and its entries may be vectors.
 :::

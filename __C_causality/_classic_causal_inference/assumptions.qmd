@@ -7,10 +7,10 @@ targets::tar_source("../R_functions")
 
 In [Example 1](#sec-example-1), say *Person 1* has job status $L_1$, *Person 2* has job status $L_2$ and *Person 3* has job status $L_3$. Each of these variables can only take on two values: “employed vs. unemployed.” Similarly, define $A_i$ as *Person $i$'s* dress (formal vs. informal), and $Y_i$ as their job offers (many vs. few). The job status measurement ($L_i$) precedes dress ($A_i$) in time, and dress precedes job offers ($Y_i$).
 
-##### Independence I: No contagion
+##### Assumption 1: No contagion
 
 
-Under classic causal inference, we make the assumption of [no contagion](#def-no-spillover) -- that [equivalent measurements](#def-equivalence) taken across participants (e.g. $L_1$, $L_2$, and $L_3$) are independent of each other given all prior measures. i.e.:
+Under classic causal inference, we make the assumption of [no contagion](#def-no-spillover): no element of a covariate influences another element of the same covariate. With single-world independence, [equivalent measurements](#def-equivalence) taken across participants (e.g. $L_1$, $L_2$, and $L_3$) are then independent of each other given all prior measures, i.e.:
 
 
 $$
@@ -39,16 +39,16 @@ Y_1 \perp Y_3 | L_1, L_2, L_3, A_1, A_2, A_3
 \end{aligned}
 $$
 
-This is shown in @fig-no-spillover-dag as the removal of arrows that connected the $L_i$'s, $A_i$'s and $Y_i$'s. In @eq-no-spillover-dag, the $L_i$'s are not functions of each other, the $A_i$'s are not functions of each other, and the $Y_i$'s are not functions of each other. i.e. Given all the measurements taken prior to a set of contemporaneous measures, the contemporaneous measures are independent. This follows from the independence of the error terms $U_{L_i}$, the error terms $U_{A_i}$, and the error terms $U_{Y_i}$ across observations $i$ (or, more generally, from the independence assumption (4) of the FFRCISTG).
+This is shown in @fig-no-spillover-dag as the removal of arrows that connected the $L_i$'s, $A_i$'s and $Y_i$'s. In @eq-no-spillover-dag, the $L_i$'s are not functions of each other, the $A_i$'s are not functions of each other, and the $Y_i$'s are not functions of each other. i.e. Given all the measurements taken prior to a set of contemporaneous measures, the contemporaneous measures are independent. This follows from no contagion together with single-world independence, assumption (4) of the FFRCISTG; no assumption is made about the error terms.
 
 {{< include ___figures/fig-no-spillover-dag.qmd >}}
 
 {{< include ___equations/eq-no-spillover-dag.qmd >}}
 
-##### Independence II: No interference
+##### Assumption 2: No interference
 
 
-Classic causal inference makes the assumption of [no interference](#def-no-interference). i.e. We assume that measurements made across participants, but not at the same time, are independent of each other. This is shown as the absence of arrows that point from the $L_i$'s to $A_j$'s, the $L_i$'s to the $Y_j$'s and the $A_i$'s to the $Y_j$ for participants $i\neq j$ (see @fig-independence-dag).
+Classic causal inference makes the assumption of [no interference](#def-no-interference): no variable in one participant's unit is a parent of a non-equivalent variable in another participant's unit. This is shown as the absence of arrows that point from the $L_i$'s to $A_j$'s, the $L_i$'s to the $Y_j$'s and the $A_i$'s to the $Y_j$ for participants $i\neq j$ (see @fig-independence-dag).
 
 This allows us to simplify the structural equation model so that each participant's measures are a function of only measures taken on them.
 
@@ -56,9 +56,9 @@ This allows us to simplify the structural equation model so that each participan
 {{< include ___equations/eq-independence-dag-full.qmd >}}
 
 
-##### Homogeneity I: Identical structural distributions
+##### Assumption 3: Identical structural distributions
 
-Finally, we see above that the functions that generate observations $L_i$ are similar in structure to each other, as are the functions that generate $A_i$'s and $Y_i$s. We make the homogeneity assumption that the functions are [identical](#def-identical-distributions) to each other.
+Finally, we see above that the functions that generate observations $L_i$ are similar in structure to each other, as are the functions that generate $A_i$'s and $Y_i$s. We make the homogeneity assumption that the functions are [identical](#def-identical-distributions) to each other, and that the error terms of equivalent variables are identically distributed, $U_{L_1} \overset{d}{=} U_{L_2} \overset{d}{=} U_{L_3}$, and likewise for $A$ and $Y$.
 
 $$
 \begin{aligned}
@@ -67,3 +67,7 @@ $$
  f_Y &= f_{Y_1} = f_{Y_2} = f_{Y_3}  \\
 \end{aligned}
 $$
+
+##### Assumption 4: Single-world independence
+
+Finally, we assume [single-world independence](#def-single-world), the causal assumption of the FFRCISTG: for every value of the nine variables, the one-step-ahead counterfactuals, each variable's value when its parents are set to their values there, are mutually independent. In Example 1, fixing $L_i = l$ and $A_i = a$ for every person, the variables $L_i$, $A_i^{(l)}$ and $Y_i^{(l, a)}$ are mutually independent, within and across persons. Nothing is assumed about the error terms. This is the assumption the identification argument below uses.

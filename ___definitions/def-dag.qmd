@@ -1,14 +1,14 @@
 ::: {#def-dag .theorem}
 ## Directed acyclic graph
 
-A graph $\mathcal G$ whose nodes represent the random variables $\mathbf V$ and whose directed edges, written $X \to Y$, form no cycles: no sequence of edges leads from a variable back to itself.
+A graph $\mathcal{G}$ whose nodes represent the random variables $\mathbf{V}$ and whose directed edges, written $X\to Y$, form no cycles: no sequence of edges leads from a variable back to itself.
 
-$X$ is a **parent** of $Y$ if $\mathcal G$ has an edge $X \to Y$; the set of parents of $Y$ is written $\mathbf{Pa}(Y)$.
+$X$ is a parent of $Y$ if $\mathcal{G}$ has an edge $X\to Y$; the set of parents of $Y$ is written $\mathbf{Pa}(Y)$. The ancestors of $Y$ are its parents, their parents, and so on.
 
-A **topological order** of $\mathcal G$ is an ordering $V_1,\dots,V_m$ of $\mathbf V$ in which every parent precedes its children,
+A topological order of $\mathcal{G}$ is an ordering $V_1,\dots,V_m$ of $\mathbf{V}$ in which every parent precedes its children,
 
 $$
-\mathbf{Pa}(V_j) \subseteq \{V_1,\dots,V_{j-1}\} \quad \text{for every } j.
+\mathbf{Pa}(V_j)\subseteq\{V_1,\dots,V_{j-1}\}\quad\text{for every } j.
 $$
 
 Topological orders are not unique, and they need not be chronological.

@@ -57,7 +57,7 @@ The proportion of all nodes contained in the LCC serves as a measure of how cohe
 number_reps <- targets::tar_read(config_list)[[1]][["settings"]][["n_reps_graph"]]
 ```
 
-To quantify uncertainty around our network-based estimates, we used the bootstrap to calculate confidence intervals, assuming that the underlying data are a realization of a Bipartite Random Network Finest Fully Randomized Causally Interpretable Structured Tree Graph (BRNFFRCISTG) model (see @sec-social-spatial-networks).
+To quantify uncertainty around our network-based estimates, we used the bootstrap to calculate confidence intervals, re-sampling participants with replacement, and interpreted the data as a realization of a Bipartite Random Network Finest Fully Randomized Causally Interpretable Structured Tree Graph (BRNFFRCISTG) model (see @sec-social-spatial-networks). The participant bootstrap treats participants as independent draws; @sec-control-intervention discusses how it relates to the model.
 
 
 Recalling that the MPX NYC person-place graph includes participant observations and community district observations as nodes, we resampled participant observations `r number_reps` times with replacement. An observation was defined as the complement of measures on a particular participant as well as all the edges that connect that participant to their community districts of residence and gatherings.

@@ -4,5 +4,5 @@ This section extended the classical framework by relaxing the assumption of inde
 
 Homogeneous network interference makes it possible to represent interference formally and to study its causal implications analytically. Under this assumption, we can summarize the influence of the network on each unit through **exposure mappings**, which translate complex interdependence into measurable quantities that can be modeled within standard causal frameworks.  
 
-This homogeneous interference model -— the **Network FFRCISTG** —- preserves the tractability of the classical FFRCISTG while acknowledging the presence of spillover effects. In the next section, we generalize further to consider **random network interference**, in which the network itself is treated as a random structure rather than a fixed pattern of relationships.
+This homogeneous interference model — the **Network FFRCISTG** — preserves the tractability of the classical FFRCISTG while acknowledging the presence of spillover effects. In the next section, we generalize further to consider **random network interference**, in which the network itself is treated as a random structure rather than a fixed pattern of relationships.
 

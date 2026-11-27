@@ -1,11 +1,11 @@
-#### Homogeneity 3: Bipartite network
+#### Bipartite network
 
-We assume that $\mathbf{\Psi}_{s}$ is bipartite. This means that we can represent it as a $p \times q$ matrix. We can also represent place attributes using vectors of length $q$, and person attributes using vectors of length $p$.
+We assume that $\mathbf{\Psi}_{s}$ is bipartite (@def-bipartite-npsem-ie): ties join people to places only, and a tie between a person and a place runs both ways with the same weight. The people's rows therefore determine the network, and we can represent it as a $p \times q$ matrix. We can also represent place attributes using vectors of length $q$, and person attributes using vectors of length $p$.
 
 $$
 \begin{aligned}
 \text{Structural: Places } (\mathbb{R}^q) \\
-&  \mathbf R_{s}                   & &= f_{\mathbf R_s}(\mathbf U_{\mathbf R_{s}},  \mathbf g_{VR}(\mathbf{V}_{s-1}, \mathbf{\Psi}_{s-1}) ) \\
+&  \mathbf R_{s}                   & &= f_{\mathbf R_s}(\mathbf U_{\mathbf R_{s}},  \mathbf g_{VR}(\mathbf{V}_{s-1}, \mathbf{\Psi}_{s}) ) \\
 &  \mathbf T_{s}                   & &= f_{\mathbf T_s}(\mathbf U_{\mathbf T_{s}}, \mathbf R_{s})                                 \\
 \text{Structural: People } (\mathbb{R}^p) \\
 &  \mathbf M_{s}                  & &=     f_{\mathbf M_s} (\mathbf U_{\mathbf M_{s}} , \mathbf V_{s-1},   \mathbf M_{s-1}, \mathbf g_{TM}(\mathbf{T}_{s}, \mathbf{\Psi}_{s}))       \\

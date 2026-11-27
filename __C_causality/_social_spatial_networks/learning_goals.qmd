@@ -6,5 +6,7 @@
 
 - Apply the assumptions of BRNFFRCISTG to a causal model including graph generators.
 
+- Distinguish ties formed row by row (local row formation) from ties formed dyad by dyad (the DBRNFFRCISTG), and say what each lets us estimate from one realization of the network.
+
 
 :::

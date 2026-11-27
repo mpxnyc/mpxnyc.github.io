@@ -1,5 +1,5 @@
 ::: {#def-random-variable .theorem}
 # Random variable
 
-A quantity $V(\omega)$ that takes a value for each element $\omega$ of a sample space $\Omega$ and behaves according to some (unknown) probability distribution. Its values may be scalars, vectors or matrices.
+A measurable function $V:\Omega\to\mathcal{R}(V)$ on a probability space $(\Omega,\mathcal{A},P)$: a quantity $V(\omega)$ that takes a value for each element $\omega$ of the sample space and whose behaviour is described by the (unknown) law $P$. Its values may be scalars, vectors or matrices.
 :::

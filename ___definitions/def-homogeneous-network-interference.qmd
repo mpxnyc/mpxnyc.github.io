@@ -1,5 +1,5 @@
 ::: {#def-homogeneous-network-interference .theorem}
 ## Homogeneous network interference
 
-An exposure mapping exhibits homogeneous network interference with respect to a graph set $\mathcal H$ if it is [separable](#def-separability) with [positionally invariant](#def-positional-invariance) and [bounded](#def-boundedness) component functions with respect to $\mathcal H$. An NPSEM satisfies homogeneous network interference if all its exposure mappings do.
+An exposure mapping exhibits homogeneous network interference with respect to a graph set $\mathcal{H}$ if it is separable with positionally invariant and bounded component functions with respect to $\mathcal{H}$. An NPSEM satisfies homogeneous network interference if all its exposure mappings do.
 :::

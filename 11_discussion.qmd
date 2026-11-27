@@ -21,7 +21,7 @@ Taken together, these findings show that epidemics move through an interconnecte
 
 ##  Scientific lessons
 
-To make sense of these dynamics, we developed the **SSNAC framework**—an approach to causal inference that treats networks as the foundation of analysis rather than a complication to be averaged away. SSNAC extends the logic of NPSEM-IE and FFRCISTG models to populations where interference is the norm. It formalizes how one person’s exposure can affect another’s outcome, and how local structures—places, clusters, community districts—shape those dependencies.
+To make sense of these dynamics, we developed the **SSNAC framework**—an approach to causal inference that treats networks as the foundation of analysis rather than a complication to be averaged away. SSNAC extends the logic of FFRCISTG models to populations where interference is the norm. It formalizes how one person’s exposure can affect another’s outcome, and how local structures—places, clusters, community districts—shape those dependencies.
 
 By treating social and spatial connections as observable, manipulable components of a causal system, SSNAC reframes what counts as an intervention. It becomes possible to reason about policies that work through networks: targeted vaccination, venue-based outreach, neighborhood-level investment.
 

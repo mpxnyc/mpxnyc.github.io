@@ -1,10 +1,11 @@
 ::: {#def-interventional-npsem .theorem}
 # Interventional NPSEM
 
-The [NPSEM](#def-npsem) obtained from an NPSEM $\mathcal{M} = \{f_V : V \in \mathbf V\}$ by replacing the structural equations of the variables in $\mathbf E$ with the intervention equations of [intervention regime](#def-intervention-regime) $\Gamma$.
+The NPSEM obtained from an NPSEM $\mathcal{M}$ with structural equations $\{f_V:V\in\mathbf{V}\}$ by replacing the structural equations of the variables in $\mathbf{E}$ with the intervention equations of intervention regime $\Gamma$:
 
 $$
-\mathcal{M}^{(\Gamma)} = \{f_V^{(\Gamma)}: V \in \mathbf V \} \qquad
-f_V^{(\Gamma)} = \begin{cases} h_V & \text{if } V \in \mathbf E\\ f_V & \text{otherwise}\end{cases}
+\mathcal{M}^{(\Gamma)}=\{f_V^{(\Gamma)}:V\in\mathbf{V}\},\qquad f_V^{(\Gamma)}=\begin{cases}h_V&\text{if }V\in\mathbf{E},\\ f_V&\text{otherwise.}\end{cases}
 $$
+
+Every equation outside $\mathbf{E}$ is unchanged. This is modularity.
 :::
