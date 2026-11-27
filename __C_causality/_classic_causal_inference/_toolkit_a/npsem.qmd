@@ -1,6 +1,6 @@
 ##### NPSEM
 
-A nonparametric structural equation model (NPSEM) is a system of deterministic equations that relates all the entries in a given random vector to each other. It does so without specifying parametric functions for each equation in the system. The same equations also say how the variables would be generated in hypothetical worlds in which some of them are set by intervention. An example of such a model is shown below. In this set of equations $(f_*)$, values that are produced by equations higher up in the list serve as inputs to equations lower down in the list.
+A nonparametric structural equation model (NPSEM) is defined relative to a directed acyclic graph (@def-dag) on a random vector: each entry is a deterministic function of its parents in the graph and of its own error term, and the functions are not given a parametric form. The parameter is the set of functions together with the joint law of the error terms, on which the NPSEM itself places no restriction (@def-npsem). The same equations also say how the variables would be generated in hypothetical worlds in which some of them are set by intervention. An example of such a model is shown below. In this set of equations $(f_*)$, values that are produced by equations higher up in the list serve as inputs to equations lower down in the list.
 
 
 $$
@@ -17,5 +17,5 @@ Y_3 &= f_{Y_3}(U_{Y_3}, L_1, L_2, L_3, A_1, A_2, A_3, Y_1, Y_2)
 \end{aligned}
 $$
 
-The arguments $(U_*)$ represent error terms—random variables that induce the joint distribution of the variables in the model. In this example every variable depends on all the variables before it, which makes the NPSEM *complete*. When error terms are mutually independent, within and across observational units, the model is called an NPSEM-IE—a nonparametric structural equation model with independent errors.
+The arguments $(U_*)$ represent error terms—random variables that induce the joint distribution of the variables in the model. In this example every variable depends on all the variables before it: nothing has yet been assumed away.
 

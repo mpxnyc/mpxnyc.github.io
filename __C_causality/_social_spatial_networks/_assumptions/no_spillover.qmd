@@ -1,13 +1,13 @@
 
 
-#### Independence 1: No contagion
+#### Assumption 1: No contagion
 
 We assume no contagion (@def-no-spillover): no element of a covariate influences another element of the same covariate. With single-world independence, equivalent measurements on observational units are then independent of each other given all prior measures. No contagion is expressed by the following DANG-like compact representation of the model.
 
 $$
 \begin{aligned}
 \text{Structural } (\mathbb{R}^n) \\
-&  \mathbf R_{s}                   & &= f_{\mathbf R_s}(\mathbf U_{\mathbf R_{s}}, \mathbf{V}_{s-1}, \mathbf{\Psi}_{s-1}) \\
+&  \mathbf R_{s}                   & &= f_{\mathbf R_s}(\mathbf U_{\mathbf R_{s}}, \mathbf{V}_{s-1}, \mathbf{\Psi}_{s}) \\
 &  \mathbf T_{s}                   & &= f_{\mathbf T_s}(\mathbf U_{\mathbf T_{s}}, \mathbf R_{s})                                 \\
 &  \mathbf M_{s}                  & &=     f_{\mathbf M_s} (\mathbf U_{\mathbf M_{s}} , \mathbf V_{s-1},   \mathbf M_{s-1}, \mathbf{T}_{s}, \mathbf{\Psi}_{s})       \\
 &  \mathbf V_{s}                  & &=     f_{\mathbf V_s}(\mathbf U_{\mathbf V_{s}}, \mathbf M_{s}, \mathbf V_{s-1})                                                \\

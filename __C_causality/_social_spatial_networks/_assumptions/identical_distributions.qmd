@@ -1,6 +1,6 @@
-#### Homogeneity 2: Identical structural distributions
+#### Assumption 3: Identical structural distributions
 
-We assume that all structural equations contained in the vector $\mathbf f_{*}$ are identical.
+We assume that all structural equations contained in the vector $\mathbf f_{*}$ are identical, and that the error terms of equivalent variables are identically distributed.
 
 $$
 \mathbf f_{*}(\mathbf{U}_*, \mathbf{Pa(*)}) = \begin{bmatrix}

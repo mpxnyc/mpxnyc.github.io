@@ -1,20 +1,20 @@
 ### Assumptions
 
-##### Independence I: No contagion
+##### Assumption 1: No contagion
 
 In [Example 2](#sec-example-2), we make the assumption of [no contagion](#def-no-spillover): no element of a covariate influences another element of the same covariate. With single-world independence, [equivalent measurements](#def-equivalence) (e.g. $L_1$, $L_2$, and $L_3$) are then independent of each other given all prior measures.
 
 This conditional independence can be checked in data. It was tested, before the assumption had a name, for physical function among family members in Agincourt [@makofane2021, ch. 2; @makofane2023] and for household mortality [@makofane2021, ch. 3]. For two of the three physical function measures the test did not reject conditional independence; for the third, effects were estimated with a coding estimator on a subset of the network in which no two individuals are connected. For household mortality there was no evidence of dependence. A test of this kind checks the conditional independence the assumption implies. It does not tell contagion apart from an unmeasured common cause of the two measures, which is how that paper reads a rejection.
 
-This is shown in @fig-interference-dag, as the removal of arrows that connected the $L_i$'s, $A_i$'s and $Y_i$'s in @fig-fully-connected-dag. In @eq-interference-dag, the $L_i$'s are not functions of each other, the $A_i$'s are not functions of each other, and the $Y_i$'s are not functions of each other, unlike in @eq-fully-connected-dag. This implies that conditioning all the measurements taken prior to a set of contemporaneous measures, the contemporaneous measures are independent.
+This is shown in @fig-interference-dag, as the removal of arrows that connected the $L_i$'s, $A_i$'s and $Y_i$'s in @fig-fully-connected-dag. In @eq-interference-dag, the $L_i$'s are not functions of each other, the $A_i$'s are not functions of each other, and the $Y_i$'s are not functions of each other, unlike in @eq-fully-connected-dag. With single-world independence, this implies that, conditioning on all the measurements taken prior to a set of contemporaneous measures, the contemporaneous measures are independent.
 
-##### Independence II: Network interference
+##### Assumption 2: Homogeneous network interference
 
 {{< include ___figures/fig-interference-dag.qmd >}} 
 
 {{< include ___equations/eq-interference-dag.qmd >}} 
 
-We make the assumption that interference respects some mapping between individuals - a mapping given by a [graph](#def-graph) adjacency matrix $\Psi$. In @fig-interference-dag, based on their relationships with one another, *Person 1*'s measures are connected with *Person 2*'s, and neither are connected with *Person 3*'s.  
+We make the assumption that interference runs only along a known [network graph](#def-graph), with adjacency matrix $\Psi$, whose entry $\psi(i,j)$ is the weight of $j$'s influence on $i$. In @fig-interference-dag, based on their relationships with one another, *Person 1* and *Person 2* influence each other, so $\psi(1,2) = \psi(2,1) = 1$, and neither influences or is influenced by *Person 3*.  
 
 $$
 \Psi = \begin{bmatrix}
@@ -25,10 +25,10 @@ $$
 $$
 
 
-##### Homogeneity I: Homogeneous network interference
+Interference is homogeneous with respect to this graph ([homogeneous network interference](#def-homogeneous-network-interference)).
 
 
-We assume that the [exposure mapping](#def-exposure-mapping) for each variable in the structural model is [separable](#def-separability). i.e. We define $g_{A_i}$, $h_{Y_i}$, and $g_{Y_i}$ as [component functions](#def-separability) for $A_i$ with respect to $\mathbf{L}$, for $Y_i$ with respect to $\mathbf{A}$, and for $Y_i$ with respect to $\mathbf{L}$. The assumption of [separability](#def-separability) allows us to write the model as follows:
+First, the [exposure mapping](#def-exposure-mapping) for each variable in the structural model is [separable](#def-separability). i.e. We define $g_{A_i}$, $h_{Y_i}$, and $g_{Y_i}$ as [component functions](#def-separability) for $A_i$ with respect to $\mathbf{L}$, for $Y_i$ with respect to $\mathbf{A}$, and for $Y_i$ with respect to $\mathbf{L}$. The assumption of [separability](#def-separability) allows us to write the model as follows:
 
 $$
 \begin{aligned}
@@ -49,7 +49,7 @@ where $\Psi_i$ is the $i^{th}$ row of matrix $\Psi$.
 
 
 
-We assume that the value of a component function is [invariant to its position](#def-positional-invariance) in the network. This allows us to drop the person subscript on the exposure mappings. 
+Second, the value of a component function is [invariant to its position](#def-positional-invariance) in the network: it depends on the neighbors' values only through the pairs of each neighbor's value and weight, through the same function for every person. This allows us to drop the person subscript on the exposure mappings. 
 
 $$
 \begin{aligned}
@@ -65,7 +65,7 @@ Y_3 &= f_{Y_3}(U_{Y_3}, L_3,A_3,  g_{Y}(\mathbf{L}, \Psi_3), h_{Y}(\mathbf{A}, \
 \end{aligned}
 $$
 
-We also assume its [bounded](#def-boundedness), meaning
+Third, each component function is [bounded](#def-boundedness), meaning
 
 $$
 \begin{aligned}
@@ -78,9 +78,9 @@ $$
 
 
 
-##### Homogeneity II: Identical structural distributions
+##### Assumption 3: Identical structural distributions
 
-We assume that the structural equations that produce individual measures are [identical](#def-identical-distributions) across individuals. Hence, we can drop the person subscript from the structural equations. 
+We assume that the structural equations that produce equivalent measures are [identical](#def-identical-distributions) across individuals, and that their error terms are identically distributed. Hence, we can drop the person subscript from the structural equations. 
 
 $$
 \begin{aligned}
@@ -96,3 +96,7 @@ Y_3 &= f_{Y}(U_{Y_3}, L_3,A_3,  g_{Y}(\mathbf{L}, \Psi_3), h_{Y}(\mathbf{A}, \Ps
 \end{aligned}
 $$
 
+
+##### Assumption 4: Single-world independence
+
+Finally, we assume [single-world independence](#def-single-world): for every value of the nine variables, the one-step-ahead counterfactuals are mutually independent, within and across persons. Interference does not change the assumption, only the parents at which the counterfactuals are taken: *Person 1*'s dress, for instance, is set at the values of $L_1$ and $L_2$. Nothing is assumed about the error terms.

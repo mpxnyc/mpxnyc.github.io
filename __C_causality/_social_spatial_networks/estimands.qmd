@@ -1,0 +1,9 @@
+### Estimands
+
+We are interested in how vaccination drives change vaccination coverage by the end of the campaign. Consider the static regime $\Gamma_{\mathbf t}$ that sets every neighborhood's decision in every week, $T_{sj} = t_{sj}$ for $s = 1, 2, 3$ and every $j$, replacing the structural equation that would have set it from the risk rating. The target is the mean of the counterfactual vaccination status at the end of week 3 over the five residents, as in the [identification section](#sec-id-setting):
+
+$$
+\theta(\Gamma_{\mathbf t}) = \frac{1}{5}\sum_{i=1}^{5} E\left[V_{3i}^{(\Gamma_{\mathbf t})}\right],
+$$
+
+and a contrast such as $\theta(\Gamma_{\mathbf 1}) - \theta(\Gamma_{\mathbf 0})$ compares drives in every neighborhood every week with no drives at all. Because a person's row depends on whether they were vaccinated the week before, the regime changes the network, not only the covariates.

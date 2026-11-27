@@ -1,6 +1,6 @@
 #### Observed data model
 
-@fig-homogenous-dag and @eq-homogenous-dag show the resulting NPSEM and DAG for our data. Because of the assumption of identical structural distributions, we can represent the model using three equations rather than nine. We retain the person subscript on the random variables in @eq-homogenous-dag and we keep all nine nodes in the DAG on @fig-homogenous-dag and add six additional nodes to represent network exposure values with respect to $\mathbf{A}$ and $\mathbf{L}$. 
+@fig-homogenous-dag and @eq-homogenous-dag show the resulting NPSEM and DAG for our data. Because of the assumption of identical structural distributions, we can represent the model using three equations rather than nine. We retain the person subscript on the random variables in @eq-homogenous-dag and we keep all nine nodes in the DAG on @fig-homogenous-dag and add six additional nodes to represent network values with respect to $\mathbf{A}$ and $\mathbf{L}$. 
 
 We draw the DAG like this to clarify that though our model is for one person, it represents a part of a system that relates all the people in the sample with each other. Our original purpose, after all, was to infer something about the sample, not any one individual in it.
 

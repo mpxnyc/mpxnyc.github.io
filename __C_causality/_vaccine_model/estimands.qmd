@@ -5,25 +5,21 @@
 Intervention coverage for the $s^{th}$ community district to be immunized, is defined:
 
 $$
-C_s^{(h)} = \frac{1}{|\mathcal{N}_p|}\sum_i V_{si}^{(h)} 
+C_s^{(h)} = \frac{1}{|\mathcal{N}_P|}\sum_{i \in \mathcal{N}_P} V_{si}^{(h)} 
 $$
 
-The cumulative intervention coverage after immunizing $s$ community districts is therefore:
-
-$$ 
-\bar{C_s}^{(h)} = \sum_{v = 1}^s{C_v }^{(h)}
-$$
+Because a vaccinated person stays vaccinated, $C_s^{(h)}$ is already the cumulative coverage after immunizing $s$ community districts.
 
 ##### Social network impact
 
-Define graph $G^{s}(N, \psi_s)$ such that:
+Define the graph $\tilde{\mathcal{G}}_s = (\mathcal{N}, \tilde\psi_s)$, the network with vaccinated people's ties removed, such that:
 
 $$
-\psi_s(i, j) = \psi(i, j) \times (1 -V_{(s-1), i})
+\tilde\psi_s(i, j) = \psi(i, j) \times (1 -V_{(s-1), i})
 $$
 
-The cumulative social network impact of immunizing $s$ community districts is measured in terms of the size of the largest of the connected components $LCC_{(s)}$ of the $G^{s}(N, \psi_s)$ network as a proportion of the total number of participants.
+The cumulative social network impact of immunizing $s$ community districts is measured in terms of the size of the largest of the connected components $LCC_{(s)}$ of the $\tilde{\mathcal{G}}_s$ network as a proportion of the total number of participants.
 
 $$
-\frac{LCC_s}{|N_p|}
+\frac{LCC_s}{|\mathcal{N}_P|}
 $$

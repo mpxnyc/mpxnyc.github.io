@@ -1,6 +1,6 @@
-#### Homogeneity 5: Time homogeneity
+#### Time homogeneity
 
-Finally, we assume that structural equations are identical across time points $s$, with the exception of the random variables defined for $s = 0$. Each of these has no parents. 
+Finally, we make an assumption that is specific to this example and is not part of the BRNFFRCISTG: the structural equations are identical across time points $s$, with the exception of the random variables defined for $s = 0$, each of which has no parents. Identical structural distributions (@def-identical-distributions) make equivalent variables share an equation across units, not across periods; time homogeneity pools the periods as well. 
 
 $$
 \begin{aligned}
@@ -16,7 +16,7 @@ $$
 &   V_{si}                  & &=     f_{ V}( U_{ V_{si}},  M_{si},  V_{s-1, i})                                                \\
 \text{Structural: People in places } (\mathbb{R}^{1 \times q}) \\
 &  {\Psi}_{0i}   & &= F_{{\mathbf \Psi_0}}(\mathbf U_{{\Psi}_{0i}})  \\
-&  {\Psi}_{si}   & &= F_{{\mathbf \Psi}}(\mathbf U_{{\Psi}_{si}}, \mathbf{V}_{s-1}, \mathbf{\Psi}_{s-1})  \\
+&  {\Psi}_{si}   & &= F_{{\mathbf \Psi}}(\mathbf U_{{\Psi}_{si}}, V_{s-1,i}, \Psi_{s-1,i})  \\
 \end{aligned}
 $$
 

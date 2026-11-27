@@ -3,8 +3,8 @@
 
 The assumption of **boundedness** can obtain in three different ways. It could be as a result of restrictions on the structure of the graph. For example, if the only relationships of interest between individual participants were marriages, each node would have a degree of either 0 or 1, meaning the count of alters with $X_{tj} = 1, j \in \mathcal{N}_i$ is either zero or one.
 
-It might obtain via restrictions on the value of $\mathbf{X}$ itself. It might be the case, for instance, that the count of $i$'s for which $X_{ti}=1$ is very low so that on average, the count of alters for which $X_{tj} = 1, j \in N_i$ will also be low.
+It might obtain via restrictions on the value of $\mathbf{X}$ itself. If, for instance, $X_t$ can equal $1$ for at most a fixed number of units, the count of neighbors for which $X_{tj} = 1, j \in \mathcal{N}_i$, can be no larger. A count that is merely low on average is not enough: boundedness requires a finite set of values for every value of $\mathbf{X}$.
 
-Finally, boundedness could obtain as a result of the functional form of $g$ itself. This might happen if $g$ models a network exposure which has a ceiling effect in its dose-response curve with the outcome of interest. For example, if $X$ indicates ownership of a car, and $\mathscr{G}$ encodes close friendships, $g$ would be a component function which tells us how each additional friend who has a car shifts the outcome of interest. For most health applications, its likely that beyond some number of friends who have a car, an additional friend who gets a car will not change the outcome.
+Finally, boundedness could obtain as a result of the functional form of $g$ itself, when the analyst defines the network value with a ceiling. For example, if $X$ indicates ownership of a car, and $\mathcal{G}$ encodes close friendships, $g$ might count friends who have a car up to three, $g_{ti}(\mathbf{X}) = \min\big(\sum_{j \in \mathcal{N}_i} X_{tj}, 3\big)$. This is reasonable when, for most health applications, beyond some number of friends who have a car an additional friend who gets a car is unlikely to change the outcome.
 
 

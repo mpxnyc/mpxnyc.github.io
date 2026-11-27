@@ -1,11 +1,9 @@
-#### Homogeneity 1: Homogeneous random network interference
-
-We assume that the [exposure mapping](#def-exposure-mapping) for each variable in the structural part of the model is [separable](#def-separability) and its component functions are [positionally invariant](#def-positional-invariance) and [bounded](#def-boundedness) with respect to the graph generators $\mathbf{\Psi}_{s-1}$ and $\mathbf{\Psi}_{s}$ (@def-homogenous-random-network-interference).
+Further, we assume that the [exposure mapping](#def-exposure-mapping) for each variable in the structural part of the model is [separable](#def-separability) and its component functions are [positionally invariant](#def-positional-invariance) and [bounded](#def-boundedness) with respect to the graph generators $\mathbf{\Psi}_{s}$, for every realization of them, with the same summary functions for every realization (@def-homogenous-random-network-interference).
 
 $$
 \begin{aligned}
 \text{Structural } (\mathbb{R}^n) \\
-&  \mathbf R_{s}                   & &= f_{\mathbf R_s}(\mathbf U_{\mathbf R_{s}},  \mathbf g_{VR}(\mathbf{V}_{s-1}, \mathbf{\Psi}_{s-1}) ) \\
+&  \mathbf R_{s}                   & &= f_{\mathbf R_s}(\mathbf U_{\mathbf R_{s}},  \mathbf g_{VR}(\mathbf{V}_{s-1}, \mathbf{\Psi}_{s}) ) \\
 &  \mathbf T_{s}                   & &= f_{\mathbf T_s}(\mathbf U_{\mathbf T_{s}}, \mathbf R_{s})                                 \\
 &  \mathbf M_{s}                  & &=     f_{\mathbf M_s} (\mathbf U_{\mathbf M_{s}} , \mathbf V_{s-1},   \mathbf M_{s-1}, \mathbf g_{TM}(\mathbf{T}_{s}, \mathbf{\Psi}_{s}))       \\
 &  \mathbf V_{s}                  & &=     f_{\mathbf V_s}(\mathbf U_{\mathbf V_{s}}, \mathbf M_{s}, \mathbf V_{s-1})                                                \\

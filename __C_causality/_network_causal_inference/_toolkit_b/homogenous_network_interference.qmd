@@ -1,5 +1,5 @@
 ##### Homogeneous network interference
 
-The assumption of [*homogeneous network interference*](#def-homogeneous-network-interference) holds that for any node in the network, the effect of a neighbor’s treatment is the same regardless of which neighbor it is, and regardless of the position of the unit in the network. In addition, the [component functions](#def-separability) of exposure mappings are restricted so that their values lie in a finite set. 
+The assumption of [*homogeneous network interference*](#def-homogeneous-network-interference) holds that each exposure mapping is [separable](#def-separability), and that its [component functions](#def-separability) are [positionally invariant](#def-positional-invariance) and [bounded](#def-boundedness). Positional invariance says that a unit's network value depends on its neighbors' values only through the pairs of each neighbor's value and weight, through one function that is the same for every unit, whatever its position in the network: neighbors with equal weights are interchangeable. Boundedness says that network values lie in a finite set. 
 
 

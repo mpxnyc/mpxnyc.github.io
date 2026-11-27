@@ -3,7 +3,7 @@
 
 Because of the assumptions of *no interference* and *no contagion*, FFRCISTG models are unable to incorporate this additional information about the relationships between individuals in [Example 2](#sec-example-2).  These relationships cause what is termed *causal interference* — the treatment level of one unit affects the outcome of another unit.
 
-We make progress by mapping out the structure of interference using graphs and incorporate it into the model.  We introduce a statistical model called the [*Network Finest Fully Randomized Causally Interpretable Structured Tree Graph (NFFRCISTG)*](#def-nffrcistg) — an extension of the [FFRCISTG](#def-ffrcistg) model that uses graphs to encode the pattern of causal interference among a set of observational units.
+We make progress by mapping out the structure of interference using graphs and incorporate it into the model.  We introduce a causal model called the [*Network Finest Fully Randomized Causally Interpretable Structured Tree Graph (NFFRCISTG)*](#def-nffrcistg) — an extension of the [FFRCISTG](#def-ffrcistg) model that uses graphs to encode the pattern of causal interference among a set of observational units.
 
 Below we build an [NFFRCISTG](#def-nffrcistg) model for [Example 2](#sec-example-2), illustrating the assumptions of the model.  Before that, we outline some ideas and language we will need for the illustration.
 

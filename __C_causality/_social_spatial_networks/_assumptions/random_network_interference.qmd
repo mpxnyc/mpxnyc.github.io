@@ -1,11 +1,11 @@
-#### Independence 2: Random network interference
+#### Assumption 2: Homogeneous random network interference
 
-We make the assumption that interference respects a mapping between individuals and neighborhoods as given by random [network graph](#def-graph) $\mathbf \Psi$, and the empty graph $\mathbf 0$: each structural equation depends on other units' variables only through their network values in the graph shown.
+We make the assumption that interference runs only along the random [network graph](#def-graph) $\mathbf \Psi_s$, or not at all (the empty graph $\mathbf 0$): each structural equation depends on other units' variables only through their network values in the graph shown.
 
 
 $$
 \begin{aligned}
-&  f_{\mathbf R_s}    & &\text{depends only on network values in} &  \mathbf{\Psi}_{s-1}\\
+&  f_{\mathbf R_s}    & &\text{depends only on network values in} &  \mathbf{\Psi}_{s}\\
 &  f_{\mathbf T_s}      & &\text{depends only on network values in} &  \mathbf{0}\\
 &  f_{\mathbf M_s}      & &\text{depends only on network values in} &  \mathbf{\Psi}_{s}\\
 &  f_{\mathbf V_s}      & &\text{depends only on network values in} &  \mathbf{0}\\

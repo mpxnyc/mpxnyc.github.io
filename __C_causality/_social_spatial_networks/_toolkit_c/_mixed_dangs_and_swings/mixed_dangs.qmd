@@ -1,7 +1,7 @@
 ##### Mixed DANGs
 
-DANGs not only allow for compact description of causal systems characterized by interference; they can describe causal systems that involve more than one kind of observational unit.  We focus on systems that involve persons as one type and places as the other.  @fig-example-dang-structural shows a mixed DANG for the first week of the campaign mentioned in [Example 2](#sec-example-2).  
+DANGs not only allow for compact description of causal systems characterized by interference; they can describe causal systems that involve more than one kind of observational unit.  We focus on systems that involve persons as one type and places as the other.  @fig-example-dang-structural shows a mixed DANG for the first week of the campaign mentioned in [Example 3](#sec-example-3).  
 
-$\mathbf{T}$ is the decision to conduct a vaccination campaign or not in each of the three places.  $\mathbf{M}$ indicates whether each of the six people received a vaccination-campaign message.  $\mathbf{V}$ indicates whether each of the people got vaccinated.  
+$\mathbf{T}$ is the decision to conduct a vaccination campaign or not in each of the three places.  $\mathbf{M}$ indicates whether each of the five people received a vaccination-campaign message.  $\mathbf{V}$ indicates whether each of the people got vaccinated.  
 
 {{< include ___figures/fig-example-dang-structural.qmd >}}

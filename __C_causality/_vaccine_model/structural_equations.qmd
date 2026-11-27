@@ -1,20 +1,20 @@
 ### Structural equations
 
-According to the model specified by structural equations [-@eq-edge-intervention-swing], no individual $i$ has been vaccinated at time 0, and nobody receives the campaign message. The risk rating for community district $j$ at time $s$ is some function $h$ of the vaccination status at time $s-1$ for each individual who is connected to that community district. An intervention is conducted in community district $j$ as time $s$ if that community district has the highest risk rating. Each individual $i$ is said to have received the campaign message at time $s$ if the intervention was conducted in any of the community districts he is connected to. Finally, we consider individual $i$ vaccinated at time $s$ if they were vaccinated at time $s-1$ or if they received the campaign message in time $s$. The risk rating is given by the function $h$. 
+According to the model specified by structural equations [-@eq-edge-intervention-swing], no individual $i$ has been vaccinated at time 0, and nobody receives the campaign message. The risk rating for community district $j$ at time $s$ is some function $h$ of the vaccination status at time $s-1$ for each individual who is connected to that community district. An intervention is conducted in community district $j$ at time $s$ if that community district has the highest risk rating. Each individual $i$ is said to have received the campaign message at time $s$ if the intervention was conducted in any of the community districts they are connected to. Finally, we consider individual $i$ vaccinated at time $s$ if they were vaccinated at time $s-1$ or if they received the campaign message in time $s$. The risk rating is given by the function $h$. 
 
 {{< include ___equations/eq-edge-intervention-swing.qmd >}}
 
 {{< include ___figures/fig-edge-intervention-swing.qmd >}}
 
 
-Define $\psi(i, j)$ as an adjacency function - an indicator function that equals to $1$ if Person $i$ lives in or visits neighborhood $j$ and $0$ otherwise. Let $\mathcal{N}_P$ be the indices of all person nodes and $\mathcal{N}_N$ be a set of indices for neighborhood nodes. Under the contact-neutralizing approach:
+Define $\psi(i, j)$ as an adjacency function - an indicator function that equals to $1$ if Person $i$ lives in or visits neighborhood $j$ and $0$ otherwise. Let $\mathcal{N}_P$ be the indices of all person nodes and $\mathcal{N}_N$ be a set of indices for neighborhood nodes, so that the network graph is $\mathcal{G} = (\mathcal{N}, \psi)$ with $\mathcal{N} = \mathcal{N}_P \cup \mathcal{N}_N$. Under the contact-neutralizing approach:
 
 $$
 h_{sj}(\mathbf{V}_{s-1}) = \sum_{ i \in \mathcal{N}_P} (1 -V_{(s-1), i}) \times \psi(i, j)   
 $$
 
-and under the movement-neutralizing approach:
+and under the movement-neutralizing approach, which weights each unvaccinated person by the number of other community districts they are connected to:
 
 $$
-h_{sj}(\mathbf{V}_{s-1}) =   \sum_{ i \in \mathcal{N}_P} (1 -V_{(s-1), i}) \times \psi(i, j) \sum_{ k \in \mathcal{N}_N} \psi(i, k) 
+h_{sj}(\mathbf{V}_{s-1}) =   \sum_{ i \in \mathcal{N}_P} (1 -V_{(s-1), i}) \times \psi(i, j) \sum_{ k \in \mathcal{N}_N,\, k \neq j} \psi(i, k) 
 $$
