@@ -1,11 +1,11 @@
 ::: {#def-identical-distributions .theorem}
 ## Identical structural distributions
 
-[Equivalent](#def-equivalence) variables have identical structural equations and identically distributed error terms.
+Equivalent variables have identical structural equations and identically distributed error terms. Because equivalent variables read different units’ values, the equations are compared through their exposure mappings: for each covariate $\mathbf{X}_k$ there is one function $f_k$ with
 
 $$
-X_i\sim X_j\Rightarrow f_{X_i}=f_{X_j}\ \text{ and }\ U_{X_i}\overset{d}{=}U_{X_j}.
+X_{ki}=f_k\big(g_{ik}(\cdot),U_{X_{ki}}\big)\ \text{ for every } i,\qquad X_{ki}\sim X_{kj}\ \Rightarrow\ U_{X_{ki}}\overset{d}{=}U_{X_{kj}},
 $$
 
-Under [single-world independence](#def-single-world), the law of each unit is the product of the laws of its one-step-ahead counterfactuals.
+where $g_{ik}$ and $g_{jk}$ return the same quantities for units $i$ and $j$: their own values of the same constructs and, under interference, summaries given by the same component functions (C.19–C.20, C.25). See Remark 1.
 :::

@@ -1,9 +1,9 @@
 ::: {#def-identical-relational-distributions .theorem}
 ## Identical relational distributions
 
-A bipartite [graph generator](#def-npsem-ge) with [local tie formation](#def-local-tie-formation) has identical relational distributions if every [dyad](#def-dyad) has the same relational equation $f_{\boldsymbol\psi}$ and the same error distribution:
+A bipartite graph generator with local tie formation has identical relational distributions if every dyad has the same relational equation $f_{\psi,k}$ and the same error distribution:
 
 $$
-U_{ij} \sim U_{i'j'} \qquad \text{for all } i, i' \in \mathcal P,\ j, j' \in \mathcal Q.
+U_{k,il}\overset{d}{=}U_{k,i'l'}\qquad\text{for all } i,i'\in\mathcal{P},\ l,l'\in\mathcal{Q}.
 $$
 :::

@@ -1,11 +1,11 @@
 ::: {#def-local-tie-formation .theorem}
 ## Local tie formation
 
-A bipartite [graph generator](#def-npsem-ge) satisfies local tie formation if the relational equation of each [dyad](#def-dyad) depends on the rest of the system only through a bounded summary $c_i$ of the person's history, a bounded summary $c_j$ of the place's history, and a bounded summary $s_{ij}$ of the dyad's past, for example whether the person attended the place in the previous period:
+A bipartite graph generator satisfies local tie formation if the equation of each dyad depends on the rest of the system only through a bounded summary $c_{ki}$ of the person’s history, a bounded summary $c_{kl}$ of the place’s history, and a bounded summary $s_{k,il}$ of the dyad’s past, for example whether the person attended the place in the previous period:
 
 $$
-D_{ij} = f_{\boldsymbol\psi}\big(c_i,\, c_j,\, s_{ij},\, U_{ij}\big),
+D_{k,il}=f_{\psi,k}\big(c_{ki},c_{kl},s_{k,il},U_{k,il}\big),\qquad c_{kl}=\kappa^{\mathcal{Q}}_k\big(\bar X_{k-1,l},\bar g_{k-1,l}\big),\qquad s_{k,il}=\sigma_k\big(\bar D_{k-1,il}\big),
 $$
 
-where $(c_i, c_j, s_{ij})$ takes finitely many values.
+with $c_{ki}$ as in C.29, and $\kappa^{\mathcal{Q}}_k$ and $\sigma_k$ the same for every place and every dyad. $(c_{ki},c_{kl},s_{k,il})$ takes finitely many values. A row of such a generator is the collection of its dyads’ equations.
 :::

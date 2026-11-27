@@ -1,11 +1,11 @@
 ::: {#def-local-row-formation .theorem}
 ## Local row formation
 
-A [BRNNPSEM](#def-bipartite-npsem-ge) satisfies local row formation if the structural equation of each person's row $\boldsymbol\Psi_i$ depends on the rest of the system only through a bounded summary $c_i$ of the person's history and a bounded summary $r_i$ of their past rows, for example the places they attended in the previous period:
+A BRNNPSEM satisfies local row formation if the structural equation of each person’s row depends on the rest of the system only through a bounded summary $c_{ki}$ of the person’s history and a bounded summary $r_{ki}$ of their past rows, for example the places they attended in the previous period. In the time-ordered setting of section 7, where $\boldsymbol{\psi}_k$ precedes $\mathbf{X}_k$,
 
 $$
-\boldsymbol\Psi_i = f_{\boldsymbol\Psi}\big(c_i,\, r_i,\, U_i\big),
+\boldsymbol{\Psi}_{ki}=f_{\boldsymbol{\Psi},k}\big(c_{ki},r_{ki},U_{\boldsymbol{\Psi}_{ki}}\big),\qquad c_{ki}=\kappa_k\big(\bar X_{k-1,i},\bar g_{k-1,i}\big),\qquad r_{ki}=\rho_k\big(\bar{\boldsymbol{\Psi}}_{k-1,i}\big),
 $$
 
-where $(c_i, r_i)$ takes finitely many values. The histories of the places are not inputs. With [identical structural distributions](#def-identical-distributions), every person's row follows the same equation.
+where $\kappa_k$ and $\rho_k$ are the same for every person and take finitely many values. The person’s history is their own covariates and their own network values. The places enter only through those network values: no summary of a particular place is an input. With identical structural distributions, every person’s row follows the same equation.
 :::

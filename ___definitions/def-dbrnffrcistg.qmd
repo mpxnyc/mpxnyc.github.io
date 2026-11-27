@@ -1,5 +1,5 @@
 ::: {#def-dbrnffrcistg .theorem}
 ## DBRNFFRCISTG model
 
-A dyadic bipartite random network finest fully randomized causally interpretable structured tree graph (DBRNFFRCISTG) is a causal model $\mathcal C = (\mathcal M, \mathcal M^{(\Gamma)})$ of a [DBRNNPSEM](#def-dyadic-npsem) $\mathcal M$ that satisfies the conditions of a [BRNFFRCISTG](#def-brnffrcistg), except that [single-world independence](#def-single-world) takes each [dyad](#def-dyad), rather than each row, as a single variable: the one-step-ahead counterfactuals of the dyads are mutually independent, and independent of those of the other variables.
+A dyadic bipartite random network finest fully randomized causally interpretable structured tree graph (DBRNFFRCISTG) is a causal model $\mathcal{C}=(\mathcal{M},\mathcal{M}^{(\Gamma)})$ of a DBRNNPSEM $\mathcal{M}$ that satisfies the conditions of a BRNFFRCISTG, except that single-world independence takes each dyad, rather than each row, as a single variable: the one-step-ahead counterfactuals of the dyads are mutually independent, and independent of those of the other variables.
 :::

@@ -1,9 +1,11 @@
 ::: {#def-observational-unit .theorem}
 ## Observational unit
 
-A sub-vector $\mathscr{O}_i$, $i \in [1,n]$, of the random variables $\mathbf V$ such that
+A sub-vector $\mathscr{O}_i$, $i\in\mathcal{N}$, of the random variables $\mathbf{V}$ such that
 
 $$
-\mathscr{O}_i \subset \mathbf V, \qquad \mathscr{O}_i \cap \mathscr{O}_j = \emptyset, \quad i \ne j.
+\mathscr{O}_i\subset\mathbf{V},\qquad \mathscr{O}_i\cap\mathscr{O}_j=\emptyset,\quad i\neq j.
 $$
+
+In sections 1–3, and in the bipartite models of sections 5 and 6, the units exhaust $\mathbf{V}$: $\mathbf{V}=\bigcup_{i\in\mathcal{N}}\mathscr{O}_i$. In section 4, $\mathbf{V}$ also contains relational variables, which belong to no unit (C.24).
 :::

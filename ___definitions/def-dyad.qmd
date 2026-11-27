@@ -1,11 +1,11 @@
 ::: {#def-dyad .theorem}
 ## Dyad
 
-In a [bipartite](#def-bipartite-npsem-ge) [graph generator](#def-npsem-ge) $\boldsymbol\psi$ with persons $\mathcal P$ and places $\mathcal Q$, the **dyad** of a person $i \in \mathcal P$ and a place $j \in \mathcal Q$ is their relational variable, taken as a single variable:
+In a bipartite graph generator $\boldsymbol{\psi}_k$ with persons $\mathcal{P}$ and places $\mathcal{Q}$, the dyad of a person $i\in\mathcal{P}$ and a place $l\in\mathcal{Q}$ is their relational variable, taken as a single variable:
 
 $$
-D_{ij} = \psi(i,j) = \psi(j,i), \qquad i \in \mathcal P,\ j \in \mathcal Q.
+D_{k,il}=\psi_k(i,l)=\psi_k(l,i),\qquad i\in\mathcal{P},\ l\in\mathcal{Q}.
 $$
 
-A person's row $\boldsymbol\Psi_i$ is the collection of their dyads, $(D_{ij})_{j \in \mathcal Q}$.
+A person’s row $\boldsymbol{\Psi}_{ki}$ is the collection of their dyads, $(D_{k,il})_{l\in\mathcal{Q}}$.
 :::

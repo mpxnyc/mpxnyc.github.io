@@ -1,29 +1,31 @@
 ::: {#def-graph .theorem}
 ## Network graph
 
-An ordered pair $\mathscr{G} = (\mathcal{N}, \psi)$ with node set $\mathcal{N}$, whose elements represent [observational units](#def-observational-unit), and adjacency function $\psi$, which represents potential causal influence between observational units. The network is directed: the adjacency function assigns a nonnegative weight $\psi(i,j)$ to each ordered pair of distinct observational units, the weight of $j$'s influence on $i$, and $\psi(i,j)$ need not equal $\psi(j,i)$.
+An ordered pair $\mathcal{G}=(\mathcal{N},\psi)$ with node set $\mathcal{N}$, whose elements represent observational units, and adjacency function $\psi$, which represents potential causal influence between observational units. The network is directed: the adjacency function assigns a nonnegative weight $\psi(i,j)$ to each ordered pair of distinct observational units, the weight of $j$’s influence on $i$, and $\psi(i,j)$ need not equal $\psi(j,i)$.
 
 $$
-\mathscr G=(\mathcal N,\psi),\qquad \psi:\mathcal N\times\mathcal N\to \mathbb R_{\ge 0},\qquad \psi(i,i)=0
+\mathcal{G}=(\mathcal{N},\psi),\qquad \psi:\mathcal{N}\times\mathcal{N}\to\mathbb{R}_{\ge0},\qquad \psi(i,i)=0.
 $$
 
-$j$ influences $i$ if and only if $\psi(i,j) > 0$.
+$j$ influences $i$ if and only if $\psi(i,j)>0$.
 
-The **neighborhood** of an observational unit $i \in \mathcal N$ is the set of units that influence it:
-
-$$
-\mathcal{N}_i = \{ j \in \mathcal{N} : \psi(i,j) > 0 \}.
-$$
-
-The **network weights** $\boldsymbol\Psi_i$ of unit $i$ are the $i$th row of the adjacency matrix, the weights of every unit's influence on $i$, with $n = |\mathcal N|$:
+The neighborhood of an observational unit $i\in\mathcal{N}$ is the set of units that influence it:
 
 $$
-\boldsymbol\Psi_i = [\psi(i,1), \dots, \psi(i,n)]^T.
+\mathcal{N}_i=\{j\in\mathcal{N}:\psi(i,j)>0\}.
 $$
 
-For a covariate $\mathbf X$, the **network values** $\mathbf X_{\mathcal N_i}$ are the entries of $\mathbf X$ belonging to the neighborhood of $i$:
+The network weights $\boldsymbol{\Psi}_i$ of unit $i$ are the $i$th row of the adjacency matrix, the weights of every unit’s influence on $i$, with $n=|\mathcal{N}|$:
 
 $$
-\mathbf X_{\mathcal N_i}=\big(X_j\big)_{j\in \mathcal N_i}.
+\boldsymbol{\Psi}_i=[\psi(i,1),\dots,\psi(i,n)]^T.
 $$
+
+For a covariate $\mathbf{X}$, the neighbor values $\mathbf{X}_{\mathcal{N}_i}$ are the entries of $\mathbf{X}$ belonging to the neighborhood of $i$, in the order of their indices:
+
+$$
+\mathbf{X}_{\mathcal{N}_i}=\big(X_j\big)_{j\in\mathcal{N}_i}.
+$$
+
+We reserve *network value* for a summary of the neighbor values (C.19).
 :::

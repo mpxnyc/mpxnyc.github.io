@@ -1,11 +1,17 @@
 ::: {#def-single-world .theorem}
 ## Single-world independence
 
-For every $\mathbf v$ in the range of $\mathbf V$, let $\Gamma_{\mathbf v}$ be the static regime that sets every variable to its value in $\mathbf v$. The counterfactual variables of $(\mathcal M, \mathcal M^{(\Gamma_{\mathbf v})})$, obtained by sequential substitution,
+For a value $\mathbf{pa}$ of the parents of $V$, the one-step-ahead counterfactual of $V$ is
 
 $$
-\big\{\, V^{(\Gamma_{\mathbf v})} : V \in \mathbf V \,\big\},
+V^{(\mathbf{pa})}=f_V\big(\mathbf{pa},U_V\big),
 $$
 
-are mutually independent. Each $V^{(\Gamma_{\mathbf v})}$ depends on $\mathbf v$ only through the values $\mathbf{pa}_V$ of $V$'s parents, and is written $V^{(\mathbf{pa}_V)}$.
+the value $V$ takes when its parents are set to $\mathbf{pa}$. For every $\mathbf{v}$ in the range of $\mathbf{V}$, write $\mathbf{pa}_V(\mathbf{v})$ for the values in $\mathbf{v}$ of the parents of $V$. Single-world independence holds if, for every $\mathbf{v}$, the one-step-ahead counterfactuals
+
+$$
+\big\{V^{(\mathbf{pa}_V(\mathbf{v}))}:V\in\mathbf{V}\big\}
+$$
+
+are mutually independent. Equivalently, let $\Gamma_{\mathbf{v}}$ be the static regime that sets every variable to its value in $\mathbf{v}$: the natural values of the variables of $\big(\mathcal{M},\mathcal{M}^{(\Gamma_{\mathbf{v}})}\big)$, obtained by sequential substitution, are mutually independent, since the natural value of $V$ under $\Gamma_{\mathbf{v}}$ is $V^{(\mathbf{pa}_V(\mathbf{v}))}$.
 :::

@@ -1,11 +1,11 @@
 ::: {#def-separability .theorem}
 ## Separability
 
-An [exposure mapping](#def-exposure-mapping) $g_{ik}$ is separable if it can be written as unit $i$'s own value for each covariate, alongside one summary per covariate:
+An exposure mapping $g_{ik}$ is separable if it can be written as unit $i$’s own value for each preceding covariate, alongside one summary per covariate:
 
 $$
-g_{ik}(\mathbf{X}_1,\dots,\mathbf{X}_{k-1}) = \Big[ \underbrace{\begin{pmatrix} X_{1i} \\ \vdots \\ X_{k-1,i} \end{pmatrix}}_{\in\, \mathbb R^{k-1}},\, \underbrace{g_{1i}(\mathbf{X}_1),\, \dots,\, g_{k-1,i}(\mathbf{X}_{k-1})}_{\text{each} \,\in\, \mathbb R}\Big]^T,
+g_{ik}(\mathbf{X}_1,\dots,\mathbf{X}_{k-1})=\Big[\underbrace{X_{1i},\dots,X_{k-1,i}}_{\in\,\mathbb{R}^{k-1}},\ \underbrace{g_{1i}(\mathbf{X}_1),\dots,g_{k-1,i}(\mathbf{X}_{k-1})}_{\text{each}\,\in\,\mathbb{R}}\Big]^T,
 $$
 
-where $X_{ti} \in \mathscr O_i$ is unit $i$'s own entry of covariate $\mathbf X_t$, and each $g_{ti} : \mathcal R(\mathbf X_t) \to \mathbb{R}$, called a **component function** of $g_{ik}$, summarizes covariate $\mathbf X_t$. A structural equation is separable if its exposure mapping is.
+where $X_{ti}\in\mathscr{O}_i$ is unit $i$’s own entry of covariate $\mathbf{X}_t$, and each $g_{ti}:\mathcal{R}(\mathbf{X}_t)\to\mathbb{R}$, called a component function of $g_{ik}$, summarizes covariate $\mathbf{X}_t$ on a network graph (C.20). The value $g_{ti}(\mathbf{X}_t)$ is the network value of unit $i$ for $\mathbf{X}_t$. A structural equation is separable if its exposure mapping is.
 :::

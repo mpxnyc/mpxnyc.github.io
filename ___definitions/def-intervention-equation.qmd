@@ -1,11 +1,11 @@
 ::: {#def-intervention .theorem}
 ## Intervention equation
 
-A deterministic function $h_{X_{ki}}$ that returns a value in the range of the random variable $X_{ki}$ from the [covariates](#def-covariate) preceding it in a [topological order](#def-dag) of the [NPSEM](#def-npsem), and from the elements of its own covariate that precede it:
+A deterministic function $h_{X_{ki}}$ that returns a value in the range of the random variable $X_{ki}$ from the covariates preceding it in a topological order of the NPSEM, the elements of its own covariate that precede it, and the graph generators that precede it:
 
 $$
-h_{X_{ki}} : \mathcal{R}(\mathbf X_1) \times \dots \times \mathcal{R}(\mathbf X_{k-1}) \times \mathcal{R}(\mathbf X_{k,<i}) \to \mathcal{R}(X_{ki}),
+h_{X_{ki}}:\mathcal{R}(\mathbf{X}_1)\times\dots\times\mathcal{R}(\mathbf{X}_{k-1})\times\mathcal{R}(\mathbf{X}_{k,<i})\times\mathcal{R}(\boldsymbol{\psi}_1)\times\dots\times\mathcal{R}(\boldsymbol{\psi}_T)\to\mathcal{R}(X_{ki}).
 $$
 
-where $\mathcal{R}(\cdot)$ is the range. The arguments are measured variables; the error term $U_{X_{ki}}$ is not among them.
+The arguments are measured variables; the error term $U_{X_{ki}}$ is not among them. With a fixed network there are no graph generators among the arguments.
 :::
